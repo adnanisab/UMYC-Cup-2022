@@ -31,6 +31,10 @@
         .s .img-fluid {
             opacity: 0.2;
         }
+        
+        .pl {
+            cursor: pointer;
+        }
     </style>
 </head>
 
@@ -50,13 +54,13 @@
                 Batsman
             </div>
             <div class="col-6 col-lg-4 px-0">
-                <img class="img-fluid" src="https://raw.githubusercontent.com/adnanisab/UMYC-Cup-2022/main/Batsman.jpg">
+                <img class="img-fluid pl" src="https://raw.githubusercontent.com/adnanisab/UMYC-Cup-2022/main/Batsman.jpg">
             </div>
             <div class="col-6 col-lg-4 px-0">
-                <img class="img-fluid" src="https://raw.githubusercontent.com/adnanisab/UMYC-Cup-2022/main/Batsman.jpg">
+                <img class="img-fluid pl" src="https://raw.githubusercontent.com/adnanisab/UMYC-Cup-2022/main/Batsman.jpg">
             </div>
             <div class="col-6 col-lg-4 px-0">
-                <img class="img-fluid" src="https://raw.githubusercontent.com/adnanisab/UMYC-Cup-2022/main/Batsman.jpg">
+                <img class="img-fluid pl" src="https://raw.githubusercontent.com/adnanisab/UMYC-Cup-2022/main/Batsman.jpg">
             </div>
 
         </div>
@@ -68,13 +72,13 @@
                 Bowler
             </div>
             <div class="col-6 col-lg-4 px-0">
-                <img class="img-fluid" src="https://raw.githubusercontent.com/adnanisab/UMYC-Cup-2022/main/Bowler.jpg">
+                <img class="img-fluid pl" src="https://raw.githubusercontent.com/adnanisab/UMYC-Cup-2022/main/Bowler.jpg">
             </div>
             <div class="col-6 col-lg-4 px-0">
-                <img class="img-fluid" src="https://raw.githubusercontent.com/adnanisab/UMYC-Cup-2022/main/Bowler.jpg">
+                <img class="img-fluid pl" src="https://raw.githubusercontent.com/adnanisab/UMYC-Cup-2022/main/Bowler.jpg">
             </div>
             <div class="col-6 col-lg-4 px-0">
-                <img class="img-fluid" src="https://raw.githubusercontent.com/adnanisab/UMYC-Cup-2022/main/Bowler.jpg">
+                <img class="img-fluid pl" src="https://raw.githubusercontent.com/adnanisab/UMYC-Cup-2022/main/Bowler.jpg">
             </div>
         </div>
         <!--/Bowler-->
@@ -85,13 +89,13 @@
                 All Rounders
             </div>
             <div class="col-6 col-lg-4 px-0">
-                <img class="img-fluid" src="https://raw.githubusercontent.com/adnanisab/UMYC-Cup-2022/main/anishgebi.jpg">
+                <img class="img-fluid pl" src="https://raw.githubusercontent.com/adnanisab/UMYC-Cup-2022/main/anishgebi.jpg">
             </div>
             <div class="col-6 col-lg-4 px-0 s">
-                <img class="img-fluid" src="https://raw.githubusercontent.com/adnanisab/UMYC-Cup-2022/main/AllRounder.jpg">
+                <img class="img-fluid pl" src="https://raw.githubusercontent.com/adnanisab/UMYC-Cup-2022/main/AllRounder.jpg">
             </div>
             <div class="col-6 col-lg-4 px-0">
-                <img class="img-fluid" src="https://raw.githubusercontent.com/adnanisab/UMYC-Cup-2022/main/AllRounder.jpg">
+                <img class="img-fluid pl" src="https://raw.githubusercontent.com/adnanisab/UMYC-Cup-2022/main/AllRounder.jpg">
             </div>
         </div>
         <!--/All Rounder-->
@@ -102,13 +106,13 @@
                 Wicket Keeper
             </div>
             <div class="col-6 col-lg-4 px-0 s">
-                <img class="img-fluid" src="https://raw.githubusercontent.com/adnanisab/UMYC-Cup-2022/main/WicketKeeper.jpg">
+                <img class="img-fluid pl" src="https://raw.githubusercontent.com/adnanisab/UMYC-Cup-2022/main/WicketKeeper.jpg">
             </div>
             <div class="col-6 col-lg-4 px-0">
-                <img class="img-fluid" src="https://raw.githubusercontent.com/adnanisab/UMYC-Cup-2022/main/WicketKeeper.jpg">
+                <img class="img-fluid pl" src="https://raw.githubusercontent.com/adnanisab/UMYC-Cup-2022/main/WicketKeeper.jpg">
             </div>
             <div class="col-6 col-lg-4 px-0 s">
-                <img class="img-fluid" src="https://raw.githubusercontent.com/adnanisab/UMYC-Cup-2022/main/WicketKeeper.jpg">
+                <img class="img-fluid pl" src="https://raw.githubusercontent.com/adnanisab/UMYC-Cup-2022/main/WicketKeeper.jpg">
             </div>
         </div>
         <!--/Wicket Keeper-->
@@ -118,6 +122,10 @@
         var s = document.getElementsByClassName("s");
         for (i = 0; i < s.length; i++) {
             s[i].insertAdjacentHTML("beforeend", "<img class='s_img' src='https://raw.githubusercontent.com/adnanisab/UMYC-Cup-2022/main/sold.png'>");
+        }
+        var pl = document.getElementsByClassName("pl");
+        for (j = 0; j < pl.length; j++) {
+            pl[j].setAttribute("onclick", "window.open('" + pl[j].getAttribute('src') + "', '_blank');");
         }
     </script>
 </body>
