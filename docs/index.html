@@ -30,7 +30,10 @@
             width: 30%;
             display: inline-block !important;
         }
-.s {order:1}
+        
+        .s {
+            order: 1
+        }
         
         .s .img-fluid {
             opacity: 0.2;
@@ -66,6 +69,10 @@
         
         .modal.modal-static .modal-dialog {
             transform: scale(1);
+        }
+        
+        .aDisable .player {
+            pointer-events: none;
         }
     </style>
     <script>
@@ -124,7 +131,7 @@
     </script>
 </head>
 
-<body style="color:white;font-family: 'Voltaire', sans-serif;">
+<body class="aBody aDisable" style="color:white;font-family: 'Voltaire', sans-serif;">
     <div class="row justify-content-center mb-3 bg-white mx-0">
         <div class="col-4">
             <center onclick="window.location.href='https://adnanisab.github.io/UMYC-Cup-2022/'"><img class="img-fluid" src="https://raw.githubusercontent.com/adnanisab/UMYC-Cup-2022/main/UMYC%20CUP.png"></center>
@@ -180,6 +187,10 @@
 
     </div>
     <script>
+        /* Activate Auction*/
+        if (window.location.href.indexOf("?auction") != -1) {
+            document.getElementsByClassName("aBody")[0].classList.remove("aDisable");
+        }
         /* Adjust Images */
         var pr = document.getElementsByClassName("player");
         for (var p = 0; p < pr.length; p++) {
