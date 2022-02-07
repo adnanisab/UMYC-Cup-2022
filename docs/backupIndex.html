@@ -1,0 +1,252 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <!-- Required meta tags -->
+    <link rel="shortcut icon" href="https://raw.githubusercontent.com/adnanisab/UMYC-Cup-2022/main/favicon.ico">
+    <meta charset="utf-8">
+    <!-- <meta http-equiv="refresh" content="30"> -->
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta property="og:image" content="https://raw.githubusercontent.com/adnanisab/UMYC-Cup-2022/main/sharelogo.jpg" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="UMYC CUP - 2022" />
+    <meta name="twitter:description" content="UMYC CUP - 2022 | Auction" />
+    <meta name="twitter:image" content="https://raw.githubusercontent.com/adnanisab/UMYC-Cup-2022/main/sharelogo.jpg" />
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Voltaire&display=swap" rel="stylesheet">
+    <title>UMYC CUP - 2022 | Auction</title>
+    <style>
+        .s {
+            position: relative;
+        }
+        
+        .s>.s_img {
+            position: absolute;
+            top: 25%;
+            left: 2%;
+            width: 30%;
+            display: inline-block !important;
+        }
+        
+        .s {
+            order: 1
+        }
+        
+        .s .img-fluid {
+            opacity: 0.2;
+        }
+        
+        .pl {
+            cursor: pointer;
+        }
+        
+        .img-fluid.pl:hover {
+            transform: scale(1.05);
+            transition: 200ms ease-in-out 100ms;
+        }
+        
+        .img-fluid.pl {
+            transition: 200ms ease-in-out 100ms;
+        }
+        
+        .modal-backdrop.show {
+            opacity: 0.96;
+        }
+        
+        .actionx {
+            bottom: 15%;
+            cursor: pointer;
+            left: 50%;
+            width: 100%;
+            transform: translateX(-50%);
+        }
+        
+        .actionx span {
+            cursor: pointer;
+            box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+        }
+        
+        .modal.modal-static .modal-dialog {
+            transform: scale(1);
+        }
+        
+        .soldx:hover {
+            background: black !important;
+        }
+        
+        .unsoldx:hover {
+            background: gray !important;
+        }
+        
+        .aDisable .player {
+            pointer-events: none;
+        }
+        
+        #f-mfp-img {
+            max-width: 40vw !important;
+        }
+        
+        #f_Popup3 {
+            background-image: url("https://raw.githubusercontent.com/adnanisab/UMYC-Cup-2022/main/bg.jpg");
+            background-repeat: no-repeat;
+            background-size: 100%;
+            background-position: top;
+            background-attachment: fixed;
+        }
+        
+        .modal-dialog {
+            position: fixed;
+            left: 50%;
+            transform: translateX(-50%) !important;
+            top: 15% !important;
+        }
+    </style>
+    <script>
+        function createCookie(name, value, days) {
+            if (days) {
+                var date = new Date();
+                date.setTime(date.getTime() + (days * 24 * 60 * 60 * 1000));
+                var expires = "; expires=" + date.toGMTString();
+            } else var expires = "";
+            document.cookie = name + "=" + value + expires + "; path=/";
+        }
+
+        function readCookie(name) {
+            var nameEQ = name + "=";
+            var ca = document.cookie.split(';');
+            for (var i = 0; i < ca.length; i++) {
+                var c = ca[i];
+                while (c.charAt(0) == ' ') c = c.substring(1, c.length);
+                if (c.indexOf(nameEQ) == 0) return c.substring(nameEQ.length, c.length);
+            }
+            return null;
+        }
+
+        function eraseCookie(name) {
+            createCookie(name, "", -1);
+        }
+
+        function OpenPopup3(pageUrl, name) {
+            if (!document.getElementById('f_Popup3_button')) {
+                if (pageUrl.indexOf('?pul=') != -1) {
+                    var aurl = pageUrl.split('?pul=').pop();
+                    aurl = (aurl.indexOf('http') == -1) ? 'http://' + aurl : aurl; // add http if not added
+                    pageUrl = pageUrl.split('?pul').shift();
+                    var msg = '<figure class="figure"><img id="f-mfp-img" class="mb-0" src="' + pageUrl + '" class="figure-img img-fluid" style="cursor:pointer" onclick="window.open(\'' + aurl + '\', \'_blank\')"></figure>';
+                } else {
+                    var msg = '<figure class="figure"><img id="f-mfp-img" class="mb-0" src="' + pageUrl + '" class="figure-img img-fluid"></figure>';
+                }
+                document.getElementsByTagName("body")[0].insertAdjacentHTML("beforeend", "<button id='f_Popup3_button' type='button' data-bs-toggle='modal' data-bs-target='#f_Popup3' style='display:none;'></button><div class='f_Popup3_box modal fade modal-static' id='f_Popup3' data-bs-backdrop='static' data-bs-keyboard='false' tabindex='-1' aria-labelledby='f_Popup3Label' aria-hidden='true'><div class='modal-dialog modal-dialog-centered modal-dialog-scrollable mx-auto'><div class='modal-content'><button type='button' class='f_Popup3_close d-none btn-close position-absolute' data-bs-dismiss='modal' aria-label='Close'><svg style='transform: scale(1.5);' xmlns='http://www.w3.org/2000/svg' width='32' height='32' fill='#fff' class='bi bi-x-lg' viewBox='0 0 16 16'><path fill-rule='evenodd' d='M13.854 2.146a.5.5 0 0 1 0 .708l-11 11a.5.5 0 0 1-.708-.708l11-11a.5.5 0 0 1 .708 0Z'/>  <path fill-rule='evenodd' d='M2.146 2.146a.5.5 0 0 0 0 .708l11 11a.5.5 0 0 0 .708-.708l-11-11a.5.5 0 0 0-.708 0Z'/></svg></button><div class='modal-body text-center position-relative' style='white-space: pre-wrap;'>" + msg + "<div class='actionx position-fixed'><span class='soldx text-white bg-danger py-2 px-5 d-inline-block rounded-pill me-3 fs-4' data-name='" + name + "'>&nbsp;&nbsp;SOLD&nbsp;&nbsp;</span> <span class='unsoldx text-dark bg-light py-2 px-5 d-inline-block rounded-pill fs-4' data-name='" + name + "'>UNSOLD</span></div></div></div></div><style>.modal-dialog-scrollable .modal-content {max-height: none;overflow:visible;}.modal-body {padding:0;} .f_Popup3_close{right:-1rem;z-index:999;top:-1rem;background-color:#0d6efd;border-radius:50px;padding:1rem;opacity:1;box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.2);background-image:none;color:#fff;display:flex;justify-content:center;align-items:center;font-weight:700;font-size:18px}.f_Popup3_close:hover{color:#fff;background-color: red;opacity:1}.modal-dialog{display:flex;justify-content:center} .modal-content{width:auto;border-width:0} #f-mfp-img{max-height:90vh;max-width: 90vw;} @media (min-width:576px) {.modal-content{width:auto;}.modal-dialog{max-width:800px;}} .modal-content{background:0 0}}</style></div>");
+                document.getElementById('f_Popup3_button').click();
+                document.getElementsByClassName('soldx')[0].addEventListener('click', function() {
+                    var sx = document.getElementsByClassName('soldx')[0].getAttribute("data-name");
+                    createCookie(sx, "Yes");
+                    document.getElementsByClassName('f_Popup3_close')[0].click();
+                });
+                document.getElementsByClassName('unsoldx')[0].addEventListener('click', function() {
+                    var ux = document.getElementsByClassName('soldx')[0].getAttribute("data-name");
+                    eraseCookie(ux);
+                    document.getElementsByClassName('f_Popup3_close')[0].click();
+                });
+                document.getElementsByClassName('f_Popup3_close')[0].addEventListener('click', function() {
+                    document.getElementById('f_Popup3_button').remove();
+                    document.getElementsByClassName('f_Popup3_box')[0].remove();
+                });
+            }
+        }
+    </script>
+</head>
+
+<body class="aBody aDisable" style="color:white;font-family: 'Voltaire', sans-serif;">
+    <div class="row justify-content-center mb-3 bg-white mx-0">
+        <div class="col-4">
+            <center><img class="img-fluid" src="https://raw.githubusercontent.com/adnanisab/UMYC-Cup-2022/main/UMYC%20CUP.png"></center>
+        </div>
+    </div>
+    <div class="container-fluid px-3 py-5 border-top border-success border-3" style="background-color: #272727;">
+
+        <h1 class="text-center mb-0 display-1 fw-bold mb-5"><span class="text-warning text-uppercase">Players Auction</span></h1>
+
+        <!--Batsman-->
+        <div class="row mx-lg-0 mb-5 pb-5">
+            <div class="col-12 rounded-pill fw-bold p-3 mb-3 fs-4" style="background-color: #324aa0;">
+                Batsman
+            </div>
+            <div id="tamimsema" class="player"></div>
+            <div id="Batsman2" class="player"></div>
+            <div id="adnanisab" class="player"></div>
+        </div>
+        <!--/Batsman-->
+
+        <!--Bowler-->
+        <div class="row mx-lg-0 mb-5 pb-5">
+            <div class="col-12 rounded-pill fw-bold p-3 mb-3 fs-4" style="background-color: #324aa0;">
+                Bowler
+            </div>
+            <div id="Bowler" class="player"></div>
+            <div id="Bowler" class="player"></div>
+            <div id="Bowler" class="player"></div>
+        </div>
+        <!--/Bowler-->
+
+        <!--All Rounder-->
+        <div class="row mx-lg-0 mb-5 pb-5">
+            <div class="col-12 rounded-pill fw-bold p-3 mb-3 fs-4" style="background-color: #324aa0;">
+                All Rounder
+            </div>
+            <div id="anishgebi" class="player"></div>
+            <div id="AllRounder" class="player"></div>
+            <div id="AllRounder" class="player"></div>
+        </div>
+        <!--/All Rounder-->
+
+        <!--Wicket Keeper-->
+        <div class="row mx-lg-0 mb-5 pb-5">
+            <div class="col-12 rounded-pill fw-bold p-3 mb-3 fs-4" style="background-color: #324aa0;">
+                Wicket Keeper
+            </div>
+            <div id="WicketKeeper" class="player"></div>
+            <div id="WicketKeeper" class="player"></div>
+            <div id="WicketKeeper" class="player"></div>
+        </div>
+        <!--/Wicket Keeper-->
+
+    </div>
+    <script>
+        /* Activate Auction*/
+        if (window.location.href.indexOf("?auction") != -1) {
+            document.getElementsByClassName("aBody")[0].classList.remove("aDisable");
+        }
+        /* Adjust Images */
+        var pr = document.getElementsByClassName("player");
+        for (var p = 0; p < pr.length; p++) {
+            var q = pr[p].getAttribute("id");
+            pr[p].classList.add("col-6", "col-lg-4", "px-0")
+            pr[p].insertAdjacentHTML("beforeend", "<img class='img-fluid pl' src='https://raw.githubusercontent.com/adnanisab/UMYC-Cup-2022/main/" + q + ".jpg' onclick=\"OpenPopup3('https://raw.githubusercontent.com/adnanisab/UMYC-Cup-2022/main/" + q + ".jpg','" + q + "')\"><img class='s_img d-none' src='https://raw.githubusercontent.com/adnanisab/UMYC-Cup-2022/main/sold.png'>");
+        }
+
+        /* Sold-Unsold*/
+        var a = document.getElementsByClassName("player");
+        setInterval(function() {
+            for (var b = 0; b < pr.length; b++) {
+                var c = a[b].getAttribute("id");
+                if (readCookie(c)) {
+                    a[b].classList.add("s");
+                } else if (!readCookie(c)) {
+                    a[b].classList.remove("s");
+                }
+            }
+        }, 10);
+        /* Image Link */
+        // var pl = document.getElementsByClassName("pl"); 
+        // for (j = 0; j < pl.length; j++) {
+        //     pl[j].setAttribute("onclick", "window.open('" + pl[j].getAttribute('src') + "', '_blank');");
+        // }
+    </script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+</body>
+
+</html>
