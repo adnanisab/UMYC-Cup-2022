@@ -28,6 +28,7 @@
             top: 25%;
             left: 2%;
             width: 30%;
+            display: inline-block !important;
         }
         
         .s .img-fluid {
@@ -46,7 +47,80 @@
         .img-fluid.pl {
             transition: 200ms ease-in-out 100ms;
         }
+        
+        .modal-backdrop.show {
+            opacity: 0.96;
+        }
+        
+        .actionx {
+            bottom: 5%;
+            cursor: pointer;
+            left: 50%;
+            transform: translateX(-50%);
+        }
+        
+        .actionx span {
+            cursor: pointer;
+        }
+        
+        .modal.modal-static .modal-dialog {
+            transform: scale(1);
+        }
     </style>
+    <script>
+        function createCookie(name, value, days) {
+            if (days) {
+                var date = new Date();
+                date.setTime(date.getTime() + (days * 24 * 60 * 60 * 1000));
+                var expires = "; expires=" + date.toGMTString();
+            } else var expires = "";
+            document.cookie = name + "=" + value + expires + "; path=/";
+        }
+
+        function readCookie(name) {
+            var nameEQ = name + "=";
+            var ca = document.cookie.split(';');
+            for (var i = 0; i < ca.length; i++) {
+                var c = ca[i];
+                while (c.charAt(0) == ' ') c = c.substring(1, c.length);
+                if (c.indexOf(nameEQ) == 0) return c.substring(nameEQ.length, c.length);
+            }
+            return null;
+        }
+
+        function eraseCookie(name) {
+            createCookie(name, "", -1);
+        }
+
+        function OpenPopup3(pageUrl, name) {
+            if (!document.getElementById('f_Popup3_button')) {
+                if (pageUrl.indexOf('?pul=') != -1) {
+                    var aurl = pageUrl.split('?pul=').pop();
+                    aurl = (aurl.indexOf('http') == -1) ? 'http://' + aurl : aurl; // add http if not added
+                    pageUrl = pageUrl.split('?pul').shift();
+                    var msg = '<figure class="figure"><img id="f-mfp-img" class="mb-0" src="' + pageUrl + '" class="figure-img img-fluid" style="cursor:pointer" onclick="window.open(\'' + aurl + '\', \'_blank\')"></figure>';
+                } else {
+                    var msg = '<figure class="figure"><img id="f-mfp-img" class="mb-0" src="' + pageUrl + '" class="figure-img img-fluid"></figure>';
+                }
+                document.getElementsByTagName("body")[0].insertAdjacentHTML("beforeend", "<button id='f_Popup3_button' type='button' data-bs-toggle='modal' data-bs-target='#f_Popup3' style='display:none;'></button><div class='f_Popup3_box modal fade modal-static' id='f_Popup3' data-bs-backdrop='static' data-bs-keyboard='false' tabindex='-1' aria-labelledby='f_Popup3Label' aria-hidden='true'><div class='modal-dialog modal-dialog-centered modal-dialog-scrollable mx-auto'><div class='modal-content'><button type='button' class='f_Popup3_close btn-close position-absolute' data-bs-dismiss='modal' aria-label='Close'><svg xmlns='http://www.w3.org/2000/svg' width='16' height='16' fill='#fff' class='bi bi-x-lg' viewBox='0 0 16 16'><path fill-rule='evenodd' d='M13.854 2.146a.5.5 0 0 1 0 .708l-11 11a.5.5 0 0 1-.708-.708l11-11a.5.5 0 0 1 .708 0Z'/>  <path fill-rule='evenodd' d='M2.146 2.146a.5.5 0 0 0 0 .708l11 11a.5.5 0 0 0 .708-.708l-11-11a.5.5 0 0 0-.708 0Z'/></svg></button><div class='modal-body text-center position-relative' style='white-space: pre-wrap;'>" + msg + "<div class='actionx position-fixed'><span class='soldx text-white bg-danger py-2 px-5 d-inline-block rounded-pill me-3 fs-4' data-name='" + name + "'>&nbsp;&nbsp;SOLD&nbsp;&nbsp;</span> <span class='unsoldx text-dark bg-light py-2 px-5 d-inline-block rounded-pill fs-4' data-name='" + name + "'>UNSOLD</span></div></div></div></div><style>.modal-dialog-scrollable .modal-content {max-height: none;overflow:visible;}.modal-body {padding:0;} .f_Popup3_close{right:-1rem;z-index:999;top:-1rem;background-color:#0d6efd;border-radius:50px;padding:.5rem;opacity:1;box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.2);background-image:none;color:#fff;display:flex;justify-content:center;align-items:center;font-weight:700;font-size:18px}.f_Popup3_close:hover{color:#fff;background-color: red;opacity:1}.modal-dialog{display:flex;justify-content:center} .modal-content{width:auto;border-width:0} #f-mfp-img{max-height:90vh;max-width: 90vw;} @media (min-width:576px) {.modal-content{width:auto;}.modal-dialog{max-width:800px;}} .modal-content{background:0 0}}</style></div>");
+                document.getElementById('f_Popup3_button').click();
+                document.getElementsByClassName('soldx')[0].addEventListener('click', function() {
+                    var sx = document.getElementsByClassName('soldx')[0].getAttribute("data-name");
+                    createCookie(sx, "Yes");
+                    document.getElementsByClassName('f_Popup3_close')[0].click();
+                });
+                document.getElementsByClassName('unsoldx')[0].addEventListener('click', function() {
+                    var ux = document.getElementsByClassName('soldx')[0].getAttribute("data-name");
+                    eraseCookie(ux);
+                    document.getElementsByClassName('f_Popup3_close')[0].click();
+                });
+                document.getElementsByClassName('f_Popup3_close')[0].addEventListener('click', function() {
+                    document.getElementById('f_Popup3_button').remove();
+                    document.getElementsByClassName('f_Popup3_box')[0].remove();
+                });
+            }
+        }
+    </script>
 </head>
 
 <body style="color:white;font-family: 'Voltaire', sans-serif;">
@@ -64,16 +138,9 @@
             <div class="col-12 rounded-pill fw-bold p-3 mb-3 fs-4" style="background-color: #324aa0;">
                 Batsman
             </div>
-            <div class="col-6 col-lg-4 px-0">
-                <img class="img-fluid pl" src="https://raw.githubusercontent.com/adnanisab/UMYC-Cup-2022/main/Batsman.jpg">
-            </div>
-            <div class="col-6 col-lg-4 px-0">
-                <img class="img-fluid pl" src="https://raw.githubusercontent.com/adnanisab/UMYC-Cup-2022/main/Batsman.jpg">
-            </div>
-            <div class="col-6 col-lg-4 px-0">
-                <img class="img-fluid pl" src="https://raw.githubusercontent.com/adnanisab/UMYC-Cup-2022/main/Batsman.jpg">
-            </div>
-
+            <div id="Batsman1" class="player"></div>
+            <div id="Batsman2" class="player"></div>
+            <div id="Batsman3" class="player"></div>
         </div>
         <!--/Batsman-->
 
@@ -82,15 +149,9 @@
             <div class="col-12 rounded-pill fw-bold p-3 mb-3 fs-4" style="background-color: #324aa0;">
                 Bowler
             </div>
-            <div class="col-6 col-lg-4 px-0">
-                <img class="img-fluid pl" src="https://raw.githubusercontent.com/adnanisab/UMYC-Cup-2022/main/Bowler.jpg">
-            </div>
-            <div class="col-6 col-lg-4 px-0">
-                <img class="img-fluid pl" src="https://raw.githubusercontent.com/adnanisab/UMYC-Cup-2022/main/Bowler.jpg">
-            </div>
-            <div class="col-6 col-lg-4 px-0">
-                <img class="img-fluid pl" src="https://raw.githubusercontent.com/adnanisab/UMYC-Cup-2022/main/Bowler.jpg">
-            </div>
+            <div id="Bowler" class="player"></div>
+            <div id="Bowler" class="player"></div>
+            <div id="Bowler" class="player"></div>
         </div>
         <!--/Bowler-->
 
@@ -99,15 +160,9 @@
             <div class="col-12 rounded-pill fw-bold p-3 mb-3 fs-4" style="background-color: #324aa0;">
                 All Rounder
             </div>
-            <div class="col-6 col-lg-4 px-0">
-                <img class="img-fluid pl" src="https://raw.githubusercontent.com/adnanisab/UMYC-Cup-2022/main/anishgebi.jpg">
-            </div>
-            <div class="col-6 col-lg-4 px-0 s">
-                <img class="img-fluid pl" src="https://raw.githubusercontent.com/adnanisab/UMYC-Cup-2022/main/AllRounder.jpg">
-            </div>
-            <div class="col-6 col-lg-4 px-0">
-                <img class="img-fluid pl" src="https://raw.githubusercontent.com/adnanisab/UMYC-Cup-2022/main/AllRounder.jpg">
-            </div>
+            <div id="anishgebi" class="player"></div>
+            <div id="AllRounder" class="player"></div>
+            <div id="AllRounder" class="player"></div>
         </div>
         <!--/All Rounder-->
 
@@ -116,29 +171,41 @@
             <div class="col-12 rounded-pill fw-bold p-3 mb-3 fs-4" style="background-color: #324aa0;">
                 Wicket Keeper
             </div>
-            <div class="col-6 col-lg-4 px-0 s">
-                <img class="img-fluid pl" src="https://raw.githubusercontent.com/adnanisab/UMYC-Cup-2022/main/WicketKeeper.jpg">
-            </div>
-            <div class="col-6 col-lg-4 px-0">
-                <img class="img-fluid pl" src="https://raw.githubusercontent.com/adnanisab/UMYC-Cup-2022/main/WicketKeeper.jpg">
-            </div>
-            <div class="col-6 col-lg-4 px-0 s">
-                <img class="img-fluid pl" src="https://raw.githubusercontent.com/adnanisab/UMYC-Cup-2022/main/WicketKeeper.jpg">
-            </div>
+            <div id="WicketKeeper" class="player"></div>
+            <div id="WicketKeeper" class="player"></div>
+            <div id="WicketKeeper" class="player"></div>
         </div>
         <!--/Wicket Keeper-->
 
     </div>
     <script>
-        var s = document.getElementsByClassName("s");
-        for (i = 0; i < s.length; i++) {
-            s[i].insertAdjacentHTML("beforeend", "<img class='s_img' src='https://raw.githubusercontent.com/adnanisab/UMYC-Cup-2022/main/sold.png'>");
+        /* Adjust Images */
+        var pr = document.getElementsByClassName("player");
+        for (var p = 0; p < pr.length; p++) {
+            var q = pr[p].getAttribute("id");
+            pr[p].classList.add("col-6", "col-lg-4", "px-0")
+            pr[p].insertAdjacentHTML("beforeend", "<img class='img-fluid pl' src='https://raw.githubusercontent.com/adnanisab/UMYC-Cup-2022/main/" + q + ".jpg' onclick=\"OpenPopup3('https://raw.githubusercontent.com/adnanisab/UMYC-Cup-2022/main/" + q + ".jpg','" + q + "')\"><img class='s_img d-none' src='https://raw.githubusercontent.com/adnanisab/UMYC-Cup-2022/main/sold.png'>");
         }
-        var pl = document.getElementsByClassName("pl");
-        for (j = 0; j < pl.length; j++) {
-            pl[j].setAttribute("onclick", "window.open('" + pl[j].getAttribute('src') + "', '_blank');");
-        }
+
+        /* Sold-Unsold*/
+        var a = document.getElementsByClassName("player");
+        setInterval(function() {
+            for (var b = 0; b < pr.length; b++) {
+                var c = a[b].getAttribute("id");
+                if (readCookie(c)) {
+                    a[b].classList.add("s");
+                } else if (!readCookie(c)) {
+                    a[b].classList.remove("s");
+                }
+            }
+        }, 10);
+        /* Image Link */
+        // var pl = document.getElementsByClassName("pl"); 
+        // for (j = 0; j < pl.length; j++) {
+        //     pl[j].setAttribute("onclick", "window.open('" + pl[j].getAttribute('src') + "', '_blank');");
+        // }
     </script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
 </body>
 
 </html>
