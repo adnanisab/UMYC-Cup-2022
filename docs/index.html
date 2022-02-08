@@ -169,19 +169,19 @@
                     document.getElementsByClassName("soldx")[0].classList.add("invisible");
                     document.getElementsByClassName("unsoldx")[0].classList.add("invisible");
                     document.getElementsByClassName('t1')[0].addEventListener('click', function() {
-                        createCookie(sx, document.getElementsByClassName('t1')[0].innerHTML);
+                        createCookie(sx, document.getElementsByClassName('t1')[0].innerHTML.replace(/ /gi, "_"));
                         document.getElementsByClassName('f_Popup3_close')[0].click();
                     });
                     document.getElementsByClassName('t2')[0].addEventListener('click', function() {
-                        createCookie(sx, document.getElementsByClassName('t2')[0].innerHTML);
+                        createCookie(sx, document.getElementsByClassName('t2')[0].innerHTML.replace(/ /gi, "_"));
                         document.getElementsByClassName('f_Popup3_close')[0].click();
                     });
                     document.getElementsByClassName('t3')[0].addEventListener('click', function() {
-                        createCookie(sx, document.getElementsByClassName('t3')[0].innerHTML);
+                        createCookie(sx, document.getElementsByClassName('t3')[0].innerHTML.replace(/ /gi, "_"));
                         document.getElementsByClassName('f_Popup3_close')[0].click();
                     });
                     document.getElementsByClassName('t4')[0].addEventListener('click', function() {
-                        createCookie(sx, document.getElementsByClassName('t4')[0].innerHTML);
+                        createCookie(sx, document.getElementsByClassName('t4')[0].innerHTML.replace(/ /gi, "_"));
                         document.getElementsByClassName('f_Popup3_close')[0].click();
                     });
                 });
@@ -211,7 +211,7 @@
 
         <!--Batsman-->
         <div class="row mx-lg-0 mb-5 pb-5">
-            <div class="col-12 rounded-pill fw-bold p-3 mb-3 fs-4" style="background-color: #324aa0;">
+            <div class="col-12 rounded-pill fw-bold p-3 mb-3 fs-2" style="background-color: #324aa0;">
                 Batsman
             </div>
             <div id="tamimsema" class="player"></div>
@@ -222,7 +222,7 @@
 
         <!--Bowler-->
         <div class="row mx-lg-0 mb-5 pb-5">
-            <div class="col-12 rounded-pill fw-bold p-3 mb-3 fs-4" style="background-color: #324aa0;">
+            <div class="col-12 rounded-pill fw-bold p-3 mb-3 fs-2" style="background-color: #324aa0;">
                 Bowler
             </div>
             <div id="Bowler" class="player"></div>
@@ -233,18 +233,18 @@
 
         <!--All Rounder-->
         <div class="row mx-lg-0 mb-5 pb-5">
-            <div class="col-12 rounded-pill fw-bold p-3 mb-3 fs-4" style="background-color: #324aa0;">
+            <div class="col-12 rounded-pill fw-bold p-3 mb-3 fs-2" style="background-color: #324aa0;">
                 All Rounder
             </div>
             <div id="anishgebi" class="player"></div>
-            <div id="AllRounder" class="player"></div>
+            <div id="ayaznan" class="player"></div>
             <div id="AllRounder" class="player"></div>
         </div>
         <!--/All Rounder-->
 
         <!--Wicket Keeper-->
         <div class="row mx-lg-0 mb-5 pb-5">
-            <div class="col-12 rounded-pill fw-bold p-3 mb-3 fs-4" style="background-color: #324aa0;">
+            <div class="col-12 rounded-pill fw-bold p-3 mb-3 fs-2" style="background-color: #324aa0;">
                 Wicket Keeper
             </div>
             <div id="WicketKeeper" class="player"></div>
@@ -260,22 +260,22 @@
 
         <!-- Mustu -->
         <div id="Mustu" class="row mx-lg-0 mb-5 pb-5 teams">
-            <div class="col-12 rounded-pill bg-danger fw-bold p-3 mb-3 fs-4 ww">Mustu</div>
+            <div class="col-12 rounded-pill bg-danger fw-bold p-3 mb-3 fs-2 ww">Mustu</div>
         </div>
 
         <!-- Asfak -->
         <div id="Asfak" class="row mx-lg-0 mb-5 pb-5 teams">
-            <div class="col-12 rounded-pill bg-danger fw-bold p-3 mb-3 fs-4 ww">Asfak</div>
+            <div class="col-12 rounded-pill bg-danger fw-bold p-3 mb-3 fs-2 ww">Asfak</div>
         </div>
 
         <!-- Siddik -->
         <div id="Siddik" class="row mx-lg-0 mb-5 pb-5 teams">
-            <div class="col-12 rounded-pill bg-danger fw-bold p-3 mb-3 fs-4 ww">Siddik</div>
+            <div class="col-12 rounded-pill bg-danger fw-bold p-3 mb-3 fs-2 ww">Siddik</div>
         </div>
 
         <!-- Ala_bhai -->
         <div id="Ala_bhai" class="row mx-lg-0 mb-5 pb-5 teams">
-            <div class="col-12 rounded-pill bg-danger fw-bold p-3 mb-3 fs-4 ww">Ala_bhai</div>
+            <div class="col-12 rounded-pill bg-danger fw-bold p-3 mb-3 fs-2 ww">Ala_bhai</div>
         </div>
     </div>
 
