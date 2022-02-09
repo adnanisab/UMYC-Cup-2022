@@ -275,11 +275,12 @@
     </div>
     <p class="bg-body py-5 text-dark text-center fw-bold fs-3"><br><br><br><br>
         <br<br><br><br><br><br><br><br><br><br><br><br><br><br>
-            <div class="row text-white fs-1 text-center border px-3 py-5 bg-dark rounded-pill mx-0 justify-content-center">
+            <div class="row text-white fs-1 border border-warning border-3 text-center border px-3 py-5 bg-dark rounded-pill mx-0 justify-content-center">
+                <div class="col-12 display-3 mb-5 text-warning">AUCTION STATUS</div>
                 <div class="total col-12 display-3 mb-5 text-warning d-none">TOTAL PLAYERS <span class="totalP text-dark bg-body rounded-pill px-3" style="font-family: Trebuchet MS;"></span></div>
-                <div class="soldC col-4 bg-success rounded-pill py-2">SOLD <span class="soldP text-dark bg-body rounded-pill px-3" style="font-family: Trebuchet MS;"></span></div>
+                <div class="soldC col-4 bg-success rounded-pill py-4">SOLD<span class="soldP ms-2 text-dark bg-body rounded-pill px-3" style="font-family: Trebuchet MS;"></span></div>
                 <div class="col-1">&nbsp;</div>
-                <div class="unsoldC col-4 bg-danger rounded-pill py-2">UNSOLD <span class="unsoldP text-dark bg-body rounded-pill px-3" style="font-family: Trebuchet MS;"></span></div>
+                <div class="unsoldC col-4 bg-danger rounded-pill py-4">UNSOLD<span class="unsoldP ms-2 text-dark bg-body rounded-pill px-3" style="font-family: Trebuchet MS;"></span></div>
             </div>
             <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br></p>
     <div class="container-fluid px-3 py-5 border-top border-danger border-3" style="background-color: #272727;">
@@ -377,7 +378,7 @@
             if (document.getElementsByClassName("s").length > 0) {
                 document.getElementsByClassName("unsoldP")[0].innerHTML = document.getElementsByClassName("player").length - document.getElementsByClassName("s").length;
             } else {
-                document.getElementsByClassName("unsoldP")[0].innerHTML = 0;
+                document.getElementsByClassName("unsoldP")[0].innerHTML = document.getElementsByClassName("player").length;
             }
         }, 10);
         var w = document.getElementsByClassName("ww");
