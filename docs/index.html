@@ -148,6 +148,21 @@
         .solding svg:hover {
             fill: yellow;
         }
+        
+        .playerprice span {
+            transform: translate(18px, -23px);
+            display: inline-block;
+            min-width: 70px;
+            text-align: center;
+            font-family: Trebuchet MS;
+        }
+        
+        .t1-left,
+        .t2-left,
+        .t3-left,
+        .t4-left {
+            font-family: Trebuchet MS;
+        }
     </style>
     <script>
         function createCookie(name, value, days) {
@@ -177,7 +192,7 @@
         function OpenPopup3(pageUrl, name) {
             if (!document.getElementById('f_Popup3_button')) {
                 var msg = '<figure class="figure figureX border border-3 border-light rounded"><img id="f-mfp-img" class="mb-0" src="' + pageUrl + '" class="figure-img img-fluid"><img class="s_img d-none" src="https://raw.githubusercontent.com/adnanisab/UMYC-Cup-2022/main/sold3.png"></figure>';
-                document.getElementsByTagName("body")[0].insertAdjacentHTML("beforeend", "<button id='f_Popup3_button' type='button' data-bs-toggle='modal' data-bs-target='#f_Popup3' style='display:none;'></button><div class='f_Popup3_box modal fade modal-static' id='f_Popup3' data-bs-backdrop='static' data-bs-keyboard='false' tabindex='-1' aria-labelledby='f_Popup3Label' aria-hidden='true'><div class='modal-dialog modal-dialog-centered modal-dialog-scrollable mx-auto'><div class='modal-content'><button type='button' class='f_Popup3_close btn-close position-absolute' data-bs-dismiss='modal' aria-label='Close'><svg style='transform: scale(1.5);' xmlns='http://www.w3.org/2000/svg' width='32' height='32' fill='#fff' class='bi bi-x-lg' viewBox='0 0 16 16'><path fill-rule='evenodd' d='M13.854 2.146a.5.5 0 0 1 0 .708l-11 11a.5.5 0 0 1-.708-.708l11-11a.5.5 0 0 1 .708 0Z'/><path fill-rule='evenodd' d='M2.146 2.146a.5.5 0 0 0 0 .708l11 11a.5.5 0 0 0 .708-.708l-11-11a.5.5 0 0 0-.708 0Z'/></svg></button><div class='modal-body text-center position-relative' style='white-space: pre-wrap;'>" + msg + "<div class='actionx position-fixed'><b class='solding d-flex justify-content-center' style='cursor: pointer;'><svg style='transform: scale(1.5);' xmlns='http://www.w3.org/2000/svg' width='32' height='32' fill='#fff' class='bi bi-list' viewBox='0 0 16 16'><path fill-rule='evenodd' d='M2.5 12a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5zm0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5zm0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5z'/></svg></b><span class='soldx invisible text-white bg-danger py-2 px-5 d-inline-block rounded-pill me-3 fs-4' data-name='" + name + "'>&nbsp;&nbsp;SOLD&nbsp;&nbsp;</span> <span class='unsoldx invisible text-dark bg-light py-2 px-5 d-inline-block rounded-pill fs-4' data-name='" + name + "'>UNSOLD</span><div class='teamX d-none'><b class='t1'>Team_A</b><b class='t2'>Team_B</b><b class='t3'>Team_C</b><b class='t4'>Team_D</b></div></div></div></div></div><style>.modal-dialog-scrollable .modal-content {max-height: none;overflow:visible;}.modal-body {padding:0;} .f_Popup3_close{right:-1rem;z-index:999;top:-1rem;background-color:#0d6efd;border-radius:50px;padding:1rem;opacity:1;box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.2);background-image:none;color:#fff;display:flex;justify-content:center;align-items:center;font-weight:700;font-size:18px}.f_Popup3_close:hover{color:#fff;background-color: red;opacity:1}.modal-dialog{display:flex;justify-content:center} .modal-content{width:auto;border-width:0} #f-mfp-img{max-height:90vh;max-width: 90vw;} @media (min-width:576px) {.modal-content{width:auto;}.modal-dialog{max-width:800px;}} .modal-content{background:0 0}}</style></div>");
+                document.getElementsByTagName("body")[0].insertAdjacentHTML("beforeend", "<button id='f_Popup3_button' type='button' data-bs-toggle='modal' data-bs-target='#f_Popup3' style='display:none;'></button><div class='f_Popup3_box modal fade modal-static' id='f_Popup3' data-bs-backdrop='static' data-bs-keyboard='false' tabindex='-1' aria-labelledby='f_Popup3Label' aria-hidden='true'><div class='modal-dialog modal-dialog-centered modal-dialog-scrollable mx-auto'><div class='modal-content'><button type='button' class='f_Popup3_close btn-close position-absolute' data-bs-dismiss='modal' aria-label='Close'><svg style='transform: scale(1.5);' xmlns='http://www.w3.org/2000/svg' width='32' height='32' fill='#fff' class='bi bi-x-lg' viewBox='0 0 16 16'><path fill-rule='evenodd' d='M13.854 2.146a.5.5 0 0 1 0 .708l-11 11a.5.5 0 0 1-.708-.708l11-11a.5.5 0 0 1 .708 0Z'/><path fill-rule='evenodd' d='M2.146 2.146a.5.5 0 0 0 0 .708l11 11a.5.5 0 0 0 .708-.708l-11-11a.5.5 0 0 0-.708 0Z'/></svg></button><div class='modal-body text-center position-relative' style='white-space: pre-wrap;'>" + msg + "<div class='actionx position-fixed'><b class='solding d-flex justify-content-center' style='cursor: pointer;'><svg style='transform: scale(1.5);' xmlns='http://www.w3.org/2000/svg' width='32' height='32' fill='#fff' class='bi bi-list' viewBox='0 0 16 16'><path fill-rule='evenodd' d='M2.5 12a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5zm0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5zm0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5z'/></svg></b><span class='soldx invisible text-white bg-danger py-2 px-5 d-inline-block rounded-pill me-3 fs-4' data-name='" + name + "'>&nbsp;&nbsp;SOLD&nbsp;&nbsp;</span> <span class='unsoldx invisible text-dark bg-light py-2 px-5 d-inline-block rounded-pill fs-4' data-name='" + name + "'>UNSOLD</span><div class='price d-none'><input class='priceV p-2 mb-2 text-center fs-3' style='font-family: Trebuchet MS;' type='text'><br><b class='priceSubmit rounded btn px-4 py-2 btn-warning fs-4'>NEXT</b></div><div class='teamX d-none'><b class='t1'>Team_A</b><b class='t2'>Team_B</b><b class='t3'>Team_C</b><b class='t4'>Team_D</b></div></div></div></div></div><style>.modal-dialog-scrollable .modal-content {max-height: none;overflow:visible;}.modal-body {padding:0;} .f_Popup3_close{right:-1rem;z-index:999;top:-1rem;background-color:#0d6efd;border-radius:50px;padding:1rem;opacity:1;box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.2);background-image:none;color:#fff;display:flex;justify-content:center;align-items:center;font-weight:700;font-size:18px}.f_Popup3_close:hover{color:#fff;background-color: red;opacity:1}.modal-dialog{display:flex;justify-content:center} .modal-content{width:auto;border-width:0} #f-mfp-img{max-height:90vh;max-width: 90vw;} @media (min-width:576px) {.modal-content{width:auto;}.modal-dialog{max-width:800px;}} .modal-content{background:0 0}}</style></div>");
                 document.getElementsByClassName('solding')[0].addEventListener('click', function() {
                     document.getElementsByClassName("solding")[0].classList.add("d-none");
                     document.getElementsByClassName("soldx")[0].classList.remove("invisible");
@@ -192,25 +207,30 @@
                     var sx = document.getElementsByClassName('soldx')[0].getAttribute("data-name");
                     document.getElementsByClassName("soldx")[0].classList.add("invisible");
                     document.getElementsByClassName("unsoldx")[0].classList.add("invisible");
-                    document.getElementsByClassName("teamX")[0].classList.remove("d-none");
+                    document.getElementsByClassName("price")[0].classList.remove("d-none");
                     document.getElementsByClassName("figureX")[0].classList.add("sX");
-                    setTimeout(function() {
-                        document.getElementsByClassName("teamX")[0].classList.add("teamXUP");
-                    }, 200);
+                    document.getElementsByClassName('priceSubmit')[0].addEventListener('click', function() {
+                        document.getElementsByClassName("price")[0].classList.add("d-none");
+                        document.getElementsByClassName("teamX")[0].classList.remove("d-none");
+                        setTimeout(function() {
+                            document.getElementsByClassName("teamX")[0].classList.add("teamXUP");
+                        }, 200);
+                    });
+
                     document.getElementsByClassName('t1')[0].addEventListener('click', function() {
-                        createCookie(sx, document.getElementsByClassName('t1')[0].innerHTML.replace(/ /gi, "_"));
+                        createCookie(sx, document.getElementsByClassName('t1')[0].innerHTML.replace(/ /gi, "_") + "@" + document.getElementsByClassName("priceV")[0].value);
                         document.getElementsByClassName('f_Popup3_close')[0].click();
                     });
                     document.getElementsByClassName('t2')[0].addEventListener('click', function() {
-                        createCookie(sx, document.getElementsByClassName('t2')[0].innerHTML.replace(/ /gi, "_"));
+                        createCookie(sx, document.getElementsByClassName('t2')[0].innerHTML.replace(/ /gi, "_") + "@" + document.getElementsByClassName("priceV")[0].value);
                         document.getElementsByClassName('f_Popup3_close')[0].click();
                     });
                     document.getElementsByClassName('t3')[0].addEventListener('click', function() {
-                        createCookie(sx, document.getElementsByClassName('t3')[0].innerHTML.replace(/ /gi, "_"));
+                        createCookie(sx, document.getElementsByClassName('t3')[0].innerHTML.replace(/ /gi, "_") + "@" + document.getElementsByClassName("priceV")[0].value);
                         document.getElementsByClassName('f_Popup3_close')[0].click();
                     });
                     document.getElementsByClassName('t4')[0].addEventListener('click', function() {
-                        createCookie(sx, document.getElementsByClassName('t4')[0].innerHTML.replace(/ /gi, "_"));
+                        createCookie(sx, document.getElementsByClassName('t4')[0].innerHTML.replace(/ /gi, "_") + "@" + document.getElementsByClassName("priceV")[0].value);
                         document.getElementsByClassName('f_Popup3_close')[0].click();
                     });
                 });
@@ -290,22 +310,22 @@
 
         <!-- Team_A -->
         <div id="Team_A" class="row mx-lg-0 mb-5 pb-5 teams">
-            <div class="col-12 rounded-pill bg-danger fw-bold p-3 mb-3 fs-2 ww text-center">Team_A</div>
+            <div class="col-12 rounded-pill bg-danger fw-bold p-3 mb-3 fs-2 ww"><span>Team_A</span><span class="float-end px-3 bg-success rounded-pill">Balance Left: <b class="t1-left">20000</b><b class="t1-leftX d-none">20000</b></span></div>
         </div><br><br><br><br><br><br>
 
         <!-- Team_B -->
         <div id="Team_B" class="row mx-lg-0 my-5 py-5 teams">
-            <div class="col-12 rounded-pill bg-danger fw-bold p-3 mb-3 fs-2 ww text-center">Team_B</div>
+            <div class="col-12 rounded-pill bg-danger fw-bold p-3 mb-3 fs-2 ww text-center"><span>Team_B</span><span class="float-end px-3 bg-success rounded-pill">Balance Left: <b class="t2-left">20000</b><b class="t2-leftX d-none">20000</b></span></div>
         </div><br><br><br><br><br><br>
 
         <!-- Team_C -->
         <div id="Team_C" class="row mx-lg-0 my-5 py-5 teams">
-            <div class="col-12 rounded-pill bg-danger fw-bold p-3 mb-3 fs-2 ww text-center">Team_C</div>
+            <div class="col-12 rounded-pill bg-danger fw-bold p-3 mb-3 fs-2 ww text-center"><span>Team_C</span><span class="float-end px-3 bg-success rounded-pill">Balance Left: <b class="t3-left">20000</b><b class="t3-leftX d-none">20000</b></span></div>
         </div><br><br><br><br><br><br>
 
         <!-- Team_D -->
         <div id="Team_D" class="row mx-lg-0 my-5 py-5 teams">
-            <div class="col-12 rounded-pill bg-danger fw-bold p-3 mb-3 fs-2 ww text-center">Team_D</div>
+            <div class="col-12 rounded-pill bg-danger fw-bold p-3 mb-3 fs-2 ww text-center"><span>Team_D</span><span class="float-end px-3 bg-success rounded-pill">Balance Left: <b class="t4-left">20000</b><b class="t4-leftX d-none">20000</b></span></div>
         </div><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
     </div>
 
@@ -341,36 +361,42 @@
                 var c = a[b].getAttribute("id");
                 if (readCookie(c)) {
                     a[b].classList.add("s");
-                    a[b].setAttribute("data-team", readCookie(c));
+                    a[b].setAttribute("data-team", readCookie(c).split("@").shift());
+                    a[b].setAttribute("data-price", readCookie(c).split("@").pop());
                 } else if (!readCookie(c)) {
                     a[b].classList.remove("s");
                     a[b].removeAttribute("data-team");
+                    a[b].removeAttribute("data-price");
                 }
             }
             var tx = document.getElementsByClassName("s");
             for (var t = 0; t < tx.length; t++) {
                 if (tx[t].getAttribute("data-team") == "Team_A") {
                     var ty = tx[t].getAttribute("id");
+                    var tp = readCookie(ty).split("@").pop();
                     if (document.getElementsByClassName(ty).length == 0) {
-                        document.getElementById("Team_A").insertAdjacentHTML("beforeend", "<div class='" + ty + " col-6 col-lg-3 px-0 teamS' data-player='" + ty + "'><img class='img-fluid' src='https://raw.githubusercontent.com/adnanisab/UMYC-Cup-2022/main/" + ty + ".jpg'></div>");
+                        document.getElementById("Team_A").insertAdjacentHTML("beforeend", "<div class='" + ty + " col-6 col-lg-3 px-0 Team_A teamS' data-player='" + ty + "' data-price='" + tp + "'><img class='img-fluid' src='https://raw.githubusercontent.com/adnanisab/UMYC-Cup-2022/main/" + ty + ".jpg'><div class='playerprice'><span class='bg-warning text-dark px-3 rounded-pill fw-bold'>" + tp + "</span></div></div>");
                     }
                 }
                 if (tx[t].getAttribute("data-team") == "Team_B") {
                     var ty = tx[t].getAttribute("id");
+                    var tp = readCookie(ty).split("@").pop();
                     if (document.getElementsByClassName(ty).length == 0) {
-                        document.getElementById("Team_B").insertAdjacentHTML("beforeend", "<div class='" + ty + " col-6 col-lg-3 px-0 teamS' data-player='" + ty + "'><img class='img-fluid' src='https://raw.githubusercontent.com/adnanisab/UMYC-Cup-2022/main/" + ty + ".jpg'></div>");
+                        document.getElementById("Team_B").insertAdjacentHTML("beforeend", "<div class='" + ty + " col-6 col-lg-3 px-0 Team_B teamS' data-player='" + ty + "' data-price='" + tp + "'><img class='img-fluid' src='https://raw.githubusercontent.com/adnanisab/UMYC-Cup-2022/main/" + ty + ".jpg'><div class='playerprice'><span class='bg-warning text-dark px-3 rounded-pill fw-bold'>" + tp + "</span></div></div>");
                     }
                 }
                 if (tx[t].getAttribute("data-team") == "Team_C") {
                     var ty = tx[t].getAttribute("id");
+                    var tp = readCookie(ty).split("@").pop();
                     if (document.getElementsByClassName(ty).length == 0) {
-                        document.getElementById("Team_C").insertAdjacentHTML("beforeend", "<div class='" + ty + " col-6 col-lg-3 px-0 teamS' data-player='" + ty + "'><img class='img-fluid' src='https://raw.githubusercontent.com/adnanisab/UMYC-Cup-2022/main/" + ty + ".jpg'></div>");
+                        document.getElementById("Team_C").insertAdjacentHTML("beforeend", "<div class='" + ty + " col-6 col-lg-3 px-0 Team_C teamS' data-player='" + ty + "' data-price='" + tp + "'><img class='img-fluid' src='https://raw.githubusercontent.com/adnanisab/UMYC-Cup-2022/main/" + ty + ".jpg'><div class='playerprice'><span class='bg-warning text-dark px-3 rounded-pill fw-bold'>" + tp + "</span></div></div>");
                     }
                 }
                 if (tx[t].getAttribute("data-team") == "Team_D") {
                     var ty = tx[t].getAttribute("id");
+                    var tp = readCookie(ty).split("@").pop();
                     if (document.getElementsByClassName(ty).length == 0) {
-                        document.getElementById("Team_D").insertAdjacentHTML("beforeend", "<div class='" + ty + " col-6 col-lg-3 px-0 teamS' data-player='" + ty + "'><img class='img-fluid' src='https://raw.githubusercontent.com/adnanisab/UMYC-Cup-2022/main/" + ty + ".jpg'></div>");
+                        document.getElementById("Team_D").insertAdjacentHTML("beforeend", "<div class='" + ty + " col-6 col-lg-3 px-0 Team_D teamS' data-player='" + ty + "' data-price='" + tp + "'><img class='img-fluid' src='https://raw.githubusercontent.com/adnanisab/UMYC-Cup-2022/main/" + ty + ".jpg'><div class='playerprice'><span class='bg-warning text-dark px-3 rounded-pill fw-bold'>" + tp + "</span></div></div>");
                     }
                 }
             }
@@ -380,6 +406,41 @@
                     ts[m].remove();
                 }
             }
+
+            /* Balance Left*/
+            var a_Team_A = document.getElementsByClassName("Team_A");
+            if (a_Team_A.length > 0) {
+                var tl_Team_A = 0;
+                for (var ai_Team_A = 0; ai_Team_A < a_Team_A.length; ai_Team_A++) {
+                    tl_Team_A = tl_Team_A + parseInt(a_Team_A[ai_Team_A].getAttribute("data-price"));
+                }
+                document.getElementsByClassName("t1-left")[0].innerHTML = parseInt(document.getElementsByClassName("t1-leftX")[0].innerHTML) - tl_Team_A;
+            }
+            var a_Team_B = document.getElementsByClassName("Team_B");
+            if (a_Team_B.length > 0) {
+                var tl_Team_B = 0;
+                for (var ai_Team_B = 0; ai_Team_B < a_Team_B.length; ai_Team_B++) {
+                    tl_Team_B = tl_Team_B + parseInt(a_Team_B[ai_Team_B].getAttribute("data-price"));
+                }
+                document.getElementsByClassName("t2-left")[0].innerHTML = parseInt(document.getElementsByClassName("t2-leftX")[0].innerHTML) - tl_Team_B;
+            }
+            var a_Team_C = document.getElementsByClassName("Team_C");
+            if (a_Team_C.length > 0) {
+                var tl_Team_C = 0;
+                for (var ai_Team_C = 0; ai_Team_C < a_Team_C.length; ai_Team_C++) {
+                    tl_Team_C = tl_Team_C + parseInt(a_Team_C[ai_Team_C].getAttribute("data-price"));
+                }
+                document.getElementsByClassName("t3-left")[0].innerHTML = parseInt(document.getElementsByClassName("t3-leftX")[0].innerHTML) - tl_Team_C;
+            }
+            var a_Team_D = document.getElementsByClassName("Team_D");
+            if (a_Team_D.length > 0) {
+                var tl_Team_D = 0;
+                for (var ai_Team_D = 0; ai_Team_D < a_Team_D.length; ai_Team_D++) {
+                    tl_Team_D = tl_Team_D + parseInt(a_Team_D[ai_Team_D].getAttribute("data-price"));
+                }
+                document.getElementsByClassName("t4-left")[0].innerHTML = parseInt(document.getElementsByClassName("t4-leftX")[0].innerHTML) - tl_Team_D;
+            }
+
             /* Counting */
             document.getElementsByClassName("totalP")[0].innerHTML = document.getElementsByClassName("player").length;
             if (document.getElementsByClassName("s").length > 0) {
