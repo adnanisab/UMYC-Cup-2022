@@ -172,7 +172,7 @@
 
         function OpenPopup3(pageUrl, name) {
             if (!document.getElementById('f_Popup3_button')) {
-                var msg = '<figure class="figure figureX border border-3 border-light rounded"><img id="f-mfp-img" class="mb-0" src="' + pageUrl + '" class="figure-img img-fluid"><img class="s_img d-none" src="https://raw.githubusercontent.com/adnanisab/UMYC-Cup-2022/main/sold2.png"></figure>';
+                var msg = '<figure class="figure figureX border border-3 border-light rounded"><img id="f-mfp-img" class="mb-0" src="' + pageUrl + '" class="figure-img img-fluid"><img class="s_img d-none" src="https://raw.githubusercontent.com/adnanisab/UMYC-Cup-2022/main/sold3.png"></figure>';
                 document.getElementsByTagName("body")[0].insertAdjacentHTML("beforeend", "<button id='f_Popup3_button' type='button' data-bs-toggle='modal' data-bs-target='#f_Popup3' style='display:none;'></button><div class='f_Popup3_box modal fade modal-static' id='f_Popup3' data-bs-backdrop='static' data-bs-keyboard='false' tabindex='-1' aria-labelledby='f_Popup3Label' aria-hidden='true'><div class='modal-dialog modal-dialog-centered modal-dialog-scrollable mx-auto'><div class='modal-content'><button type='button' class='f_Popup3_close btn-close position-absolute' data-bs-dismiss='modal' aria-label='Close'><svg style='transform: scale(1.5);' xmlns='http://www.w3.org/2000/svg' width='32' height='32' fill='#fff' class='bi bi-x-lg' viewBox='0 0 16 16'><path fill-rule='evenodd' d='M13.854 2.146a.5.5 0 0 1 0 .708l-11 11a.5.5 0 0 1-.708-.708l11-11a.5.5 0 0 1 .708 0Z'/>  <path fill-rule='evenodd' d='M2.146 2.146a.5.5 0 0 0 0 .708l11 11a.5.5 0 0 0 .708-.708l-11-11a.5.5 0 0 0-.708 0Z'/></svg></button><div class='modal-body text-center position-relative' style='white-space: pre-wrap;'>" + msg + "<div class='actionx position-fixed'><span class='soldx text-white bg-danger py-2 px-5 d-inline-block rounded-pill me-3 fs-4' data-name='" + name + "'>&nbsp;&nbsp;SOLD&nbsp;&nbsp;</span> <span class='unsoldx text-dark bg-light py-2 px-5 d-inline-block rounded-pill fs-4' data-name='" + name + "'>UNSOLD</span><div class='teamX d-none'><b class='t1'>Team_A</b><b class='t2'>Team_B</b><b class='t3'>Team_C</b><b class='t4'>Team_D</b></div></div></div></div></div><style>.modal-dialog-scrollable .modal-content {max-height: none;overflow:visible;}.modal-body {padding:0;} .f_Popup3_close{right:-1rem;z-index:999;top:-1rem;background-color:#0d6efd;border-radius:50px;padding:1rem;opacity:1;box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.2);background-image:none;color:#fff;display:flex;justify-content:center;align-items:center;font-weight:700;font-size:18px}.f_Popup3_close:hover{color:#fff;background-color: red;opacity:1}.modal-dialog{display:flex;justify-content:center} .modal-content{width:auto;border-width:0} #f-mfp-img{max-height:90vh;max-width: 90vw;} @media (min-width:576px) {.modal-content{width:auto;}.modal-dialog{max-width:800px;}} .modal-content{background:0 0}}</style></div>");
                 document.getElementById('f_Popup3_button').click();
                 document.getElementsByClassName("t1")[0].innerHTML = document.getElementsByClassName("t1")[0].innerHTML.replace(/_/gi, " ");
@@ -231,8 +231,8 @@
 
         <!--Batsman-->
         <div class="row mx-lg-0 mb-5 pb-5">
-            <div class="col-12 rounded-pill fw-bold p-3 mb-3 fs-2" style="background-color: #324aa0;">
-                Batsman
+            <div class="col-12 rounded-pill fw-bold p-3 mb-3 fs-2 text-center" style="background-color: #324aa0;">
+                <img src="https://raw.githubusercontent.com/adnanisab/UMYC-Cup-2022/main/bat.png" class="img-fluid me-4 bg-danger rounded-pill p-2">BATSMAN
             </div>
             <div id="tamimsema" class="player"></div>
             <div id="salimvali" class="player"></div>
@@ -243,8 +243,8 @@
 
         <!--Bowler-->
         <div class="row mx-lg-0 my-5 py-5">
-            <div class="col-12 rounded-pill fw-bold p-3 mb-3 fs-2" style="background-color: #324aa0;">
-                Bowler
+            <div class="col-12 rounded-pill fw-bold p-3 mb-3 fs-2 text-center" style="background-color: #324aa0;">
+                <img src="https://raw.githubusercontent.com/adnanisab/UMYC-Cup-2022/main/ball2.png" class="img-fluid me-4 bg-danger rounded-pill p-2">BOWLER
             </div>
             <div id="ayaznan" class="player"></div>
             <div id="Bowler" class="player"></div>
@@ -254,8 +254,8 @@
 
         <!--All Rounder-->
         <div class="row mx-lg-0 my-5 py-5">
-            <div class="col-12 rounded-pill fw-bold p-3 mb-3 fs-2" style="background-color: #324aa0;">
-                All Rounder
+            <div class="col-12 rounded-pill fw-bold p-3 mb-3 fs-2 text-center" style="background-color: #324aa0;">
+                <img src="https://raw.githubusercontent.com/adnanisab/UMYC-Cup-2022/main/bat.png" class="img-fluid me-4 bg-danger rounded-pill p-2">ALL ROUNDER<img src="https://raw.githubusercontent.com/adnanisab/UMYC-Cup-2022/main/ball2.png" class="img-fluid ms-4 bg-danger rounded-pill p-2">
             </div>
             <div id="anishgebi" class="player"></div>
             <div id="AllRounder" class="player"></div>
@@ -264,8 +264,8 @@
 
         <!--Wicket Keeper-->
         <div class="row mx-lg-0 my-5 py-5">
-            <div class="col-12 rounded-pill fw-bold p-3 mb-3 fs-2" style="background-color: #324aa0;">
-                Wicket Keeper
+            <div class="col-12 rounded-pill fw-bold p-3 mb-3 fs-2 text-center" style="background-color: #324aa0;">
+                <img src="https://raw.githubusercontent.com/adnanisab/UMYC-Cup-2022/main/wicket.png" class="img-fluid me-4 bg-danger rounded-pill p-2">WICKET KEEPER
             </div>
             <div id="WicketKeeper" class="player"></div>
             <div id="WicketKeeper" class="player"></div>
@@ -281,22 +281,22 @@
 
         <!-- Team_A -->
         <div id="Team_A" class="row mx-lg-0 mb-5 pb-5 teams">
-            <div class="col-12 rounded-pill bg-danger fw-bold p-3 mb-3 fs-2 ww">Team_A</div>
+            <div class="col-12 rounded-pill bg-danger fw-bold p-3 mb-3 fs-2 ww text-center">Team_A</div>
         </div><br><br><br><br><br><br>
 
         <!-- Team_B -->
         <div id="Team_B" class="row mx-lg-0 my-5 py-5 teams">
-            <div class="col-12 rounded-pill bg-danger fw-bold p-3 mb-3 fs-2 ww">Team_B</div>
+            <div class="col-12 rounded-pill bg-danger fw-bold p-3 mb-3 fs-2 ww text-center">Team_B</div>
         </div><br><br><br><br><br><br>
 
         <!-- Team_C -->
         <div id="Team_C" class="row mx-lg-0 my-5 py-5 teams">
-            <div class="col-12 rounded-pill bg-danger fw-bold p-3 mb-3 fs-2 ww">Team_C</div>
+            <div class="col-12 rounded-pill bg-danger fw-bold p-3 mb-3 fs-2 ww text-center">Team_C</div>
         </div><br><br><br><br><br><br>
 
         <!-- Team_D -->
         <div id="Team_D" class="row mx-lg-0 my-5 py-5 teams">
-            <div class="col-12 rounded-pill bg-danger fw-bold p-3 mb-3 fs-2 ww">Team_D</div>
+            <div class="col-12 rounded-pill bg-danger fw-bold p-3 mb-3 fs-2 ww text-center">Team_D</div>
         </div><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
     </div>
 
@@ -322,7 +322,7 @@
         for (var p = 0; p < pr.length; p++) {
             var q = pr[p].getAttribute("id");
             pr[p].classList.add("col-6", "col-lg-4", "px-0")
-            pr[p].insertAdjacentHTML("beforeend", "<img class='img-fluid pl' src='https://raw.githubusercontent.com/adnanisab/UMYC-Cup-2022/main/" + q + ".jpg' onclick=\"OpenPopup3('https://raw.githubusercontent.com/adnanisab/UMYC-Cup-2022/main/" + q + ".jpg','" + q + "')\"><img class='s_img d-none' src='https://raw.githubusercontent.com/adnanisab/UMYC-Cup-2022/main/sold2.png'>");
+            pr[p].insertAdjacentHTML("beforeend", "<img class='img-fluid pl' src='https://raw.githubusercontent.com/adnanisab/UMYC-Cup-2022/main/" + q + ".jpg' onclick=\"OpenPopup3('https://raw.githubusercontent.com/adnanisab/UMYC-Cup-2022/main/" + q + ".jpg','" + q + "')\"><img class='s_img d-none' src='https://raw.githubusercontent.com/adnanisab/UMYC-Cup-2022/main/sold3.png'>");
         }
 
         /* Sold-Unsold*/
