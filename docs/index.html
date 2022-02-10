@@ -423,6 +423,8 @@
                     tl_Team_A = tl_Team_A + parseInt(a_Team_A[ai_Team_A].getAttribute("data-price"));
                 }
                 document.getElementsByClassName("t1-left")[0].innerHTML = parseInt(document.getElementsByClassName("t1-leftX")[0].innerHTML) - tl_Team_A;
+            } else {
+                document.getElementsByClassName("t1-left")[0].innerHTML = parseInt(document.getElementsByClassName("t1-leftX")[0].innerHTML);
             }
             var a_Team_B = document.getElementsByClassName("Team_B");
             if (a_Team_B.length > 0) {
@@ -431,6 +433,8 @@
                     tl_Team_B = tl_Team_B + parseInt(a_Team_B[ai_Team_B].getAttribute("data-price"));
                 }
                 document.getElementsByClassName("t2-left")[0].innerHTML = parseInt(document.getElementsByClassName("t2-leftX")[0].innerHTML) - tl_Team_B;
+            } else {
+                document.getElementsByClassName("t2-left")[0].innerHTML = parseInt(document.getElementsByClassName("t2-leftX")[0].innerHTML);
             }
             var a_Team_C = document.getElementsByClassName("Team_C");
             if (a_Team_C.length > 0) {
@@ -439,6 +443,8 @@
                     tl_Team_C = tl_Team_C + parseInt(a_Team_C[ai_Team_C].getAttribute("data-price"));
                 }
                 document.getElementsByClassName("t3-left")[0].innerHTML = parseInt(document.getElementsByClassName("t3-leftX")[0].innerHTML) - tl_Team_C;
+            } else {
+                document.getElementsByClassName("t3-left")[0].innerHTML = parseInt(document.getElementsByClassName("t3-leftX")[0].innerHTML);
             }
             var a_Team_D = document.getElementsByClassName("Team_D");
             if (a_Team_D.length > 0) {
@@ -447,6 +453,8 @@
                     tl_Team_D = tl_Team_D + parseInt(a_Team_D[ai_Team_D].getAttribute("data-price"));
                 }
                 document.getElementsByClassName("t4-left")[0].innerHTML = parseInt(document.getElementsByClassName("t4-leftX")[0].innerHTML) - tl_Team_D;
+            } else {
+                document.getElementsByClassName("t4-left")[0].innerHTML = parseInt(document.getElementsByClassName("t4-leftX")[0].innerHTML);
             }
 
             /* Counting */
