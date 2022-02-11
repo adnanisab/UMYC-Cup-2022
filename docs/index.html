@@ -5,7 +5,6 @@
     <!-- Required meta tags -->
     <link rel="shortcut icon" href="https://raw.githubusercontent.com/adnanisab/UMYC-Cup-2022/main/favicon.ico">
     <meta charset="utf-8">
-    <!-- <meta http-equiv="refresh" content="30"> -->
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta property="og:image" content="https://raw.githubusercontent.com/adnanisab/UMYC-Cup-2022/main/sharelogo.jpg" />
     <meta name="twitter:card" content="summary_large_image" />
@@ -212,6 +211,12 @@
         .BookMark:hover {
             opacity: 1;
         }
+        
+        .Big {
+            transform: scale(1.05);
+            opacity: 0.5;
+            transition: 100ms ease-in-out;
+        }
     </style>
     <script>
         function createCookie(name, value, days) {
@@ -293,6 +298,22 @@
                     document.getElementsByClassName('f_Popup3_box')[0].remove();
                 });
             }
+        }
+
+        function myFunction(a) {
+            /* Get the text field */
+            var b = a + "$COPY";
+            var copyText = document.getElementById(b);
+            /* Select the text field */
+            copyText.select();
+            copyText.setSelectionRange(0, 99999); /* For mobile devices */
+
+            /* Copy the text inside the text field */
+            navigator.clipboard.writeText(copyText.value);
+            document.getElementsByClassName(a)[0].classList.add("Big");
+            setTimeout(function() {
+                document.getElementsByClassName(a)[0].classList.remove("Big");
+            }, 200)
         }
     </script>
 </head>
@@ -457,28 +478,28 @@
                     var ty = tx[t].getAttribute("id");
                     var tp = readCookie(ty).split("@").pop();
                     if (document.getElementsByClassName(ty).length == 0) {
-                        document.getElementById("Team_A").insertAdjacentHTML("beforeend", "<div class='" + ty + " col-6 col-lg-3 px-0 Team_A teamS' data-player='" + ty + "' data-price='" + tp + "'><img class='img-fluid' src='https://raw.githubusercontent.com/adnanisab/UMYC-Cup-2022/main/" + ty + ".jpg'><div class='playerprice'><span class='bg-warning text-dark px-3 rounded-pill fw-bold'>" + tp + "</span></div></div>");
+                        document.getElementById("Team_A").insertAdjacentHTML("beforeend", "<div class='" + ty + " col-6 col-lg-3 px-0 Team_A teamS' data-player='" + ty + "' data-price='" + tp + "' onclick='myFunction(\"" + ty + "\")'><input id='" + ty + "$COPY' type='text' class='CopyTeam d-none' value='" + ty + "@" + tp + "'><img class='img-fluid' src='https://raw.githubusercontent.com/adnanisab/UMYC-Cup-2022/main/" + ty + ".jpg'><div class='playerprice'><span class='bg-warning text-dark px-3 rounded-pill fw-bold'>" + tp + "</span></div></div>");
                     }
                 }
                 if (tx[t].getAttribute("data-team") == "Team_B") {
                     var ty = tx[t].getAttribute("id");
                     var tp = readCookie(ty).split("@").pop();
                     if (document.getElementsByClassName(ty).length == 0) {
-                        document.getElementById("Team_B").insertAdjacentHTML("beforeend", "<div class='" + ty + " col-6 col-lg-3 px-0 Team_B teamS' data-player='" + ty + "' data-price='" + tp + "'><img class='img-fluid' src='https://raw.githubusercontent.com/adnanisab/UMYC-Cup-2022/main/" + ty + ".jpg'><div class='playerprice'><span class='bg-warning text-dark px-3 rounded-pill fw-bold'>" + tp + "</span></div></div>");
+                        document.getElementById("Team_B").insertAdjacentHTML("beforeend", "<div class='" + ty + " col-6 col-lg-3 px-0 Team_B teamS' data-player='" + ty + "' data-price='" + tp + "' onclick='myFunction(\"" + ty + "\")'><input id='" + ty + "$COPY' type='text' class='CopyTeam d-none' value='" + ty + "@" + tp + "'><img class='img-fluid' src='https://raw.githubusercontent.com/adnanisab/UMYC-Cup-2022/main/" + ty + ".jpg'><div class='playerprice'><span class='bg-warning text-dark px-3 rounded-pill fw-bold'>" + tp + "</span></div></div>");
                     }
                 }
                 if (tx[t].getAttribute("data-team") == "Team_C") {
                     var ty = tx[t].getAttribute("id");
                     var tp = readCookie(ty).split("@").pop();
                     if (document.getElementsByClassName(ty).length == 0) {
-                        document.getElementById("Team_C").insertAdjacentHTML("beforeend", "<div class='" + ty + " col-6 col-lg-3 px-0 Team_C teamS' data-player='" + ty + "' data-price='" + tp + "'><img class='img-fluid' src='https://raw.githubusercontent.com/adnanisab/UMYC-Cup-2022/main/" + ty + ".jpg'><div class='playerprice'><span class='bg-warning text-dark px-3 rounded-pill fw-bold'>" + tp + "</span></div></div>");
+                        document.getElementById("Team_C").insertAdjacentHTML("beforeend", "<div class='" + ty + " col-6 col-lg-3 px-0 Team_C teamS' data-player='" + ty + "' data-price='" + tp + "' onclick='myFunction(\"" + ty + "\")'><input id='" + ty + "$COPY' type='text' class='CopyTeam d-none' value='" + ty + "@" + tp + "'><img class='img-fluid' src='https://raw.githubusercontent.com/adnanisab/UMYC-Cup-2022/main/" + ty + ".jpg'><div class='playerprice'><span class='bg-warning text-dark px-3 rounded-pill fw-bold'>" + tp + "</span></div></div>");
                     }
                 }
                 if (tx[t].getAttribute("data-team") == "Team_D") {
                     var ty = tx[t].getAttribute("id");
                     var tp = readCookie(ty).split("@").pop();
                     if (document.getElementsByClassName(ty).length == 0) {
-                        document.getElementById("Team_D").insertAdjacentHTML("beforeend", "<div class='" + ty + " col-6 col-lg-3 px-0 Team_D teamS' data-player='" + ty + "' data-price='" + tp + "'><img class='img-fluid' src='https://raw.githubusercontent.com/adnanisab/UMYC-Cup-2022/main/" + ty + ".jpg'><div class='playerprice'><span class='bg-warning text-dark px-3 rounded-pill fw-bold'>" + tp + "</span></div></div>");
+                        document.getElementById("Team_D").insertAdjacentHTML("beforeend", "<div class='" + ty + " col-6 col-lg-3 px-0 Team_D teamS' data-player='" + ty + "' data-price='" + tp + "' onclick='myFunction(\"" + ty + "\")'><input id='" + ty + "$COPY' type='text' class='CopyTeam d-none' value='" + ty + "@" + tp + "'><img class='img-fluid' src='https://raw.githubusercontent.com/adnanisab/UMYC-Cup-2022/main/" + ty + ".jpg'><div class='playerprice'><span class='bg-warning text-dark px-3 rounded-pill fw-bold'>" + tp + "</span></div></div>");
                     }
                 }
             }
