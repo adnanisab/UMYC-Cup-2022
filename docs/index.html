@@ -19,7 +19,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Voltaire&display=swap" rel="stylesheet">
     <title>UMYC CUP - 2022 | Auction</title>
     <style>
-    .s,
+        .s,
         .sX {
             position: relative;
         }
@@ -169,7 +169,49 @@
             justify-content: center;
             align-items: center;
         }
-    }
+        
+        .BookMark svg {
+            cursor: pointer;
+        }
+        
+        .BookMark {
+            position: fixed;
+            bottom: 5px;
+            left: 5px;
+        }
+        
+        .links img {
+            max-height: 40px;
+        }
+        
+        .links a {
+            margin-left: 2rem;
+            text-decoration: none;
+            color: white;
+            line-height: 40px;
+        }
+        
+        .bg-purple-hover:hover {
+            background-color: #7952b3 !important;
+        }
+        
+        .links a:hover {
+            opacity: 1;
+        }
+        
+        .open:hover,
+        .close:hover {
+            fill: white;
+            opacity: 1 !important;
+        }
+        
+        .BookMark {
+            opacity: 0;
+        }
+        
+        .BookMark:hover {
+            opacity: 1;
+        }
     </style>
     <script>
         function createCookie(name, value, days) {
@@ -349,7 +391,39 @@
             <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br></p>
     <p class="bg-body py-5 fs-2 text-dark text-center fw-bold fs-3"><br><br><br><br>
         <br<br><br><br><br><br><br><br><br><br><br><br><br><span class="display-3">END OF AUCTION</span><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br></p>
+
+    <div class="BookMark" style="user-select: none;">
+        <svg style='transform: scale(1.5);' xmlns='http://www.w3.org/2000/svg' width='32' height='32' fill='#000' class='bi bi-list open' viewBox='0 0 16 16'><path fill-rule='evenodd' d='M2.5 12a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5zm0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5zm0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5z'/></svg>
+        <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" fill="#000" class="bi bi-x-lg close d-none" viewBox="0 0 16 16">
+            <path fill-rule="evenodd" d="M13.854 2.146a.5.5 0 0 1 0 .708l-11 11a.5.5 0 0 1-.708-.708l11-11a.5.5 0 0 1 .708 0Z"/>
+            <path fill-rule="evenodd" d="M2.146 2.146a.5.5 0 0 0 0 .708l11 11a.5.5 0 0 0 .708-.708l-11-11a.5.5 0 0 0-.708 0Z"/>
+          </svg>
+        <span class="links d-none">
+            <a href="#BatsmanList"><img src="https://raw.githubusercontent.com/adnanisab/UMYC-Cup-2022/main/bat.png" class="img-fluid bg-dark rounded-pill p-2 bg-purple-hover"></a>
+            <a href="#BowlerList"><img src="https://raw.githubusercontent.com/adnanisab/UMYC-Cup-2022/main/ball.png" class="img-fluid bg-dark rounded-pill p-2 bg-purple-hover"></a>
+            <a href="#ARList"><img src="https://raw.githubusercontent.com/adnanisab/UMYC-Cup-2022/main/bat.png" class="img-fluid bg-dark rounded-pill p-2 position-absolute bg-purple-hover" style="margin-left: 20px;"><img src="https://raw.githubusercontent.com/adnanisab/UMYC-Cup-2022/main/ball.png" class="img-fluid me-4 bg-dark rounded-pill p-2 bg-purple-hover"></a>
+            <a href="#WKList"><img src="https://raw.githubusercontent.com/adnanisab/UMYC-Cup-2022/main/wicket.png" class="img-fluid bg-dark rounded-pill p-2"></a>
+            <div class="ms-5 float-end d-inline-block">
+            <a href="#Team_A" class="bg-dark p-2 rounded-pill bg-purple-hover">Team_A</a>
+            <a href="#Team_B" class="bg-dark p-2 rounded-pill bg-purple-hover">Team_B</a>
+            <a href="#Team_C" class="bg-dark p-2 rounded-pill bg-purple-hover">Team_C</a>
+            <a href="#Team_D" class="bg-dark p-2 rounded-pill bg-purple-hover">Team_D</a>
+            </div>
+        </span>
+    </div>
     <script>
+        /* Menu Bar */
+        document.getElementsByClassName('open')[0].addEventListener('click', function() {
+            document.getElementsByClassName("open")[0].classList.add("d-none");
+            document.getElementsByClassName("close")[0].classList.remove("d-none");
+            document.getElementsByClassName("links")[0].classList.remove("d-none");
+        });
+        document.getElementsByClassName('close')[0].addEventListener('click', function() {
+            document.getElementsByClassName("close")[0].classList.add("d-none");
+            document.getElementsByClassName("open")[0].classList.remove("d-none");
+            document.getElementsByClassName("links")[0].classList.add("d-none");
+        });
+
         /* Activate Auction*/
         if (window.location.href.indexOf("?auction") != -1) {
             document.getElementsByClassName("aBody")[0].classList.remove("aDisable");
