@@ -560,36 +560,38 @@
         /* Select Random */
         document.getElementsByClassName('selectX')[0].addEventListener('click', function() {
             var f = document.getElementsByClassName("find");
-            var fx = Math.floor(Math.random() * f.length);
-            var nm = f[fx].getAttribute("id");
-            document.getElementsByClassName("randomBox")[0].classList.remove("d-none");
-            document.getElementsByClassName("selectY")[0].innerHTML = "";
-            setTimeout(function() {
-                document.getElementsByClassName("selectY")[0].innerHTML = "3";
-            }, 500);
-            setTimeout(function() {
+            if (f.length > 0) {
+                var fx = Math.floor(Math.random() * f.length);
+                var nm = f[fx].getAttribute("id");
+                document.getElementsByClassName("randomBox")[0].classList.remove("d-none");
                 document.getElementsByClassName("selectY")[0].innerHTML = "";
-            }, 1300);
-            setTimeout(function() {
-                document.getElementsByClassName("selectY")[0].innerHTML = "2";
-            }, 1500);
-            setTimeout(function() {
-                document.getElementsByClassName("selectY")[0].innerHTML = "";
-            }, 2300);
-            setTimeout(function() {
-                document.getElementsByClassName("selectY")[0].innerHTML = "1";
-            }, 2500);
-            setTimeout(function() {
-                document.getElementById(nm).childNodes[0].click();
                 setTimeout(function() {
-                    document.getElementsByClassName("randomBox")[0].classList.add("d-none");
-                }, 1000);
-            }, 3000);
-            // window.location.href = "#" + nm;
-            // f[fx].classList.add("found");
-            // setTimeout(function() {
-            //     f[fx].classList.remove("found");
-            // }, 5000);
+                    document.getElementsByClassName("selectY")[0].innerHTML = "3";
+                }, 500);
+                setTimeout(function() {
+                    document.getElementsByClassName("selectY")[0].innerHTML = "";
+                }, 1300);
+                setTimeout(function() {
+                    document.getElementsByClassName("selectY")[0].innerHTML = "2";
+                }, 1500);
+                setTimeout(function() {
+                    document.getElementsByClassName("selectY")[0].innerHTML = "";
+                }, 2300);
+                setTimeout(function() {
+                    document.getElementsByClassName("selectY")[0].innerHTML = "1";
+                }, 2500);
+                setTimeout(function() {
+                    document.getElementById(nm).childNodes[0].click();
+                    setTimeout(function() {
+                        document.getElementsByClassName("randomBox")[0].classList.add("d-none");
+                    }, 1000);
+                }, 3000);
+                // window.location.href = "#" + nm;
+                // f[fx].classList.add("found");
+                // setTimeout(function() {
+                //     f[fx].classList.remove("found");
+                // }, 5000);
+            }
         });
 
         /* Menu Bar */
