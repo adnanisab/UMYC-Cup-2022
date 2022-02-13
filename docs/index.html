@@ -680,7 +680,9 @@
                     a[b].setAttribute("data-price", readCookie(c).split("@").pop());
                 } else if (!readCookie(c)) {
                     a[b].classList.remove("s");
-                    a[b].classList.add("find");
+                    if (!a[b].classList.contains("usx")) {
+                        a[b].classList.add("find");
+                    }
                     a[b].removeAttribute("data-team");
                     a[b].removeAttribute("data-price");
                 }
