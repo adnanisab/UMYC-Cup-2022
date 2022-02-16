@@ -347,7 +347,7 @@
         function OpenPopup3(pageUrl, name, price) {
             if (!document.getElementById('f_Popup3_button')) {
                 var msg = '<figure class="figure figureX border border-3 border-light rounded"><img id="f-mfp-img" class="mb-0" src="' + pageUrl + '" class="figure-img img-fluid"><img class="s_img d-none" src="https://raw.githubusercontent.com/adnanisab/UMYC-Cup-2022/main/sold3.png"></figure>';
-                document.getElementsByTagName("body")[0].insertAdjacentHTML("beforeend", "<button id='f_Popup3_button' type='button' data-bs-toggle='modal' data-bs-target='#f_Popup3' style='display:none;'></button><div class='f_Popup3_box modal fade modal-static' id='f_Popup3' data-bs-backdrop='static' data-bs-keyboard='false' tabindex='-1' aria-labelledby='f_Popup3Label' aria-hidden='true'><div class='modal-dialog modal-dialog-centered modal-dialog-scrollable mx-auto'><div class='modal-content'><button type='button' class='f_Popup3_close btn-close position-absolute' data-bs-dismiss='modal' aria-label='Close'><svg style='transform: scale(1.5);' xmlns='http://www.w3.org/2000/svg' width='32' height='32' fill='#fff' class='bi bi-x-lg' viewBox='0 0 16 16'><path fill-rule='evenodd' d='M13.854 2.146a.5.5 0 0 1 0 .708l-11 11a.5.5 0 0 1-.708-.708l11-11a.5.5 0 0 1 .708 0Z'/><path fill-rule='evenodd' d='M2.146 2.146a.5.5 0 0 0 0 .708l11 11a.5.5 0 0 0 .708-.708l-11-11a.5.5 0 0 0-.708 0Z'/></svg></button><div class='modal-body text-center position-relative' style='white-space: pre-wrap;'>" + msg + "<div class='actionx position-fixed'><b class='solding d-none justify-content-center' style='cursor: pointer;'><svg style='transform: scale(1.5);' xmlns='http://www.w3.org/2000/svg' width='32' height='32' fill='#fff' class='bi bi-list' viewBox='0 0 16 16'><path fill-rule='evenodd' d='M2.5 12a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5zm0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5zm0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5z'/></svg></b><span class='soldx invisible text-white bg-danger py-2 px-5 d-inline-block rounded-pill me-3 fs-4' data-name='" + name + "'>&nbsp;&nbsp;SOLD&nbsp;&nbsp;</span> <span class='unsoldx invisible text-dark bg-light py-2 px-5 d-inline-block rounded-pill fs-4' data-name='" + name + "'>UNSOLD</span><div class='price upGo'><b class='unsoldx2 rounded-pill btn px-4 py-2 btn-danger fs-4' data-name='" + name + "'>UNSOLD</b><strong class='cus-strong d-inline-block bg-primary mx-3 p-2 rounded-pill'><b class='fs-2 ps-2'><more class='changeBid'>Base Price</more><svg xmlns='http://www.w3.org/2000/svg' data-bid='100' width='32' height='32' fill='#ffc107' class='cus-bid bi bi-arrow-right-square-fill ms-4' viewBox='0 0 16 16'><path d='M0 14a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V2a2 2 0 0 0-2-2H2a2 2 0 0 0-2 2v12zm4.5-6.5h5.793L8.146 5.354a.5.5 0 1 1 .708-.708l3 3a.5.5 0 0 1 0 .708l-3 3a.5.5 0 0 1-.708-.708L10.293 8.5H4.5a.5.5 0 0 1 0-1z'/></svg></b><input value='" + price + "' class='priceV text-center fs-2' style='font-family: Trebuchet MS;' type='number'  maxlength='6' size='6'></strong><b class='priceSubmit rounded-pill btn px-4 py-2 btn-warning fs-4' data-name='" + name + "'>&nbsp;&nbsp;SOLD&nbsp;&nbsp;</b></div><div class='teamX d-none'><b class='t1' data-team='UMAR_DADABHAI_LIONS'>UMAR_DADABHAI_LIONS</b><b class='t2' data-team='ALABHAI_TEAM'>ALABHAI_TEAM</b><b class='t3' data-team='SIDDIK_MEMON_TEAM'>SIDDIK_MEMON_TEAM</b><b class='t4' data-team='FRESH_N_PURE_UK'>FRESH_N_PURE_UK</b></div></div></div></div></div><style>.modal-dialog-scrollable .modal-content {max-height: none;overflow:visible;}.modal-body {padding:0;} .f_Popup3_close{right:-1rem;z-index:999;top:-1rem;background-color:#0d6efd;border-radius:50px;padding:1rem;opacity:1;box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.2);background-image:none;color:#fff;display:flex;justify-content:center;align-items:center;font-weight:700;font-size:18px}.f_Popup3_close:hover{color:#fff;background-color: red;opacity:1}.modal-dialog{display:flex;justify-content:center} .modal-content{width:auto;border-width:0} #f-mfp-img{max-height:90vh;max-width: 90vw;} @media (min-width:576px) {.modal-content{width:auto;}.modal-dialog{max-width:800px;}} .modal-content{background:0 0}}</style></div>");
+                document.getElementsByTagName("body")[0].insertAdjacentHTML("beforeend", "<button id='f_Popup3_button' type='button' data-bs-toggle='modal' data-bs-target='#f_Popup3' style='display:none;'></button><div class='f_Popup3_box modal fade modal-static' id='f_Popup3' data-bs-backdrop='static' data-bs-keyboard='false' tabindex='-1' aria-labelledby='f_Popup3Label' aria-hidden='true'><div class='modal-dialog modal-dialog-centered modal-dialog-scrollable mx-auto'><div class='modal-content'><button type='button' class='f_Popup3_close btn-close position-absolute' data-bs-dismiss='modal' aria-label='Close'><svg style='transform: scale(1.5);' xmlns='http://www.w3.org/2000/svg' width='32' height='32' fill='#fff' class='bi bi-x-lg' viewBox='0 0 16 16'><path fill-rule='evenodd' d='M13.854 2.146a.5.5 0 0 1 0 .708l-11 11a.5.5 0 0 1-.708-.708l11-11a.5.5 0 0 1 .708 0Z'/><path fill-rule='evenodd' d='M2.146 2.146a.5.5 0 0 0 0 .708l11 11a.5.5 0 0 0 .708-.708l-11-11a.5.5 0 0 0-.708 0Z'/></svg></button><div class='modal-body text-center position-relative' style='white-space: pre-wrap;'>" + msg + "<div class='actionx position-fixed'><b class='solding d-none justify-content-center' style='cursor: pointer;'><svg style='transform: scale(1.5);' xmlns='http://www.w3.org/2000/svg' width='32' height='32' fill='#fff' class='bi bi-list' viewBox='0 0 16 16'><path fill-rule='evenodd' d='M2.5 12a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5zm0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5zm0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5z'/></svg></b><span class='soldx invisible text-white bg-danger py-2 px-5 d-inline-block rounded-pill me-3 fs-4' data-name='" + name + "'>&nbsp;&nbsp;SOLD&nbsp;&nbsp;</span> <span class='unsoldx invisible text-dark bg-light py-2 px-5 d-inline-block rounded-pill fs-4' data-name='" + name + "'>UNSOLD</span><div class='price upGo'><b class='unsoldx2 rounded-pill btn px-4 py-2 btn-danger fs-4' data-name='" + name + "'>UNSOLD</b><strong class='cus-strong d-inline-block bg-primary mx-3 p-2 rounded-pill'><b class='fs-2 ps-2'><more class='changeBid'>Base Price</more><svg xmlns='http://www.w3.org/2000/svg' data-bid='100' width='32' height='32' fill='#ffc107' class='cus-bid bi bi-arrow-right-square-fill ms-4' viewBox='0 0 16 16'><path d='M0 14a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V2a2 2 0 0 0-2-2H2a2 2 0 0 0-2 2v12zm4.5-6.5h5.793L8.146 5.354a.5.5 0 1 1 .708-.708l3 3a.5.5 0 0 1 0 .708l-3 3a.5.5 0 0 1-.708-.708L10.293 8.5H4.5a.5.5 0 0 1 0-1z'/></svg></b><input value='" + price + "' class='priceV text-center fs-2' style='font-family: Trebuchet MS;' type='number'  maxlength='6' size='6'></strong><b class='priceSubmit rounded-pill btn px-4 py-2 btn-warning fs-4' data-name='" + name + "'>&nbsp;&nbsp;SOLD&nbsp;&nbsp;</b></div><div class='teamX d-none'><b class='t1' data-team='UMAR_DADABHAI_LIONS'>UMAR_DADABHAI_LIONS</b><b class='t2' data-team='ALABHAI_TEAM'>ALABHAI_TEAM</b><b class='t3' data-team='UMYC_STARS'>UMYC_STARS</b><b class='t4' data-team='FRESH_N_PURE_UK'>FRESH_N_PURE_UK</b></div></div></div></div></div><style>.modal-dialog-scrollable .modal-content {max-height: none;overflow:visible;}.modal-body {padding:0;} .f_Popup3_close{right:-1rem;z-index:999;top:-1rem;background-color:#0d6efd;border-radius:50px;padding:1rem;opacity:1;box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.2);background-image:none;color:#fff;display:flex;justify-content:center;align-items:center;font-weight:700;font-size:18px}.f_Popup3_close:hover{color:#fff;background-color: red;opacity:1}.modal-dialog{display:flex;justify-content:center} .modal-content{width:auto;border-width:0} #f-mfp-img{max-height:90vh;max-width: 90vw;} @media (min-width:576px) {.modal-content{width:auto;}.modal-dialog{max-width:800px;}} .modal-content{background:0 0}}</style></div>");
                 document.getElementById('f_Popup3_button').click();
                 var sx = document.getElementsByClassName('soldx')[0].getAttribute("data-name");
                 // document.getElementsByClassName('solding')[0].addEventListener('click', function() {
@@ -460,6 +460,7 @@
             <div class="col-12 rounded-pill fw-bold p-3 mb-3 fs-2" style="background-color: #324aa0;">
                 <img src="https://raw.githubusercontent.com/adnanisab/UMYC-Cup-2022/main/bat.png" class="img-fluid me-4 bg-danger rounded-pill p-2">BATSMAN
             </div>
+            <div id="Suleman-Gebi" class="player find" data-base-price="500"></div>
             <div id="Tamim-Sema" class="player find" data-base-price="500"></div>
             <div id="Jilaan-Popat" class="player find" data-base-price="500"></div>
             <div id="Anzal-Gebi" class="player find" data-base-price="500"></div>
@@ -470,16 +471,21 @@
             <div id="Salim-Vali" class="player find" data-base-price="500"></div>
             <div id="Saffan-Vali" class="player find" data-base-price="500"></div>
             <div id="Adnan-Isab" class="player find" data-base-price="500"></div>
+            <div id="Sakib-Nan" class="player find" data-base-price="500"></div>
             <div id="Hafiz-Fahad-Vali" class="player find" data-base-price="500"></div>
+            <div id="Juned-Abuji" class="player find" data-base-price="500"></div>
             <div id="Mukit-Shaikh" class="player find" data-base-price="500"></div>
             <div id="Laiq-Shaikh" class="player find" data-base-price="500"></div>
             <div id="Talha-Khalil" class="player find" data-base-price="500"></div>
             <div id="Mudassar-Kanyat" class="player find" data-base-price="500"></div>
             <div id="Yusuf-Maniar" class="player find" data-base-price="500"></div>
             <div id="Ramzan-Gebi" class="player find" data-base-price="500"></div>
+            <div id="Mubassir-Nanabhai" class="player find" data-base-price="500"></div>
+            <div id="Imran-Popat" class="player find" data-base-price="500"></div>
             <div id="Saffan-Bhindiwala" class="player find" data-base-price="500"></div>
             <div id="Iktedar-Shaikh" class="player find" data-base-price="500"></div>
             <div id="Muktedar-Shaikh" class="player find" data-base-price="500"></div>
+            <div id="Adnan-S-Barafwala" class="player find" data-base-price="500"></div>
             <div id="Farhan-Nan" class="player find" data-base-price="500"></div>
             <div id="Firoz-Multani" class="player find" data-base-price="500"></div>
         </div><br><br><br><br><br><br>
@@ -492,6 +498,7 @@
             </div>
             <div id="Mahruf-Sema" class="player find" data-base-price="500"></div>
             <div id="Ayaz-Nan" class="player find" data-base-price="500"></div>
+            <div id="Mahmud-Dadabhai" class="player find" data-base-price="500"></div>
         </div><br><br><br><br><br><br>
         <!--/Bowler-->
 
@@ -506,8 +513,10 @@
             <div id="Shahbaz-Nan" class="player find" data-base-price="500"></div>
             <div id="Ajmal-Sema" class="player find" data-base-price="500"></div>
             <div id="Muzammil-Maniar" class="player find" data-base-price="500"></div>
-            <div id="Ayan-Shaikh" class="player find" data-base-price="500"></div>
+            <div id="Abdul-Ayaaz-Shaikh" class="player find" data-base-price="500"></div>
             <div id="Muzassim-Gebi" class="player find" data-base-price="500"></div>
+            <div id="Arshil-Damanvala" class="player find" data-base-price="500"></div>
+            <div id="Arshad-Abuji" class="player find" data-base-price="500"></div>
             <div id="Mohammad-Gebi" class="player find" data-base-price="500"></div>
             <div id="Munib-Shaikh" class="player find" data-base-price="500"></div>
             <div id="Ayyan-M-Shaikh" class="player find" data-base-price="500"></div>
@@ -525,6 +534,7 @@
                 <img src="https://raw.githubusercontent.com/adnanisab/UMYC-Cup-2022/main/wicket.png" class="img-fluid me-4 bg-danger rounded-pill p-2">WICKET KEEPER
             </div>
             <div id="Asfak-Nan" class="player find" data-base-price="500"></div>
+            <div id="Haifz-Siddiq-Gandhi" class="player find" data-base-price="500"></div>
         </div><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
         <!--/Wicket Keeper-->
     </div>
@@ -544,9 +554,9 @@
             <div class="col-12 rounded-pill bg-danger fw-bold p-3 mb-3 fs-2 ww"><span>ALABHAI_TEAM</span><span class="float-end px-3 bg-success rounded-pill">Balance Left: <b class="t2-left">50000</b><b class="t2-leftX d-none">50000</b></span></div>
         </div><br><br><br><br><br><br>
 
-        <!-- SIDDIK_MEMON_TEAM -->
-        <div id="SIDDIK_MEMON_TEAM" class="row mx-lg-0 my-5 py-5 teams">
-            <div class="col-12 rounded-pill bg-danger fw-bold p-3 mb-3 fs-2 ww"><span>SIDDIK_MEMON_TEAM</span><span class="float-end px-3 bg-success rounded-pill">Balance Left: <b class="t3-left">50000</b><b class="t3-leftX d-none">50000</b></span></div>
+        <!-- UMYC_STARS -->
+        <div id="UMYC_STARS" class="row mx-lg-0 my-5 py-5 teams">
+            <div class="col-12 rounded-pill bg-danger fw-bold p-3 mb-3 fs-2 ww"><span>UMYC_STARS</span><span class="float-end px-3 bg-success rounded-pill">Balance Left: <b class="t3-left">50000</b><b class="t3-leftX d-none">50000</b></span></div>
         </div><br><br><br><br><br><br>
 
         <!-- FRESH_N_PURE_UK -->
@@ -563,8 +573,8 @@
     <p id="auctionStatus" class="bg-body py-5 text-dark text-center fw-bold fs-3"><br>
         <br>
         <div class="row text-white fs-1 border border-warning border-3 text-center border px-3 py-5 bg-dark rounded-pill mx-0 justify-content-center">
-            <div class="col-12 display-3 mb-5 text-warning">AUCTION STATUS</div>
-            <div class="total col-12 display-3 mb-5 text-warning d-none">TOTAL PLAYERS <span class="totalP text-dark bg-body rounded-pill px-3" style="font-family: Trebuchet MS;"></span></div>
+            <div class="col-12 display-3 mb-5 text-warning d-none">AUCTION STATUS</div>
+            <div class="total col-12 display-3 mb-5 text-warning">TOTAL PLAYERS <span class="totalP text-dark bg-body rounded-pill px-3" style="font-family: Trebuchet MS;"></span></div>
             <div class="soldC col-4 bg-success rounded-pill py-4">SOLD<span class="soldP ms-2 text-dark bg-body rounded-pill px-3" style="font-family: Trebuchet MS;"></span></div>
             <div class="col-1">&nbsp;</div>
             <div class="unsoldC col-4 bg-danger rounded-pill py-4">UNSOLD<span class="unsoldP ms-2 text-dark bg-body rounded-pill px-3" style="font-family: Trebuchet MS;"></span></div>
@@ -594,7 +604,7 @@
             <div class="ms-5 float-end d-inline-block">
             <a href="#UMAR_DADABHAI_LIONS" class="bg-dark p-2 rounded-pill bg-red-hover">UMAR DADABHAI LIONS</a>
             <a href="#ALABHAI_TEAM" class="bg-dark p-2 rounded-pill bg-red-hover">ALABHAI_TEAM</a>
-            <a href="#SIDDIK_MEMON_TEAM" class="bg-dark p-2 rounded-pill bg-red-hover">SIDDIK_MEMON_TEAM</a>
+            <a href="#UMYC_STARS" class="bg-dark p-2 rounded-pill bg-red-hover">UMYC_STARS</a>
             <a href="#FRESH_N_PURE_UK" class="bg-dark p-2 rounded-pill bg-red-hover">FRESH_N_PURE_UK</a>
             </div>
         </span>
@@ -741,11 +751,11 @@
                         document.getElementById("ALABHAI_TEAM").insertAdjacentHTML("beforeend", "<div class='" + ty + " col-6 col-lg-3 px-0 ALABHAI_TEAM teamS' data-player='" + ty + "' data-price='" + tp + "' onclick='myFunction(\"" + ty + "\")'><input id='" + ty + "$COPY' type='text' class='CopyTeam d-none' value='" + ty + "@" + tp + "'><img class='img-fluid' src='https://raw.githubusercontent.com/adnanisab/UMYC-Cup-2022/main/" + ty + ".jpg'><div class='playerprice'><span class='bg-warning text-dark px-3 rounded-pill fw-bold'>" + tp + "</span></div></div>");
                     }
                 }
-                if (tx[t].getAttribute("data-team") == "SIDDIK_MEMON_TEAM") {
+                if (tx[t].getAttribute("data-team") == "UMYC_STARS") {
                     var ty = tx[t].getAttribute("id");
                     var tp = readCookie(ty).split("@").pop();
                     if (document.getElementsByClassName(ty).length == 0) {
-                        document.getElementById("SIDDIK_MEMON_TEAM").insertAdjacentHTML("beforeend", "<div class='" + ty + " col-6 col-lg-3 px-0 SIDDIK_MEMON_TEAM teamS' data-player='" + ty + "' data-price='" + tp + "' onclick='myFunction(\"" + ty + "\")'><input id='" + ty + "$COPY' type='text' class='CopyTeam d-none' value='" + ty + "@" + tp + "'><img class='img-fluid' src='https://raw.githubusercontent.com/adnanisab/UMYC-Cup-2022/main/" + ty + ".jpg'><div class='playerprice'><span class='bg-warning text-dark px-3 rounded-pill fw-bold'>" + tp + "</span></div></div>");
+                        document.getElementById("UMYC_STARS").insertAdjacentHTML("beforeend", "<div class='" + ty + " col-6 col-lg-3 px-0 UMYC_STARS teamS' data-player='" + ty + "' data-price='" + tp + "' onclick='myFunction(\"" + ty + "\")'><input id='" + ty + "$COPY' type='text' class='CopyTeam d-none' value='" + ty + "@" + tp + "'><img class='img-fluid' src='https://raw.githubusercontent.com/adnanisab/UMYC-Cup-2022/main/" + ty + ".jpg'><div class='playerprice'><span class='bg-warning text-dark px-3 rounded-pill fw-bold'>" + tp + "</span></div></div>");
                     }
                 }
                 if (tx[t].getAttribute("data-team") == "FRESH_N_PURE_UK") {
@@ -784,13 +794,13 @@
             } else {
                 document.getElementsByClassName("t2-left")[0].innerHTML = parseInt(document.getElementsByClassName("t2-leftX")[0].innerHTML);
             }
-            var a_SIDDIK_MEMON_TEAM = document.getElementsByClassName("SIDDIK_MEMON_TEAM");
-            if (a_SIDDIK_MEMON_TEAM.length > 0) {
-                var tl_SIDDIK_MEMON_TEAM = 0;
-                for (var ai_SIDDIK_MEMON_TEAM = 0; ai_SIDDIK_MEMON_TEAM < a_SIDDIK_MEMON_TEAM.length; ai_SIDDIK_MEMON_TEAM++) {
-                    tl_SIDDIK_MEMON_TEAM = tl_SIDDIK_MEMON_TEAM + parseInt(a_SIDDIK_MEMON_TEAM[ai_SIDDIK_MEMON_TEAM].getAttribute("data-price"));
+            var a_UMYC_STARS = document.getElementsByClassName("UMYC_STARS");
+            if (a_UMYC_STARS.length > 0) {
+                var tl_UMYC_STARS = 0;
+                for (var ai_UMYC_STARS = 0; ai_UMYC_STARS < a_UMYC_STARS.length; ai_UMYC_STARS++) {
+                    tl_UMYC_STARS = tl_UMYC_STARS + parseInt(a_UMYC_STARS[ai_UMYC_STARS].getAttribute("data-price"));
                 }
-                document.getElementsByClassName("t3-left")[0].innerHTML = parseInt(document.getElementsByClassName("t3-leftX")[0].innerHTML) - tl_SIDDIK_MEMON_TEAM;
+                document.getElementsByClassName("t3-left")[0].innerHTML = parseInt(document.getElementsByClassName("t3-leftX")[0].innerHTML) - tl_UMYC_STARS;
             } else {
                 document.getElementsByClassName("t3-left")[0].innerHTML = parseInt(document.getElementsByClassName("t3-leftX")[0].innerHTML);
             }
@@ -812,25 +822,23 @@
             } else {
                 document.getElementsByClassName("soldP")[0].innerHTML = 0;
             }
-            if (document.getElementsByClassName("s").length > 0) {
-                document.getElementsByClassName("unsoldP")[0].innerHTML = document.getElementsByClassName("player").length - document.getElementsByClassName("s").length;
+            if (document.getElementsByClassName("usx").length > 0) {
+                document.getElementsByClassName("unsoldP")[0].innerHTML = document.getElementsByClassName("usx").length;
             } else {
-                document.getElementsByClassName("unsoldP")[0].innerHTML = document.getElementsByClassName("player").length;
+                document.getElementsByClassName("unsoldP")[0].innerHTML = 0;
             }
         }, 10);
         var w = document.getElementsByClassName("ww");
         for (z = 0; z < w.length; z++) {
             w[z].innerHTML = w[z].innerHTML.replace(/_/gi, " ");
         }
-        /* Image Link */
-        // var pl = document.getElementsByClassName("pl"); 
-        // for (j = 0; j < pl.length; j++) {
-        //     pl[j].setAttribute("onclick", "window.open('" + pl[j].getAttribute('src') + "', '_blank');");
-        // }
+
 
         /* ********************************* Cookies ********************************* */
         createCookie("Ahmed-Dariai", "FRESH_N_PURE_UK@5000");
-        createCookie("Siddik-Memon", "SIDDIK_MEMON_TEAM@5000");
+        createCookie("Siddik-Memon", "UMYC_STARS@7000");
+        createCookie("Mahmud-Dadabhai", "UMAR_DADABHAI_LIONS@5000");
+        createCookie("Arshad-Abuji", "ALABHAI_TEAM@5000");
     </script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
     <script>
