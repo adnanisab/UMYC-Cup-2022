@@ -347,7 +347,7 @@
         function OpenPopup3(pageUrl, name, price) {
             if (!document.getElementById('f_Popup3_button')) {
                 var msg = '<figure class="figure figureX border border-3 border-light rounded"><img id="f-mfp-img" class="mb-0" src="' + pageUrl + '" class="figure-img img-fluid"><img class="s_img d-none" src="https://raw.githubusercontent.com/adnanisab/UMYC-Cup-2022/main/sold3.png"></figure>';
-                document.getElementsByTagName("body")[0].insertAdjacentHTML("beforeend", "<button id='f_Popup3_button' type='button' data-bs-toggle='modal' data-bs-target='#f_Popup3' style='display:none;'></button><div class='f_Popup3_box modal fade modal-static' id='f_Popup3' data-bs-backdrop='static' data-bs-keyboard='false' tabindex='-1' aria-labelledby='f_Popup3Label' aria-hidden='true'><div class='modal-dialog modal-dialog-centered modal-dialog-scrollable mx-auto'><div class='modal-content'><button type='button' class='f_Popup3_close btn-close position-absolute' data-bs-dismiss='modal' aria-label='Close'><svg style='transform: scale(1.5);' xmlns='http://www.w3.org/2000/svg' width='32' height='32' fill='#fff' class='bi bi-x-lg' viewBox='0 0 16 16'><path fill-rule='evenodd' d='M13.854 2.146a.5.5 0 0 1 0 .708l-11 11a.5.5 0 0 1-.708-.708l11-11a.5.5 0 0 1 .708 0Z'/><path fill-rule='evenodd' d='M2.146 2.146a.5.5 0 0 0 0 .708l11 11a.5.5 0 0 0 .708-.708l-11-11a.5.5 0 0 0-.708 0Z'/></svg></button><div class='modal-body text-center position-relative' style='white-space: pre-wrap;'>" + msg + "<div class='actionx position-fixed'><b class='solding d-none justify-content-center' style='cursor: pointer;'><svg style='transform: scale(1.5);' xmlns='http://www.w3.org/2000/svg' width='32' height='32' fill='#fff' class='bi bi-list' viewBox='0 0 16 16'><path fill-rule='evenodd' d='M2.5 12a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5zm0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5zm0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5z'/></svg></b><span class='soldx invisible text-white bg-danger py-2 px-5 d-inline-block rounded-pill me-3 fs-4' data-name='" + name + "'>&nbsp;&nbsp;SOLD&nbsp;&nbsp;</span> <span class='unsoldx invisible text-dark bg-light py-2 px-5 d-inline-block rounded-pill fs-4' data-name='" + name + "'>UNSOLD</span><div class='price upGo'><b class='unsoldx2 rounded-pill btn px-4 py-2 btn-danger fs-4' data-name='" + name + "'>UNSOLD</b><strong class='cus-strong d-inline-block bg-primary mx-3 p-2 rounded-pill'><b class='fs-2 ps-2'><more class='changeBid'>Base Price</more><svg xmlns='http://www.w3.org/2000/svg' data-bid='100' width='32' height='32' fill='#ffc107' class='cus-bid bi bi-arrow-right-square-fill ms-4' viewBox='0 0 16 16'><path d='M0 14a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V2a2 2 0 0 0-2-2H2a2 2 0 0 0-2 2v12zm4.5-6.5h5.793L8.146 5.354a.5.5 0 1 1 .708-.708l3 3a.5.5 0 0 1 0 .708l-3 3a.5.5 0 0 1-.708-.708L10.293 8.5H4.5a.5.5 0 0 1 0-1z'/></svg></b><input value='" + price + "' class='priceV text-center fs-2' style='font-family: Trebuchet MS;' type='number'  maxlength='6' size='6'></strong><b class='priceSubmit rounded-pill btn px-4 py-2 btn-warning fs-4' data-name='" + name + "'>&nbsp;&nbsp;SOLD&nbsp;&nbsp;</b></div><div class='teamX d-none'><b class='t1' data-team='UMAR_DADABHAI_LIONS'>UMAR_DADABHAI_LIONS</b><b class='t2' data-team='ALABHAI_TEAM'>ALABHAI_TEAM</b><b class='t3' data-team='SIDDIK_MEMON_TEAM'>SIDDIK_MEMON_TEAM</b><b class='t4' data-team='FRESH_N_PURE_TITANS'>FRESH_N_PURE_TITANS</b></div></div></div></div></div><style>.modal-dialog-scrollable .modal-content {max-height: none;overflow:visible;}.modal-body {padding:0;} .f_Popup3_close{right:-1rem;z-index:999;top:-1rem;background-color:#0d6efd;border-radius:50px;padding:1rem;opacity:1;box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.2);background-image:none;color:#fff;display:flex;justify-content:center;align-items:center;font-weight:700;font-size:18px}.f_Popup3_close:hover{color:#fff;background-color: red;opacity:1}.modal-dialog{display:flex;justify-content:center} .modal-content{width:auto;border-width:0} #f-mfp-img{max-height:90vh;max-width: 90vw;} @media (min-width:576px) {.modal-content{width:auto;}.modal-dialog{max-width:800px;}} .modal-content{background:0 0}}</style></div>");
+                document.getElementsByTagName("body")[0].insertAdjacentHTML("beforeend", "<button id='f_Popup3_button' type='button' data-bs-toggle='modal' data-bs-target='#f_Popup3' style='display:none;'></button><div class='f_Popup3_box modal fade modal-static' id='f_Popup3' data-bs-backdrop='static' data-bs-keyboard='false' tabindex='-1' aria-labelledby='f_Popup3Label' aria-hidden='true'><div class='modal-dialog modal-dialog-centered modal-dialog-scrollable mx-auto'><div class='modal-content'><button type='button' class='f_Popup3_close btn-close position-absolute' data-bs-dismiss='modal' aria-label='Close'><svg style='transform: scale(1.5);' xmlns='http://www.w3.org/2000/svg' width='32' height='32' fill='#fff' class='bi bi-x-lg' viewBox='0 0 16 16'><path fill-rule='evenodd' d='M13.854 2.146a.5.5 0 0 1 0 .708l-11 11a.5.5 0 0 1-.708-.708l11-11a.5.5 0 0 1 .708 0Z'/><path fill-rule='evenodd' d='M2.146 2.146a.5.5 0 0 0 0 .708l11 11a.5.5 0 0 0 .708-.708l-11-11a.5.5 0 0 0-.708 0Z'/></svg></button><div class='modal-body text-center position-relative' style='white-space: pre-wrap;'>" + msg + "<div class='actionx position-fixed'><b class='solding d-none justify-content-center' style='cursor: pointer;'><svg style='transform: scale(1.5);' xmlns='http://www.w3.org/2000/svg' width='32' height='32' fill='#fff' class='bi bi-list' viewBox='0 0 16 16'><path fill-rule='evenodd' d='M2.5 12a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5zm0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5zm0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5z'/></svg></b><span class='soldx invisible text-white bg-danger py-2 px-5 d-inline-block rounded-pill me-3 fs-4' data-name='" + name + "'>&nbsp;&nbsp;SOLD&nbsp;&nbsp;</span> <span class='unsoldx invisible text-dark bg-light py-2 px-5 d-inline-block rounded-pill fs-4' data-name='" + name + "'>UNSOLD</span><div class='price upGo'><b class='unsoldx2 rounded-pill btn px-4 py-2 btn-danger fs-4' data-name='" + name + "'>UNSOLD</b><strong class='cus-strong d-inline-block bg-primary mx-3 p-2 rounded-pill'><b class='fs-2 ps-2'><more class='changeBid'>Base Price</more><svg xmlns='http://www.w3.org/2000/svg' data-bid='100' width='32' height='32' fill='#ffc107' class='cus-bid bi bi-arrow-right-square-fill ms-4' viewBox='0 0 16 16'><path d='M0 14a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V2a2 2 0 0 0-2-2H2a2 2 0 0 0-2 2v12zm4.5-6.5h5.793L8.146 5.354a.5.5 0 1 1 .708-.708l3 3a.5.5 0 0 1 0 .708l-3 3a.5.5 0 0 1-.708-.708L10.293 8.5H4.5a.5.5 0 0 1 0-1z'/></svg></b><input value='" + price + "' class='priceV text-center fs-2' style='font-family: Trebuchet MS;' type='number'  maxlength='6' size='6'></strong><b class='priceSubmit rounded-pill btn px-4 py-2 btn-warning fs-4' data-name='" + name + "'>&nbsp;&nbsp;SOLD&nbsp;&nbsp;</b></div><div class='teamX d-none'><b class='t1' data-team='UMAR_DADABHAI_LIONS'>UMAR_DADABHAI_LIONS</b><b class='t2' data-team='ALABHAI_TEAM'>ALABHAI_TEAM</b><b class='t3' data-team='SIDDIK_MEMON_TEAM'>SIDDIK_MEMON_TEAM</b><b class='t4' data-team='FRESH_N_PURE_UK'>FRESH_N_PURE_UK</b></div></div></div></div></div><style>.modal-dialog-scrollable .modal-content {max-height: none;overflow:visible;}.modal-body {padding:0;} .f_Popup3_close{right:-1rem;z-index:999;top:-1rem;background-color:#0d6efd;border-radius:50px;padding:1rem;opacity:1;box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.2);background-image:none;color:#fff;display:flex;justify-content:center;align-items:center;font-weight:700;font-size:18px}.f_Popup3_close:hover{color:#fff;background-color: red;opacity:1}.modal-dialog{display:flex;justify-content:center} .modal-content{width:auto;border-width:0} #f-mfp-img{max-height:90vh;max-width: 90vw;} @media (min-width:576px) {.modal-content{width:auto;}.modal-dialog{max-width:800px;}} .modal-content{background:0 0}}</style></div>");
                 document.getElementById('f_Popup3_button').click();
                 var sx = document.getElementsByClassName('soldx')[0].getAttribute("data-name");
                 // document.getElementsByClassName('solding')[0].addEventListener('click', function() {
@@ -549,9 +549,9 @@
             <div class="col-12 rounded-pill bg-danger fw-bold p-3 mb-3 fs-2 ww"><span>SIDDIK_MEMON_TEAM</span><span class="float-end px-3 bg-success rounded-pill">Balance Left: <b class="t3-left">50000</b><b class="t3-leftX d-none">50000</b></span></div>
         </div><br><br><br><br><br><br>
 
-        <!-- FRESH_N_PURE_TITANS -->
-        <div id="FRESH_N_PURE_TITANS" class="row mx-lg-0 my-5 py-5 teams">
-            <div class="col-12 rounded-pill bg-danger fw-bold p-3 mb-3 fs-2 ww"><span>FRESH_N_PURE_TITANS</span><span class="float-end px-3 bg-success rounded-pill">Balance Left: <b class="t4-left">50000</b><b class="t4-leftX d-none">50000</b></span></div>
+        <!-- FRESH_N_PURE_UK -->
+        <div id="FRESH_N_PURE_UK" class="row mx-lg-0 my-5 py-5 teams">
+            <div class="col-12 rounded-pill bg-danger fw-bold p-3 mb-3 fs-2 ww"><span>FRESH_N_PURE_UK</span><span class="float-end px-3 bg-success rounded-pill">Balance Left: <b class="t4-left">50000</b><b class="t4-leftX d-none">50000</b></span></div>
         </div><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
     </div>
 
@@ -595,7 +595,7 @@
             <a href="#UMAR_DADABHAI_LIONS" class="bg-dark p-2 rounded-pill bg-red-hover">UMAR DADABHAI LIONS</a>
             <a href="#ALABHAI_TEAM" class="bg-dark p-2 rounded-pill bg-red-hover">ALABHAI_TEAM</a>
             <a href="#SIDDIK_MEMON_TEAM" class="bg-dark p-2 rounded-pill bg-red-hover">SIDDIK_MEMON_TEAM</a>
-            <a href="#FRESH_N_PURE_TITANS" class="bg-dark p-2 rounded-pill bg-red-hover">FRESH_N_PURE_TITANS</a>
+            <a href="#FRESH_N_PURE_UK" class="bg-dark p-2 rounded-pill bg-red-hover">FRESH_N_PURE_UK</a>
             </div>
         </span>
     </div>
@@ -748,11 +748,11 @@
                         document.getElementById("SIDDIK_MEMON_TEAM").insertAdjacentHTML("beforeend", "<div class='" + ty + " col-6 col-lg-3 px-0 SIDDIK_MEMON_TEAM teamS' data-player='" + ty + "' data-price='" + tp + "' onclick='myFunction(\"" + ty + "\")'><input id='" + ty + "$COPY' type='text' class='CopyTeam d-none' value='" + ty + "@" + tp + "'><img class='img-fluid' src='https://raw.githubusercontent.com/adnanisab/UMYC-Cup-2022/main/" + ty + ".jpg'><div class='playerprice'><span class='bg-warning text-dark px-3 rounded-pill fw-bold'>" + tp + "</span></div></div>");
                     }
                 }
-                if (tx[t].getAttribute("data-team") == "FRESH_N_PURE_TITANS") {
+                if (tx[t].getAttribute("data-team") == "FRESH_N_PURE_UK") {
                     var ty = tx[t].getAttribute("id");
                     var tp = readCookie(ty).split("@").pop();
                     if (document.getElementsByClassName(ty).length == 0) {
-                        document.getElementById("FRESH_N_PURE_TITANS").insertAdjacentHTML("beforeend", "<div class='" + ty + " col-6 col-lg-3 px-0 FRESH_N_PURE_TITANS teamS' data-player='" + ty + "' data-price='" + tp + "' onclick='myFunction(\"" + ty + "\")'><input id='" + ty + "$COPY' type='text' class='CopyTeam d-none' value='" + ty + "@" + tp + "'><img class='img-fluid' src='https://raw.githubusercontent.com/adnanisab/UMYC-Cup-2022/main/" + ty + ".jpg'><div class='playerprice'><span class='bg-warning text-dark px-3 rounded-pill fw-bold'>" + tp + "</span></div></div>");
+                        document.getElementById("FRESH_N_PURE_UK").insertAdjacentHTML("beforeend", "<div class='" + ty + " col-6 col-lg-3 px-0 FRESH_N_PURE_UK teamS' data-player='" + ty + "' data-price='" + tp + "' onclick='myFunction(\"" + ty + "\")'><input id='" + ty + "$COPY' type='text' class='CopyTeam d-none' value='" + ty + "@" + tp + "'><img class='img-fluid' src='https://raw.githubusercontent.com/adnanisab/UMYC-Cup-2022/main/" + ty + ".jpg'><div class='playerprice'><span class='bg-warning text-dark px-3 rounded-pill fw-bold'>" + tp + "</span></div></div>");
                     }
                 }
             }
@@ -794,13 +794,13 @@
             } else {
                 document.getElementsByClassName("t3-left")[0].innerHTML = parseInt(document.getElementsByClassName("t3-leftX")[0].innerHTML);
             }
-            var a_FRESH_N_PURE_TITANS = document.getElementsByClassName("FRESH_N_PURE_TITANS");
-            if (a_FRESH_N_PURE_TITANS.length > 0) {
-                var tl_FRESH_N_PURE_TITANS = 0;
-                for (var ai_FRESH_N_PURE_TITANS = 0; ai_FRESH_N_PURE_TITANS < a_FRESH_N_PURE_TITANS.length; ai_FRESH_N_PURE_TITANS++) {
-                    tl_FRESH_N_PURE_TITANS = tl_FRESH_N_PURE_TITANS + parseInt(a_FRESH_N_PURE_TITANS[ai_FRESH_N_PURE_TITANS].getAttribute("data-price"));
+            var a_FRESH_N_PURE_UK = document.getElementsByClassName("FRESH_N_PURE_UK");
+            if (a_FRESH_N_PURE_UK.length > 0) {
+                var tl_FRESH_N_PURE_UK = 0;
+                for (var ai_FRESH_N_PURE_UK = 0; ai_FRESH_N_PURE_UK < a_FRESH_N_PURE_UK.length; ai_FRESH_N_PURE_UK++) {
+                    tl_FRESH_N_PURE_UK = tl_FRESH_N_PURE_UK + parseInt(a_FRESH_N_PURE_UK[ai_FRESH_N_PURE_UK].getAttribute("data-price"));
                 }
-                document.getElementsByClassName("t4-left")[0].innerHTML = parseInt(document.getElementsByClassName("t4-leftX")[0].innerHTML) - tl_FRESH_N_PURE_TITANS;
+                document.getElementsByClassName("t4-left")[0].innerHTML = parseInt(document.getElementsByClassName("t4-leftX")[0].innerHTML) - tl_FRESH_N_PURE_UK;
             } else {
                 document.getElementsByClassName("t4-left")[0].innerHTML = parseInt(document.getElementsByClassName("t4-leftX")[0].innerHTML);
             }
@@ -829,7 +829,7 @@
         // }
 
         /* ********************************* Cookies ********************************* */
-        createCookie("Ahmed-Dariai", "FRESH_N_PURE_TITANS@5000");
+        createCookie("Ahmed-Dariai", "FRESH_N_PURE_UK@5000");
         createCookie("Siddik-Memon", "SIDDIK_MEMON_TEAM@5000");
     </script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
