@@ -670,7 +670,6 @@
             <a href="javascript:void(0)" class="selectX p-2 rounded bg-warning mx-5 d-none" style="color:black !important">SELECT FRESH PLAYER</a>
 
             <a href="javascript:void(0)" class="selectZ p-2 rounded bg-danger mx-5 d-none">SELECT UNSOLD PLAYER</a>
-            <!-- <a href="#GoogleSheet" class="p-2 rounded-pill bg-primary mx-4" data-bs-toggle="tooltip" data-bs-placement="top" title="View All Team Players">LIST</a> -->
 
             <div class="ms-5 float-lg-end d-block d-lg-inline d-inline-block">
             <a href="#UMAR_DADABHAI_LIONS" class="bg-dark p-2 rounded-pill bg-red-hover px-2">UMAR DADABHAI LIONS</a>
@@ -921,10 +920,17 @@
     </script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
     <script>
-        var tooltipTriggerList = [].slice.call(document.querySelectorAll('[data-bs-toggle="tooltip"]'))
-        var tooltipList = tooltipTriggerList.map(function(tooltipTriggerEl) {
-            return new bootstrap.Tooltip(tooltipTriggerEl)
-        })
+        window.onbeforeunload = function(e) {
+            e = e || window.event;
+
+            // For IE and Firefox prior to version 4
+            if (e) {
+                e.returnValue = 'Sure?';
+            }
+
+            // For Safari
+            return 'Sure?';
+        };
     </script>
 
     <!-- Replace solding class with below if not want to place price
