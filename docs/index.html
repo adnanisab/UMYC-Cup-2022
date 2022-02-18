@@ -407,7 +407,7 @@
         function OpenPopup3(pageUrl, name, price) {
             if (!document.getElementById('f_Popup3_button')) {
                 var msg = '<figure class="figure figureX border border-3 border-light rounded"><img id="f-mfp-img" class="mb-0" src="' + pageUrl + '" class="figure-img img-fluid"><img class="s_img d-none" src="https://raw.githubusercontent.com/adnanisab/UMYC-Cup-2022/main/sold3.png"></figure>';
-                document.getElementsByTagName("body")[0].insertAdjacentHTML("beforeend", "<button id='f_Popup3_button' type='button' data-bs-toggle='modal' data-bs-target='#f_Popup3' style='display:none;'></button><div class='f_Popup3_box modal fade modal-static' id='f_Popup3' data-bs-backdrop='static' data-bs-keyboard='false' tabindex='-1' aria-labelledby='f_Popup3Label' aria-hidden='true'><div class='modal-dialog modal-dialog-centered modal-dialog-scrollable mx-auto'><div class='modal-content'><button type='button' class='f_Popup3_close btn-close position-absolute' data-bs-dismiss='modal' aria-label='Close'><svg style='transform: scale(1.5);' xmlns='http://www.w3.org/2000/svg' width='32' height='32' fill='#fff' class='bi bi-x-lg' viewBox='0 0 16 16'><path fill-rule='evenodd' d='M13.854 2.146a.5.5 0 0 1 0 .708l-11 11a.5.5 0 0 1-.708-.708l11-11a.5.5 0 0 1 .708 0Z'/><path fill-rule='evenodd' d='M2.146 2.146a.5.5 0 0 0 0 .708l11 11a.5.5 0 0 0 .708-.708l-11-11a.5.5 0 0 0-.708 0Z'/></svg></button><div class='modal-body text-center position-relative' style='white-space: pre-wrap;'>" + msg + "<div class='actionx position-fixed'><b class='solding d-none justify-content-center' style='cursor: pointer;'><svg style='transform: scale(1.5);' xmlns='http://www.w3.org/2000/svg' width='32' height='32' fill='#fff' class='bi bi-list' viewBox='0 0 16 16'><path fill-rule='evenodd' d='M2.5 12a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5zm0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5zm0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5z'/></svg></b><span class='soldx invisible text-white bg-danger py-2 px-5 d-inline-block rounded-pill me-3 fs-4' data-name='" + name + "'>&nbsp;&nbsp;SOLD&nbsp;&nbsp;</span> <span class='unsoldx invisible text-dark bg-light py-2 px-5 d-inline-block rounded-pill fs-4' data-name='" + name + "'>UNSOLD</span><div class='price upGo'><b class='unsoldx2 rounded-pill btn px-4 py-2 btn-danger fs-4' data-name='" + name + "'>UNSOLD</b><strong class='cus-strong d-inline-block bg-primary mx-3 p-2 rounded-pill'><b class='fs-2 ps-2'><more class='changeBid'>Base Price</more><svg xmlns='http://www.w3.org/2000/svg' data-bid='100' width='32' height='32' fill='#ffc107' class='cus-bid bi bi-arrow-right-square-fill ms-4' viewBox='0 0 16 16'><path d='M0 14a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V2a2 2 0 0 0-2-2H2a2 2 0 0 0-2 2v12zm4.5-6.5h5.793L8.146 5.354a.5.5 0 1 1 .708-.708l3 3a.5.5 0 0 1 0 .708l-3 3a.5.5 0 0 1-.708-.708L10.293 8.5H4.5a.5.5 0 0 1 0-1z'/></svg></b><input value='" + price + "' class='priceV text-center fs-2' style='font-family: Trebuchet MS;' type='number'  maxlength='6' size='6'></strong><b class='priceSubmit rounded-pill btn px-4 py-2 btn-warning fs-4' data-name='" + name + "'>&nbsp;&nbsp;SOLD&nbsp;&nbsp;</b></div><div class='teamX d-none'><b class='t1' data-team='UMAR_DADABHAI_LIONS'>UMAR_DADABHAI_LIONS</b><b class='t2' data-team='ALABHAI_TEAM'>ALABHAI_TEAM</b><b class='t3' data-team='UMYC_STARS'>UMYC_STARS</b><b class='t4' data-team='FRESH_N_PURE_UK'>FRESH_N_PURE_UK</b></div></div></div></div></div><style>.modal-dialog-scrollable .modal-content {max-height: none;overflow:visible;}.modal-body {padding:0;} .f_Popup3_close{right:-1rem;z-index:999;top:-1rem;background-color:#0d6efd;border-radius:50px;padding:1rem;opacity:1;box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.2);background-image:none;color:#fff;display:flex;justify-content:center;align-items:center;font-weight:700;font-size:18px}.f_Popup3_close:hover{color:#fff;background-color: red;opacity:1}.modal-dialog{display:flex;justify-content:center} .modal-content{width:auto;border-width:0} #f-mfp-img{max-height:90vh;max-width: 90vw;} @media (min-width:576px) {.modal-content{width:auto;}.modal-dialog{max-width:800px;}} .modal-content{background:0 0}}</style></div>");
+                document.getElementsByTagName("body")[0].insertAdjacentHTML("beforeend", "<button id='f_Popup3_button' type='button' data-bs-toggle='modal' data-bs-target='#f_Popup3' style='display:none;'></button><div class='f_Popup3_box modal fade modal-static' id='f_Popup3' data-bs-backdrop='static' data-bs-keyboard='false' tabindex='-1' aria-labelledby='f_Popup3Label' aria-hidden='true'><div class='modal-dialog modal-dialog-centered modal-dialog-scrollable mx-auto'><div class='modal-content'><button type='button' class='f_Popup3_close btn-close position-absolute' data-bs-dismiss='modal' aria-label='Close'><svg style='transform: scale(1.5);' xmlns='http://www.w3.org/2000/svg' width='32' height='32' fill='#fff' class='bi bi-x-lg' viewBox='0 0 16 16'><path fill-rule='evenodd' d='M13.854 2.146a.5.5 0 0 1 0 .708l-11 11a.5.5 0 0 1-.708-.708l11-11a.5.5 0 0 1 .708 0Z'/><path fill-rule='evenodd' d='M2.146 2.146a.5.5 0 0 0 0 .708l11 11a.5.5 0 0 0 .708-.708l-11-11a.5.5 0 0 0-.708 0Z'/></svg></button><div class='modal-body text-center position-relative' style='white-space: pre-wrap;'>" + msg + "<div class='actionx position-fixed'><b class='solding d-none justify-content-center' style='cursor: pointer;'><svg style='transform: scale(1.5);' xmlns='http://www.w3.org/2000/svg' width='32' height='32' fill='#fff' class='bi bi-list' viewBox='0 0 16 16'><path fill-rule='evenodd' d='M2.5 12a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5zm0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5zm0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5z'/></svg></b><span class='soldx invisible text-white bg-danger py-2 px-5 d-inline-block rounded-pill me-3 fs-4' data-name='" + name + "'>&nbsp;&nbsp;SOLD&nbsp;&nbsp;</span> <span class='unsoldx invisible text-dark bg-light py-2 px-5 d-inline-block rounded-pill fs-4' data-name='" + name + "'>UNSOLD</span><div class='price upGo'><b class='unsoldx2 rounded-pill btn px-4 py-2 btn-danger fs-4' data-name='" + name + "'>UNSOLD</b><strong class='cus-strong d-inline-block bg-primary mx-3 p-2 rounded-pill'><b class='fs-2 ps-2'><more class='changeBid'>Base Price</more><svg xmlns='http://www.w3.org/2000/svg' data-bid='100' width='32' height='32' fill='#ffc107' class='cus-bid bi bi-arrow-right-square-fill ms-4' viewBox='0 0 16 16'><path d='M0 14a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V2a2 2 0 0 0-2-2H2a2 2 0 0 0-2 2v12zm4.5-6.5h5.793L8.146 5.354a.5.5 0 1 1 .708-.708l3 3a.5.5 0 0 1 0 .708l-3 3a.5.5 0 0 1-.708-.708L10.293 8.5H4.5a.5.5 0 0 1 0-1z'/></svg></b><input value='" + price + "' class='priceV text-center fs-2' style='font-family: Trebuchet MS;' type='number'  maxlength='6' size='6'></strong><b class='priceSubmit rounded-pill btn px-4 py-2 btn-warning fs-4' data-name='" + name + "'>&nbsp;&nbsp;SOLD&nbsp;&nbsp;</b></div><div class='teamX d-none'><b class='t1' data-team='UMAR_DADABHAI_LIONS'>UMAR_DADABHAI_LIONS</b><b class='t2' data-team='RISING_STARS_JUNED_11'>RISING_STARS_JUNED_11</b><b class='t3' data-team='UMYC_STARS'>UMYC_STARS</b><b class='t4' data-team='FRESH_N_PURE_UK'>FRESH_N_PURE_UK</b></div></div></div></div></div><style>.modal-dialog-scrollable .modal-content {max-height: none;overflow:visible;}.modal-body {padding:0;} .f_Popup3_close{right:-1rem;z-index:999;top:-1rem;background-color:#0d6efd;border-radius:50px;padding:1rem;opacity:1;box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.2);background-image:none;color:#fff;display:flex;justify-content:center;align-items:center;font-weight:700;font-size:18px}.f_Popup3_close:hover{color:#fff;background-color: red;opacity:1}.modal-dialog{display:flex;justify-content:center} .modal-content{width:auto;border-width:0} #f-mfp-img{max-height:90vh;max-width: 90vw;} @media (min-width:576px) {.modal-content{width:auto;}.modal-dialog{max-width:800px;}} .modal-content{background:0 0}}</style></div>");
                 document.getElementById('f_Popup3_button').click();
                 setTimeout(function() {
                     document.getElementById("f_Popup3").classList.add("f_Popup3x");
@@ -525,6 +525,7 @@
             </div>
             <div id="Suleman-Gebi" class="player find" data-base-price="500"></div>
             <div id="Tamim-Sema" class="player find" data-base-price="500"></div>
+            <div id="Hisham-Vali" class="player find" data-base-price="500"></div>
             <div id="Jilaan-Popat" class="player find" data-base-price="500"></div>
             <div id="Anzal-Gebi" class="player find" data-base-price="500"></div>
             <div id="Sarfaraz-Popat" class="player find" data-base-price="500"></div>
@@ -573,6 +574,7 @@
             <div id="Abdul-Ayaaz-Shaikh" class="player find" data-base-price="500"></div>
             <div id="Muzassim-Gebi" class="player find" data-base-price="500"></div>
             <div id="Arshil-Damanvala" class="player find" data-base-price="500"></div>
+            <div id="Hamza-Barafwala" class="player find" data-base-price="500"></div>
             <div id="Arshad-Abuji" class="player find" data-base-price="500"></div>
             <div id="Mohammad-Gebi" class="player find" data-base-price="500"></div>
             <div id="Munib-Shaikh" class="player find" data-base-price="500"></div>
@@ -620,9 +622,9 @@
             <div class="col-12 rounded-pill bg-danger fw-bold p-3 mb-3 fs-2 ww d-lg-flex align-items-center justify-content-between"><span class="ww-span"><img class="img_fluid ww-img me-3" src="https://raw.githubusercontent.com/adnanisab/UMYC-Cup-2022/main/UMAR-DADABHAI-LIONS-TRANSPARENT.png">UMAR_DADABHAI_LIONS</span><span class="float-lg-end d-block d-lg-inline px-3 bg-success rounded-pill">Balance Left: <b class="t1-left">50000</b><b class="t1-leftX d-none">50000</b></span></div>
         </div><br><br><br><br><br><br>
 
-        <!-- ALABHAI_TEAM -->
-        <div id="ALABHAI_TEAM" class="row mx-lg-0 my-5 py-5 teams">
-            <div class="col-12 rounded-pill bg-danger fw-bold p-3 mb-3 fs-2 ww d-lg-flex align-items-center justify-content-between"><span class="ww-span"><img class="img_fluid ww-img me-3" src="https://raw.githubusercontent.com/adnanisab/UMYC-Cup-2022/main/UMAR-DADABHAI-LIONS-TRANSPARENT.png">ALABHAI_TEAM</span><span class="float-lg-end d-block d-lg-inline px-3 bg-success rounded-pill">Balance Left: <b class="t2-left">50000</b><b class="t2-leftX d-none">50000</b></span></div>
+        <!-- RISING_STARS_JUNED_11 -->
+        <div id="RISING_STARS_JUNED_11" class="row mx-lg-0 my-5 py-5 teams">
+            <div class="col-12 rounded-pill bg-danger fw-bold p-3 mb-3 fs-2 ww d-lg-flex align-items-center justify-content-between"><span class="ww-span"><img class="img_fluid ww-img me-3" src="https://raw.githubusercontent.com/adnanisab/UMYC-Cup-2022/main/RISING-STARS-JUNED-11.png">RISING_STARS_JUNED_11</span><span class="float-lg-end d-block d-lg-inline px-3 bg-success rounded-pill">Balance Left: <b class="t2-left">50000</b><b class="t2-leftX d-none">50000</b></span></div>
         </div><br><br><br><br><br><br>
 
         <!-- UMYC_STARS -->
@@ -673,7 +675,7 @@
 
             <div class="ms-5 float-lg-end d-block d-lg-inline d-inline-block">
             <a href="#UMAR_DADABHAI_LIONS" class="bg-dark p-2 rounded-pill bg-red-hover px-2">UMAR DADABHAI LIONS</a>
-            <a href="#ALABHAI_TEAM" class="bg-dark p-2 rounded-pill bg-red-hover px-2">ALABHAI_TEAM</a>
+            <a href="#RISING_STARS_JUNED_11" class="bg-dark p-2 rounded-pill bg-red-hover px-2">RISING STARS JUNED 11</a>
             <a href="#UMYC_STARS" class="bg-dark p-2 rounded-pill bg-red-hover px-2">UMYC STARS</a>
             <a href="#FRESH_N_PURE_UK" class="bg-dark p-2 rounded-pill bg-red-hover px-2 me-2">FRESH N PURE UK</a>
             </div>
@@ -815,11 +817,11 @@
                         document.getElementById("UMAR_DADABHAI_LIONS").insertAdjacentHTML("beforeend", "<div class='" + ty + " col-12 col-md-6 col-lg-3 px-0 UMAR_DADABHAI_LIONS teamS' data-player='" + ty + "' data-price='" + tp + "' onclick='myFunction(\"" + ty + "\")'><input id='" + ty + "$COPY' type='text' class='CopyTeam d-none' value='" + ty + "@" + tp + "'><img class='img-fluid' src='https://raw.githubusercontent.com/adnanisab/UMYC-Cup-2022/main/" + ty + ".jpg'><div class='playerprice'><span class='bg-warning text-dark px-3 rounded-pill fw-bold'>" + tp + "</span></div></div>");
                     }
                 }
-                if (tx[t].getAttribute("data-team") == "ALABHAI_TEAM") {
+                if (tx[t].getAttribute("data-team") == "RISING_STARS_JUNED_11") {
                     var ty = tx[t].getAttribute("id");
                     var tp = readCookie(ty).split("@").pop();
                     if (document.getElementsByClassName(ty).length == 0) {
-                        document.getElementById("ALABHAI_TEAM").insertAdjacentHTML("beforeend", "<div class='" + ty + " col-12 col-md-6 col-lg-3 px-0 ALABHAI_TEAM teamS' data-player='" + ty + "' data-price='" + tp + "' onclick='myFunction(\"" + ty + "\")'><input id='" + ty + "$COPY' type='text' class='CopyTeam d-none' value='" + ty + "@" + tp + "'><img class='img-fluid' src='https://raw.githubusercontent.com/adnanisab/UMYC-Cup-2022/main/" + ty + ".jpg'><div class='playerprice'><span class='bg-warning text-dark px-3 rounded-pill fw-bold'>" + tp + "</span></div></div>");
+                        document.getElementById("RISING_STARS_JUNED_11").insertAdjacentHTML("beforeend", "<div class='" + ty + " col-12 col-md-6 col-lg-3 px-0 RISING_STARS_JUNED_11 teamS' data-player='" + ty + "' data-price='" + tp + "' onclick='myFunction(\"" + ty + "\")'><input id='" + ty + "$COPY' type='text' class='CopyTeam d-none' value='" + ty + "@" + tp + "'><img class='img-fluid' src='https://raw.githubusercontent.com/adnanisab/UMYC-Cup-2022/main/" + ty + ".jpg'><div class='playerprice'><span class='bg-warning text-dark px-3 rounded-pill fw-bold'>" + tp + "</span></div></div>");
                     }
                 }
                 if (tx[t].getAttribute("data-team") == "UMYC_STARS") {
@@ -855,13 +857,13 @@
             } else {
                 document.getElementsByClassName("t1-left")[0].innerHTML = parseInt(document.getElementsByClassName("t1-leftX")[0].innerHTML);
             }
-            var a_ALABHAI_TEAM = document.getElementsByClassName("ALABHAI_TEAM");
-            if (a_ALABHAI_TEAM.length > 0) {
-                var tl_ALABHAI_TEAM = 0;
-                for (var ai_ALABHAI_TEAM = 0; ai_ALABHAI_TEAM < a_ALABHAI_TEAM.length; ai_ALABHAI_TEAM++) {
-                    tl_ALABHAI_TEAM = tl_ALABHAI_TEAM + parseInt(a_ALABHAI_TEAM[ai_ALABHAI_TEAM].getAttribute("data-price"));
+            var a_RISING_STARS_JUNED_11 = document.getElementsByClassName("RISING_STARS_JUNED_11");
+            if (a_RISING_STARS_JUNED_11.length > 0) {
+                var tl_RISING_STARS_JUNED_11 = 0;
+                for (var ai_RISING_STARS_JUNED_11 = 0; ai_RISING_STARS_JUNED_11 < a_RISING_STARS_JUNED_11.length; ai_RISING_STARS_JUNED_11++) {
+                    tl_RISING_STARS_JUNED_11 = tl_RISING_STARS_JUNED_11 + parseInt(a_RISING_STARS_JUNED_11[ai_RISING_STARS_JUNED_11].getAttribute("data-price"));
                 }
-                document.getElementsByClassName("t2-left")[0].innerHTML = parseInt(document.getElementsByClassName("t2-leftX")[0].innerHTML) - tl_ALABHAI_TEAM;
+                document.getElementsByClassName("t2-left")[0].innerHTML = parseInt(document.getElementsByClassName("t2-leftX")[0].innerHTML) - tl_RISING_STARS_JUNED_11;
             } else {
                 document.getElementsByClassName("t2-left")[0].innerHTML = parseInt(document.getElementsByClassName("t2-leftX")[0].innerHTML);
             }
@@ -910,7 +912,7 @@
         createCookie("Ahmed-Dariai", "FRESH_N_PURE_UK@5000");
         createCookie("Siddik-Memon", "UMYC_STARS@7000");
         createCookie("Mahmud-Dadabhai", "UMAR_DADABHAI_LIONS@5000");
-        createCookie("Arshad-Abuji", "ALABHAI_TEAM@5000");
+        createCookie("Arshad-Abuji", "RISING_STARS_JUNED_11@5000");
 
 
 
@@ -938,7 +940,7 @@
     
     <div class='cus-price solding'><span class='cus-price-span bg-warning text-dark px-4 rounded-pill fs-3 lh-lg d-inline-block'>Base Price : " + price + "</span></div>
 
-    createCookie("Player-Name","ALABHAI_TEAM@700");
+    createCookie("Player-Name","RISING_STARS_JUNED_11@700");
 -->
 </body>
 
