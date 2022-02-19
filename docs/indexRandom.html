@@ -1,0 +1,955 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <!-- Required meta tags -->
+    <link rel="shortcut icon" href="https://raw.githubusercontent.com/adnanisab/UMYC-Cup-2022/main/favicon.ico">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta property="og:image" content="https://raw.githubusercontent.com/adnanisab/UMYC-Cup-2022/main/sharelogo.jpg" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="UMYC CUP - 2022" />
+    <meta name="twitter:description" content="UMYC CUP - 2022 | Auction" />
+    <meta name="twitter:image" content="https://raw.githubusercontent.com/adnanisab/UMYC-Cup-2022/main/sharelogo.jpg" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans&display=swap" rel="stylesheet">
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Voltaire&display=swap" rel="stylesheet">
+    <title>UMYC CUP - 2022 | Auction</title>
+    <style>
+        .s,
+        .sX,
+        .usx {
+            position: relative;
+        }
+        
+        .s>.s_img,
+        .sX>.s_img {
+            position: absolute;
+            top: auto;
+            left: 7%;
+            width: 20%;
+            display: inline-block !important;
+            bottom: 2%;
+        }
+        
+        .ww-span {
+            font-family: 'Josefin Sans', sans-serif;
+        }
+        
+        .usx>.us_img {
+            position: absolute;
+            top: auto;
+            left: 4%;
+            width: 30%;
+            display: inline-block !important;
+            bottom: 2%;
+            transform: rotate(10deg);
+        }
+        
+        .usx {
+            order: 1;
+        }
+        
+        .s {
+            order: 2;
+        }
+        
+        .s .img-fluid {
+            opacity: 0.2;
+        }
+        
+        .sX #f-mfp-img {
+            opacity: 0.8;
+        }
+        
+        .pl {
+            cursor: pointer;
+        }
+        
+        .img-fluid.pl:hover {
+            transform: scale(1.05);
+            transition: 200ms ease-in-out 100ms;
+        }
+        
+        .img-fluid.pl {
+            transition: 200ms ease-in-out 100ms;
+        }
+        
+        .modal-backdrop.show {
+            opacity: 0.96;
+        }
+        
+        .actionx {
+            bottom: 15%;
+            cursor: pointer;
+            left: 50%;
+            width: 100vw;
+            transform: translateX(-50%);
+        }
+        
+        .actionx span {
+            cursor: pointer;
+            box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+        }
+        
+        .modal.modal-static .modal-dialog {
+            transform: scale(1);
+        }
+        
+        .soldx:hover {
+            background: black !important;
+        }
+        
+        .unsoldx:hover {
+            background: gray !important;
+        }
+        
+        .aDisable .player {
+            pointer-events: none;
+        }
+        
+        #f-mfp-img {
+            max-width: 60vw !important;
+        }
+        
+        #f_Popup3 {
+            background-image: url("https://raw.githubusercontent.com/adnanisab/UMYC-Cup-2022/main/bg.jpg");
+            background-repeat: no-repeat;
+            background-size: 100%;
+            background-position: top;
+            background-attachment: fixed;
+        }
+        
+        .modal-dialog {
+            position: fixed;
+            left: 50%;
+            transform: translateX(-50%) !important;
+            top: 15% !important;
+        }
+        
+        .teamX b {
+            background: white;
+            margin-right: 1rem;
+            padding: 0.5rem 1rem;
+            display: inline-block;
+            box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+            text-transform: uppercase;
+            cursor: pointer;
+            color: black;
+            font-weight: normal !important;
+            font-size: 1.5rem !important;
+            margin-bottom: .5rem !important;
+        }
+        
+        .teamX b:hover {
+            background: #000;
+            color: white;
+        }
+        
+        .teamX {
+            transform: translateY(100px);
+            opacity: 0;
+            transition: 200ms ease-in-out;
+        }
+        
+        .teamXUP {
+            transform: translateY(0);
+            opacity: 1;
+            transition: 300ms ease-in-out;
+        }
+        
+        .f_Popup3_close {
+            opacity: 0 !important;
+        }
+        
+        .solding svg:hover {
+            fill: yellow;
+        }
+        
+        .playerprice {
+            position: absolute;
+            bottom: 0;
+            left: 7%;
+        }
+        
+        @media (max-width:576px) {
+            .playerprice {
+                left: 9%;
+            }
+        }
+        
+        .playerprice span {
+            /* transform: translate(23px, -23px); */
+            display: inline-block;
+            min-width: 70px;
+            text-align: center;
+            font-family: Trebuchet MS;
+        }
+        
+        .t1-left,
+        .t2-left,
+        .t3-left,
+        .t4-left {
+            font-family: Trebuchet MS;
+            color: #ffc107;
+        }
+        
+        .price {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        
+        .BookMark svg {
+            cursor: pointer;
+        }
+        
+        .BookMark {
+            opacity: 0;
+            padding: 10px;
+            border-radius: 50px;
+            width: 100%;
+        }
+        
+        .BookMark {
+            position: fixed;
+            bottom: 0;
+            left: 0;
+            background-color: rgba(0, 0, 0, 0.95);
+        }
+        
+        .links img {
+            max-height: 40px;
+        }
+        
+        .links a {
+            margin-left: 1rem;
+            text-decoration: none;
+            color: white;
+            line-height: 40px;
+        }
+        
+        .bg-red-hover:hover {
+            background-color: red !important;
+        }
+        
+        .links a:hover {
+            opacity: 1;
+        }
+        
+        .open:hover,
+        .close:hover {
+            fill: white;
+            opacity: 1 !important;
+        }
+        
+        .BookMark {
+            opacity: 0;
+        }
+        
+        .BookMark:hover {
+            opacity: 1;
+        }
+        
+        .Big {
+            transform: scale(1.05);
+            opacity: 0.5;
+            transition: 100ms ease-in-out;
+        }
+        
+        .priceV {
+            background: transparent;
+            border-width: 0;
+            color: white;
+            caret-color: #0d6efd;
+        }
+        
+        .teamS {
+            cursor: pointer;
+            position: relative;
+        }
+        
+        strong,
+        .priceSubmit,
+        .unsoldx2 {
+            box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+            user-select: none;
+        }
+        
+        input::-webkit-outer-spin-button,
+        input::-webkit-inner-spin-button {
+            -webkit-appearance: none;
+            margin: 0;
+        }
+        
+        input[type=number] {
+            -moz-appearance: textfield;
+        }
+        
+        .priceV:focus {
+            outline: 0 none;
+        }
+        
+        .f_Popup3_close:hover {
+            opacity: 1 !important;
+        }
+        
+        .cus-bid {
+            cursor: pointer;
+        }
+        
+        .cus-strong {
+            transform: scale(1.2);
+        }
+        
+        .priceV {
+            transition: 200ms ease-in;
+            max-width: 120px;
+        }
+        
+        .priceVBig {
+            transform: scale(1.3);
+            transition: 200ms ease-in-out;
+        }
+        
+        .randomBox {
+            background: black;
+            color: white;
+            width: 100%;
+            height: 100%;
+            position: fixed;
+            top: 0;
+            left: 0;
+            bottom: 0;
+            right: 0;
+            z-index: 1;
+        }
+        
+        .selectY {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, 50%);
+            font-size: 4rem;
+            font-family: Trebuchet MS;
+        }
+        
+        .img.fluid.ww-img {
+            max-height: 60px;
+        }
+        
+        #cus-save {
+            font-size: 1rem;
+            width: 90%;
+            font-family: Tahoma;
+        }
+        
+        .f_Popup3_box {
+            transform: translateY(100%);
+            transition: 300ms ease-in-out;
+            opacity: 0;
+            overflow: hidden;
+        }
+        
+        .f_Popup3x {
+            transform: translateY(0%);
+            transition: 300ms ease-in-out;
+            opacity: 1;
+        }
+    </style>
+    <script>
+        function createCookie(name, value, days) {
+            if (days) {
+                var date = new Date();
+                date.setTime(date.getTime() + (days * 24 * 60 * 60 * 1000));
+                var expires = "; expires=" + date.toGMTString();
+            } else var expires = "";
+            document.cookie = name + "=" + value + expires + "; path=/";
+        }
+
+        function readCookie(name) {
+            var nameEQ = name + "=";
+            var ca = document.cookie.split(';');
+            for (var i = 0; i < ca.length; i++) {
+                var c = ca[i];
+                while (c.charAt(0) == ' ') c = c.substring(1, c.length);
+                if (c.indexOf(nameEQ) == 0) return c.substring(nameEQ.length, c.length);
+            }
+            return null;
+        }
+
+        function eraseCookie(name) {
+            createCookie(name, "", -1);
+        }
+
+        function getCookies() {
+            var cookies = document.cookie.split(';');
+            var ret = '';
+            var ccn = '';
+            var ccv = '';
+            var ccc = ''
+            for (var i = 1; i <= cookies.length; i++) {
+                ccn = cookies[i - 1].split("=").shift();
+                ccv = cookies[i - 1].split("=").pop();
+                ccc = "createCookie('" + ccn.trim() + "','" + ccv.trim() + "')";
+                //  ret += ccc + ";";
+                document.getElementById("cus-save").value = ret += ccc + ";";
+            }
+            window.location.href = "#cus-save";
+            // return ret;
+        }
+
+        function OpenPopup3(pageUrl, name, price) {
+            if (!document.getElementById('f_Popup3_button')) {
+                var msg = '<figure class="figure figureX border border-3 border-light rounded"><img id="f-mfp-img" class="mb-0" src="' + pageUrl + '" class="figure-img img-fluid"><img class="s_img d-none" src="https://raw.githubusercontent.com/adnanisab/UMYC-Cup-2022/main/sold3.png"></figure>';
+                document.getElementsByTagName("body")[0].insertAdjacentHTML("beforeend", "<button id='f_Popup3_button' type='button' data-bs-toggle='modal' data-bs-target='#f_Popup3' style='display:none;'></button><div class='f_Popup3_box modal fade modal-static' id='f_Popup3' data-bs-backdrop='static' data-bs-keyboard='false' tabindex='-1' aria-labelledby='f_Popup3Label' aria-hidden='true'><div class='modal-dialog modal-dialog-centered modal-dialog-scrollable mx-auto'><div class='modal-content'><button type='button' class='f_Popup3_close btn-close position-absolute' data-bs-dismiss='modal' aria-label='Close'><svg style='transform: scale(1.5);' xmlns='http://www.w3.org/2000/svg' width='32' height='32' fill='#fff' class='bi bi-x-lg' viewBox='0 0 16 16'><path fill-rule='evenodd' d='M13.854 2.146a.5.5 0 0 1 0 .708l-11 11a.5.5 0 0 1-.708-.708l11-11a.5.5 0 0 1 .708 0Z'/><path fill-rule='evenodd' d='M2.146 2.146a.5.5 0 0 0 0 .708l11 11a.5.5 0 0 0 .708-.708l-11-11a.5.5 0 0 0-.708 0Z'/></svg></button><div class='modal-body text-center position-relative' style='white-space: pre-wrap;'>" + msg + "<div class='actionx position-fixed'><b class='solding d-none justify-content-center' style='cursor: pointer;'><svg style='transform: scale(1.5);' xmlns='http://www.w3.org/2000/svg' width='32' height='32' fill='#fff' class='bi bi-list' viewBox='0 0 16 16'><path fill-rule='evenodd' d='M2.5 12a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5zm0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5zm0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5z'/></svg></b><span class='soldx invisible text-white bg-danger py-2 px-5 d-inline-block rounded-pill me-3 fs-4' data-name='" + name + "'>&nbsp;&nbsp;SOLD&nbsp;&nbsp;</span> <span class='unsoldx invisible text-dark bg-light py-2 px-5 d-inline-block rounded-pill fs-4' data-name='" + name + "'>UNSOLD</span><div class='price upGo'><b class='unsoldx2 rounded-pill btn px-4 py-2 btn-danger fs-4' data-name='" + name + "'>UNSOLD</b><strong class='cus-strong d-inline-block bg-primary mx-3 p-2 rounded-pill'><b class='fs-2 ps-2'><more class='changeBid'>Base Price</more><svg xmlns='http://www.w3.org/2000/svg' data-bid='250' width='32' height='32' fill='#ffc107' class='cus-bid bi bi-arrow-right-square-fill ms-4' viewBox='0 0 16 16'><path d='M0 14a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V2a2 2 0 0 0-2-2H2a2 2 0 0 0-2 2v12zm4.5-6.5h5.793L8.146 5.354a.5.5 0 1 1 .708-.708l3 3a.5.5 0 0 1 0 .708l-3 3a.5.5 0 0 1-.708-.708L10.293 8.5H4.5a.5.5 0 0 1 0-1z'/></svg></b><input value='" + price + "' class='priceV text-center fs-2' style='font-family: Trebuchet MS;' type='number'  maxlength='6' size='6'></strong><b class='priceSubmit rounded-pill btn px-4 py-2 btn-warning fs-4' data-name='" + name + "'>&nbsp;&nbsp;SOLD&nbsp;&nbsp;</b></div><div class='teamX d-none'><b class='t1' data-team='UMAR_DADABHAI_LIONS'>UMAR_DADABHAI_LIONS</b><b class='t2' data-team='RISING_STARS_JUNED_11'>RISING_STARS_JUNED_11</b><b class='t3' data-team='BLUE_STARS_XI'>BLUE_STARS_XI</b><b class='t4' data-team='FRESH_N_PURE_UK'>FRESH_N_PURE_UK</b></div></div></div></div></div><style>.modal-dialog-scrollable .modal-content {max-height: none;overflow:visible;}.modal-body {padding:0;} .f_Popup3_close{right:-1rem;z-index:999;top:-1rem;background-color:#0d6efd;border-radius:50px;padding:1rem;opacity:1;box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.2);background-image:none;color:#fff;display:flex;justify-content:center;align-items:center;font-weight:700;font-size:18px}.f_Popup3_close:hover{color:#fff;background-color: red;opacity:1}.modal-dialog{display:flex;justify-content:center} .modal-content{width:auto;border-width:0} #f-mfp-img{max-height:90vh;max-width: 90vw;} @media (min-width:576px) {.modal-content{width:auto;}.modal-dialog{max-width:800px;}} .modal-content{background:0 0}}</style></div>");
+                document.getElementById('f_Popup3_button').click();
+                setTimeout(function() {
+                    document.getElementById("f_Popup3").classList.add("f_Popup3x");
+                }, 200);
+                var sx = document.getElementsByClassName('soldx')[0].getAttribute("data-name");
+                var cb = document.getElementsByClassName("cus-bid")[0].getAttribute("data-bid");
+                document.getElementsByClassName('cus-bid')[0].addEventListener('click', function() {
+                    var av = parseInt(document.getElementsByClassName("priceV")[0].value);
+                    if (av < 2000) {
+                        cb = 250;
+                    } else if (av < 5000) {
+                        cb = 500;
+                    } else {
+                        cb = 1000;
+                    }
+                    console.log(cb + "-" + av);
+                    document.getElementsByClassName("changeBid")[0].innerHTML = "Current Bid";
+                    document.getElementsByClassName("unsoldx2")[0].classList.add("invisible");
+                    document.getElementsByClassName("priceV")[0].value = parseInt(document.getElementsByClassName("priceV")[0].value) + parseInt(cb);
+                    document.getElementsByClassName("priceV")[0].classList.add("priceVBig");
+                    setTimeout(function() {
+                        document.getElementsByClassName("priceV")[0].classList.remove("priceVBig");
+                    }, 300)
+                });
+                document.getElementsByClassName('priceSubmit')[0].addEventListener('click', function() {
+                    var cn = document.getElementsByClassName("priceSubmit")[0].getAttribute("data-name");
+                    if (readCookie("UNSOLD")) {
+                        var cv = readCookie("UNSOLD");
+                        if (cv.indexOf(cn) != -1) {
+                            cv = cv.replace(cn, "");
+                            createCookie("UNSOLD", cv);
+                        }
+                    }
+                    document.getElementsByClassName("figureX")[0].classList.add("sX");
+                    document.getElementsByClassName("price")[0].classList.add("d-none");
+                    document.getElementsByClassName("teamX")[0].classList.remove("d-none");
+                    setTimeout(function() {
+                        document.getElementsByClassName("teamX")[0].classList.add("teamXUP");
+                    }, 200);
+
+                    document.getElementsByClassName("t1")[0].innerHTML = document.getElementsByClassName("t1")[0].innerHTML.replace(/_/gi, " ");
+                    document.getElementsByClassName("t2")[0].innerHTML = document.getElementsByClassName("t2")[0].innerHTML.replace(/_/gi, " ");
+                    document.getElementsByClassName("t3")[0].innerHTML = document.getElementsByClassName("t3")[0].innerHTML.replace(/_/gi, " ");
+                    document.getElementsByClassName("t4")[0].innerHTML = document.getElementsByClassName("t4")[0].innerHTML.replace(/_/gi, " ");
+                    /*Select Team*/
+                    document.getElementsByClassName('t1')[0].addEventListener('click', function() {
+                        window.location.href = "#" + document.getElementsByClassName('t1')[0].getAttribute("data-team");
+                        createCookie(sx, document.getElementsByClassName('t1')[0].innerHTML.replace(/ /gi, "_") + "@" + document.getElementsByClassName("priceV")[0].value);
+                        document.getElementsByClassName('f_Popup3_close')[0].click();
+                    });
+                    document.getElementsByClassName('t2')[0].addEventListener('click', function() {
+                        window.location.href = "#" + document.getElementsByClassName('t2')[0].getAttribute("data-team");
+                        createCookie(sx, document.getElementsByClassName('t2')[0].innerHTML.replace(/ /gi, "_") + "@" + document.getElementsByClassName("priceV")[0].value);
+                        document.getElementsByClassName('f_Popup3_close')[0].click();
+                    });
+                    document.getElementsByClassName('t3')[0].addEventListener('click', function() {
+                        window.location.href = "#" + document.getElementsByClassName('t3')[0].getAttribute("data-team");
+                        createCookie(sx, document.getElementsByClassName('t3')[0].innerHTML.replace(/ /gi, "_") + "@" + document.getElementsByClassName("priceV")[0].value);
+                        document.getElementsByClassName('f_Popup3_close')[0].click();
+                    });
+                    document.getElementsByClassName('t4')[0].addEventListener('click', function() {
+                        window.location.href = "#" + document.getElementsByClassName('t4')[0].getAttribute("data-team");
+                        createCookie(sx, document.getElementsByClassName('t4')[0].innerHTML.replace(/ /gi, "_") + "@" + document.getElementsByClassName("priceV")[0].value);
+                        document.getElementsByClassName('f_Popup3_close')[0].click();
+                    });
+                });
+                document.getElementsByClassName('unsoldx2')[0].addEventListener('click', function() {
+                    var usx = document.getElementsByClassName('unsoldx2')[0].getAttribute('data-name');
+                    document.getElementById(usx).classList.add("usx");
+                    document.getElementById(usx).classList.remove("find");
+                    var ux = document.getElementsByClassName('soldx')[0].getAttribute("data-name");
+                    var uc = "";
+                    if (readCookie('UNSOLD')) {
+                        uc = readCookie('UNSOLD');
+                    }
+                    createCookie("UNSOLD", uc + "@" + ux);
+                    eraseCookie(ux);
+                    document.getElementsByClassName('f_Popup3_close')[0].click();
+                });
+                document.getElementsByClassName('f_Popup3_close')[0].addEventListener('click', function() {
+                    document.getElementById('f_Popup3_button').remove();
+                    document.getElementsByClassName('f_Popup3_box')[0].remove();
+                });
+            }
+        }
+
+        function myFunction(a) {
+            /* Get the text field */
+            var b = a + "$COPY";
+            var copyText = document.getElementById(b);
+            /* Select the text field */
+            copyText.select();
+            copyText.setSelectionRange(0, 99999); /* For mobile devices */
+
+            /* Copy the text inside the text field */
+            navigator.clipboard.writeText(copyText.value.replace(/-/gi, " "));
+            document.getElementsByClassName(a)[0].classList.add("Big");
+            setTimeout(function() {
+                document.getElementsByClassName(a)[0].classList.remove("Big");
+            }, 200)
+        }
+    </script>
+</head>
+
+<body class="aBody aDisable" style="color:white;font-family: 'Voltaire', sans-serif;">
+    <div class="row justify-content-center my-5 py-5 bg-white mx-0">
+        <div class="col-10 my-5 pb-5">
+            <center class="pb-5"><img class="img-fluid" src="https://raw.githubusercontent.com/adnanisab/UMYC-Cup-2022/main/auction.jpg"></center>
+        </div>
+    </div>
+    <div class="container-fluid mt-5 px-3 py-5 border-top border-success border-3" style="background-color: #272727;">
+
+        <h1 class="text-warning text-center display-1 text-uppercase mb-5 py-5 d-block"><span class="text-warning text-uppercase d-block">Players Auction</span></h1>
+        <div class="randomBox d-none"><span class="selectY"></span></div>
+        <!--Batsman-->
+        <div id="BatsmanList" class="row mx-lg-0 mb-5 py-5">
+            <div class="col-12 rounded-pill fw-bold p-3 mb-3 fs-2" style="background-color: #324aa0;">
+                <img src="https://raw.githubusercontent.com/adnanisab/UMYC-Cup-2022/main/bat.png" class="img-fluid me-4 bg-danger rounded-pill p-2">BATSMAN
+            </div>
+            <div id="Suleman-Gebi" class="player find" data-base-price="500"></div>
+            <div id="Tamim-Sema" class="player find" data-base-price="500"></div>
+            <div id="Hisham-Vali" class="player find" data-base-price="500"></div>
+            <div id="Jilaan-Popat" class="player find" data-base-price="500"></div>
+            <div id="Anzal-Gebi" class="player find" data-base-price="500"></div>
+            <div id="Sarfaraz-Popat" class="player find" data-base-price="500"></div>
+            <div id="Ahmed-Dariai" class="player find" data-base-price="500"></div>
+            <div id="Mohsin-Pira" class="player find" data-base-price="500"></div>
+            <div id="Aziz-Shaikh" class="player find" data-base-price="500"></div>
+            <div id="Salim-Vali" class="player find" data-base-price="500"></div>
+            <div id="Saffan-Vali" class="player find" data-base-price="500"></div>
+            <div id="Adnan-Isab" class="player find" data-base-price="500"></div>
+            <div id="Sakib-Nan" class="player find" data-base-price="500"></div>
+            <div id="Hafiz-Fahad-Vali" class="player find" data-base-price="500"></div>
+            <div id="Nisar-Lal" class="player find" data-base-price="500"></div>
+            <div id="Juned-Abuji" class="player find" data-base-price="500"></div>
+            <div id="Mukit-Shaikh" class="player find" data-base-price="500"></div>
+            <div id="Laiq-Shaikh" class="player find" data-base-price="500"></div>
+            <div id="Talha-Khalil" class="player find" data-base-price="500"></div>
+            <div id="Mudassar-Kanyat" class="player find" data-base-price="500"></div>
+            <div id="Yusuf-Maniar" class="player find" data-base-price="500"></div>
+            <div id="Ramzan-Gebi" class="player find" data-base-price="500"></div>
+            <div id="Imran-Popat" class="player find" data-base-price="500"></div>
+            <div id="Saffan-Bhindiwala" class="player find" data-base-price="500"></div>
+            <div id="Iktedar-Shaikh" class="player find" data-base-price="500"></div>
+            <div id="Muktedar-Shaikh" class="player find" data-base-price="500"></div>
+            <div id="Amaan-S-Lal" class="player find" data-base-price="500"></div>
+            <div id="Adnan-S-Barafwala" class="player find" data-base-price="500"></div>
+            <div id="Farhan-Nan" class="player find" data-base-price="500"></div>
+            <div id="Firoz-Multani" class="player find" data-base-price="500"></div>
+        </div><br><br><br><br><br><br>
+        <!--/Batsman-->
+
+
+        <!--All Rounder-->
+        <div id="ARList" class="row mx-lg-0 my-5 py-5">
+            <div class="col-12 rounded-pill fw-bold p-3 mb-3 fs-2" style="background-color: #324aa0;">
+                <img src="https://raw.githubusercontent.com/adnanisab/UMYC-Cup-2022/main/all.png" class="img-fluid me-4 bg-danger rounded-pill p-2">ALL ROUNDER
+            </div>
+            <div id="Anish-Gebi" class="player find" data-base-price="500"></div>
+            <div id="Siddik-Memon" class="player find" data-base-price="500"></div>
+            <div id="Mustakim-Popat" class="player find" data-base-price="500"></div>
+            <div id="Sakib-Isab" class="player find" data-base-price="500"></div>
+            <div id="Shahbaz-Nan" class="player find" data-base-price="500"></div>
+            <div id="Ajmal-Sema" class="player find" data-base-price="500"></div>
+            <div id="Abdul-Rehman-Dariai" class="player find" data-base-price="500"></div>
+            <div id="Bilal-Maniyar" class="player find" data-base-price="500"></div>
+            <div id="Muzammil-Maniar" class="player find" data-base-price="500"></div>
+            <div id="Abdul-Ayaaz-Shaikh" class="player find" data-base-price="500"></div>
+            <div id="Muzassim-Gebi" class="player find" data-base-price="500"></div>
+            <div id="Arshil-Damanvala" class="player find" data-base-price="500"></div>
+            <div id="Hamza-Barafwala" class="player find" data-base-price="500"></div>
+            <div id="Arshad-Abuji" class="player find" data-base-price="500"></div>
+            <div id="Mohammad-Gebi" class="player find" data-base-price="500"></div>
+            <div id="Munib-Shaikh" class="player find" data-base-price="500"></div>
+            <div id="Ayyan-M-Shaikh" class="player find" data-base-price="500"></div>
+            <div id="Hamid-Shaikh" class="player find" data-base-price="500"></div>
+            <div id="Juned-Nan" class="player find" data-base-price="500"></div>
+            <div id="Abdul-Rahman-Nanabhai" class="player find" data-base-price="500"></div>
+            <div id="Mubassir-Nanabhai" class="player find" data-base-price="500"></div>
+            <div id="Adib-Lal" class="player find" data-base-price="500"></div>
+            <div id="Tabrez-Gebi" class="player find" data-base-price="500"></div>
+        </div><br><br><br><br><br><br>
+        <!--/All Rounder-->
+
+        <!--Wicket Keeper-->
+        <div id="WKList" class="row mx-lg-0 my-5 py-5">
+            <div class="col-12 rounded-pill fw-bold p-3 mb-3 fs-2" style="background-color: #324aa0;">
+                <img src="https://raw.githubusercontent.com/adnanisab/UMYC-Cup-2022/main/wicket.png" class="img-fluid me-4 bg-danger rounded-pill p-2">WICKET KEEPER
+            </div>
+            <div id="Asfak-Nan" class="player find" data-base-price="500"></div>
+            <div id="Haifz-Siddiq-Gandhi" class="player find" data-base-price="500"></div>
+        </div><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+        <!--/Wicket Keeper-->
+
+        <!--Bowler-->
+        <div id="BowlerList" class="row mx-lg-0 my-5 py-5">
+            <div class="col-12 rounded-pill fw-bold p-3 mb-3 fs-2" style="background-color: #324aa0;">
+                <img src="https://raw.githubusercontent.com/adnanisab/UMYC-Cup-2022/main/ball2.png" class="img-fluid me-4 bg-danger rounded-pill p-2">BOWLER
+            </div>
+            <div id="Mahruf-Sema" class="player find" data-base-price="500"></div>
+            <div id="Ayaz-Nan" class="player find" data-base-price="500"></div>
+            <div id="Mahmud-Dadabhai" class="player find" data-base-price="500"></div>
+        </div><br><br><br><br><br><br>
+        <!--/Bowler-->
+
+
+    </div>
+    <p class="bg-body py-5 text-dark text-center fw-bold fs-3"><br><br><br><br>
+        <br<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br></p>
+    <div class="container-fluid px-3 py-5 border-top border-danger border-3" style="background-color: #272727;">
+
+        <h1 class="text-center mb-0 display-1 fw-bold mb-5 py-5 d-block"><span class="text-white text-uppercase d-block">Teams</span></h1>
+
+        <!-- UMAR_DADABHAI_LIONS -->
+        <div id="UMAR_DADABHAI_LIONS" class="row mx-lg-0 my-5 py-5 teams">
+            <div class="col-12 rounded-pill bg-danger fw-bold p-3 mb-3 fs-2 ww d-lg-flex align-items-center justify-content-between"><span class="ww-span"><img class="img_fluid ww-img me-3" src="https://raw.githubusercontent.com/adnanisab/UMYC-Cup-2022/main/UMAR-DADABHAI-LIONS-TRANSPARENT.png">UMAR_DADABHAI_LIONS</span><span class="float-lg-end d-block d-lg-inline px-3 bg-success rounded-pill">Balance Left: <b class="t1-left">50000</b><b class="t1-leftX d-none">50000</b></span></div>
+        </div><br><br><br><br><br><br>
+
+        <!-- RISING_STARS_JUNED_11 -->
+        <div id="RISING_STARS_JUNED_11" class="row mx-lg-0 my-5 py-5 teams">
+            <div class="col-12 rounded-pill bg-danger fw-bold p-3 mb-3 fs-2 ww d-lg-flex align-items-center justify-content-between"><span class="ww-span"><img class="img_fluid ww-img me-3" src="https://raw.githubusercontent.com/adnanisab/UMYC-Cup-2022/main/RISING-STARS-JUNED-11.png">RISING_STARS_JUNED_11</span><span class="float-lg-end d-block d-lg-inline px-3 bg-success rounded-pill">Balance Left: <b class="t2-left">50000</b><b class="t2-leftX d-none">50000</b></span></div>
+        </div><br><br><br><br><br><br>
+
+        <!-- BLUE_STARS_XI -->
+        <div id="BLUE_STARS_XI" class="row mx-lg-0 my-5 py-5 teams">
+            <div class="col-12 rounded-pill bg-danger fw-bold p-3 mb-3 fs-2 ww d-lg-flex align-items-center justify-content-between"><span class="ww-span"><img class="img_fluid ww-img me-3" src="https://raw.githubusercontent.com/adnanisab/UMYC-Cup-2022/main/TEST.png">BLUE_STARS_XI</span><span class="float-lg-end d-block d-lg-inline px-3 bg-success rounded-pill">Balance Left: <b class="t3-left">50000</b><b class="t3-leftX d-none">50000</b></span></div>
+        </div><br><br><br><br><br><br>
+
+        <!-- FRESH_N_PURE_UK -->
+        <div id="FRESH_N_PURE_UK" class="row mx-lg-0 my-5 py-5 teams">
+            <div class="col-12 rounded-pill bg-danger fw-bold p-3 mb-3 fs-2 ww d-lg-flex align-items-center justify-content-between"><span class="ww-span"><img class="img_fluid ww-img me-3" src="https://raw.githubusercontent.com/adnanisab/UMYC-Cup-2022/main/FRESH-N-PURE-UK.png">FRESH_N_PURE_UK</span><span class="float-lg-end d-block d-lg-inline px-3 bg-success rounded-pill">Balance Left: <b class="t4-left">50000</b><b class="t4-leftX d-none">50000</b></span></div>
+        </div><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+    </div>
+
+    <!-- <p class="bg-body py-5 text-dark text-center fw-bold fs-3"><br>
+        <iframe id="GoogleSheet" style="width:100%; height:600px;border-width:0" src="https://docs.google.com/spreadsheets/d/1vm3InSsBKY0_8BTTLq5Nfrc3QJxITNw9mO7U1ud2bYE/edit#gid=0">
+    </iframe>
+    </p> -->
+
+    <p id="auctionStatus" class="bg-body py-5 text-dark text-center fw-bold fs-3"><br>
+        <br>
+        <div class="row text-white fs-1 border border-warning border-3 text-center border px-3 py-5 bg-dark rounded mx-0 justify-content-center">
+            <div class="col-12 display-3 mb-5 text-warning d-none">AUCTION STATUS</div>
+            <div class="total col-12 display-3 mb-5 text-warning">TOTAL PLAYERS <span class="totalP text-dark bg-body rounded-pill px-3" style="font-family: Trebuchet MS;"></span></div>
+            <div class="soldC col-lg-4 bg-success rounded-pill py-4">SOLD<span class="soldP ms-2 text-dark bg-body rounded-pill px-3" style="font-family: Trebuchet MS;"></span></div>
+            <div class="col-1">&nbsp;</div>
+            <div class="unsoldC col-lg-4 bg-danger rounded-pill py-4">UNSOLD<span class="unsoldP ms-2 text-dark bg-body rounded-pill px-3" style="font-family: Trebuchet MS;"></span></div>
+        </div>
+        <br<br><br><br><br>
+            <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br></p>
+    <p class="bg-body py-5 fs-2 text-dark text-center fw-bold fs-3"><br><br><br><br>
+        <br<br><br><br><br><br><br><br><br><br><br><br><br><span class="display-3" style="cursor: pointer;" onclick="getCookies();">END OF AUCTION</span><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+            <textarea id="cus-save"></textarea><br><br><br></p>
+    <div class="BookMark" style="user-select: none;">
+        <svg style='transform: scale(1.5);' xmlns='http://www.w3.org/2000/svg' width='32' height='32' fill='#fff' class='bi bi-list open d-none' viewBox='0 0 16 16'><path fill-rule='evenodd' d='M2.5 12a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5zm0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5zm0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5z'/></svg>
+        <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" fill="red" class="bi bi-x-lg close d-none" viewBox="0 0 16 16">
+            <path fill-rule="evenodd" d="M13.854 2.146a.5.5 0 0 1 0 .708l-11 11a.5.5 0 0 1-.708-.708l11-11a.5.5 0 0 1 .708 0Z"/>
+            <path fill-rule="evenodd" d="M2.146 2.146a.5.5 0 0 0 0 .708l11 11a.5.5 0 0 0 .708-.708l-11-11a.5.5 0 0 0-.708 0Z"/>
+          </svg>
+        <span class="links">
+            <a href="#BatsmanList"><img src="https://raw.githubusercontent.com/adnanisab/UMYC-Cup-2022/main/bat.png" class="img-fluid bg-dark rounded-pill p-2 bg-red-hover"></a>            
+            <a href="#ARList"><img src="https://raw.githubusercontent.com/adnanisab/UMYC-Cup-2022/main/all.png" class="img-fluid bg-dark rounded-pill p-2 bg-red-hover"></a>                       
+            <a class="" href="#WKList"><img src="https://raw.githubusercontent.com/adnanisab/UMYC-Cup-2022/main/wicket.png" class="img-fluid bg-dark rounded-pill p-2 bg-red-hover"></a>
+            <a href="#BowlerList"><img src="https://raw.githubusercontent.com/adnanisab/UMYC-Cup-2022/main/ball.png" class="img-fluid bg-dark rounded-pill p-2 bg-red-hover"></a> 
+
+            <a href="javascript:void(0)" class="selectX p-2 rounded bg-warning mx-5 d-none" style="color:black !important">SELECT FRESH PLAYER</a>
+
+            <a href="javascript:void(0)" class="selectZ p-2 rounded bg-danger mx-5 d-none">SELECT UNSOLD PLAYER</a>
+
+            <div class="ms-5 float-lg-end d-block d-lg-inline d-inline-block">
+            <a href="#UMAR_DADABHAI_LIONS" class="bg-dark p-2 rounded-pill bg-red-hover px-2">UMAR DADABHAI LIONS</a>
+            <a href="#RISING_STARS_JUNED_11" class="bg-dark p-2 rounded-pill bg-red-hover px-2">RISING STARS JUNED 11</a>
+            <a href="#BLUE_STARS_XI" class="bg-dark p-2 rounded-pill bg-red-hover px-2">BLUE STARS XI</a>
+            <a href="#FRESH_N_PURE_UK" class="bg-dark p-2 rounded-pill bg-red-hover px-2 me-2">FRESH N PURE UK</a>
+            </div>
+        </span>
+
+    </div>
+    <script>
+        /* UNSOLD Cookie*/
+        if (readCookie("UNSOLD")) {
+            var x = readCookie("UNSOLD");
+            var y = document.getElementsByClassName("find");
+            for (z = 0; z < y.length; z++) {
+                var zz = y[z].getAttribute("id");
+                if (x.indexOf(zz) != -1) {
+                    y[z].classList.add("usx");
+                }
+            }
+            var vv = document.getElementsByClassName("usx");
+            for (v = 0; v < vv.length; v++) {
+                if (vv[v].classList.contains("find")) {
+                    vv[v].classList.remove("find");
+                }
+            }
+        }
+
+        /* Select Random */
+        document.getElementsByClassName('selectX')[0].addEventListener('click', function() {
+            var f = document.getElementsByClassName("find");
+            if (f.length > 0) {
+                var fx = Math.floor(Math.random() * f.length);
+                var nm = f[fx].getAttribute("id");
+                document.getElementsByClassName("randomBox")[0].classList.remove("d-none");
+                document.getElementsByClassName("selectY")[0].innerHTML = "";
+                setTimeout(function() {
+                    document.getElementsByClassName("selectY")[0].innerHTML = "3";
+                }, 500);
+                setTimeout(function() {
+                    document.getElementsByClassName("selectY")[0].innerHTML = "";
+                }, 1300);
+                setTimeout(function() {
+                    document.getElementsByClassName("selectY")[0].innerHTML = "2";
+                }, 1500);
+                setTimeout(function() {
+                    document.getElementsByClassName("selectY")[0].innerHTML = "";
+                }, 2300);
+                setTimeout(function() {
+                    document.getElementsByClassName("selectY")[0].innerHTML = "1";
+                }, 2500);
+                setTimeout(function() {
+                    document.getElementById(nm).childNodes[0].click();
+                    setTimeout(function() {
+                        document.getElementsByClassName("randomBox")[0].classList.add("d-none");
+                    }, 1000);
+                }, 3000);
+            }
+        });
+        document.getElementsByClassName('selectZ')[0].addEventListener('click', function() {
+            var f = document.getElementsByClassName("usx");
+            if (f.length > 0) {
+                var fx = Math.floor(Math.random() * f.length);
+                var nm = f[fx].getAttribute("id");
+                document.getElementsByClassName("randomBox")[0].classList.remove("d-none");
+                document.getElementsByClassName("selectY")[0].innerHTML = "";
+                setTimeout(function() {
+                    document.getElementsByClassName("selectY")[0].innerHTML = "3";
+                }, 500);
+                setTimeout(function() {
+                    document.getElementsByClassName("selectY")[0].innerHTML = "";
+                }, 1300);
+                setTimeout(function() {
+                    document.getElementsByClassName("selectY")[0].innerHTML = "2";
+                }, 1500);
+                setTimeout(function() {
+                    document.getElementsByClassName("selectY")[0].innerHTML = "";
+                }, 2300);
+                setTimeout(function() {
+                    document.getElementsByClassName("selectY")[0].innerHTML = "1";
+                }, 2500);
+                setTimeout(function() {
+                    document.getElementById(nm).childNodes[0].click();
+                    setTimeout(function() {
+                        document.getElementsByClassName("randomBox")[0].classList.add("d-none");
+                    }, 1000);
+                }, 3000);
+            }
+        });
+
+        /* Menu Bar */
+        document.getElementsByClassName('open')[0].addEventListener('click', function() {
+            document.getElementsByClassName("open")[0].classList.add("d-none");
+            document.getElementsByClassName("close")[0].classList.remove("d-none");
+            document.getElementsByClassName("links")[0].classList.remove("d-none");
+        });
+        document.getElementsByClassName('close')[0].addEventListener('click', function() {
+            document.getElementsByClassName("close")[0].classList.add("d-none");
+            document.getElementsByClassName("open")[0].classList.remove("d-none");
+            document.getElementsByClassName("links")[0].classList.add("d-none");
+        });
+
+        /* Activate Auction*/
+        if (window.location.href.indexOf("?auction") != -1) {
+            document.getElementsByClassName("aBody")[0].classList.remove("aDisable");
+        }
+        /* Adjust Images */
+        var pr = document.getElementsByClassName("player");
+        for (var p = 0; p < pr.length; p++) {
+            var q = pr[p].getAttribute("id");
+            var bp = pr[p].getAttribute("data-base-price");
+            pr[p].classList.add("col-12", "col-md-6", "col-lg-4", "px-0")
+            pr[p].insertAdjacentHTML("beforeend", "<img class='img-fluid pl' src='https://raw.githubusercontent.com/adnanisab/UMYC-Cup-2022/main/" + q + ".jpg' onclick=\"OpenPopup3('https://raw.githubusercontent.com/adnanisab/UMYC-Cup-2022/main/" + q + ".jpg','" + q + "','" + bp + "')\"><img class='s_img d-none' src='https://raw.githubusercontent.com/adnanisab/UMYC-Cup-2022/main/sold3.png'><img class='us_img d-none' src='https://raw.githubusercontent.com/adnanisab/UMYC-Cup-2022/main/unsold.png'>");
+        }
+
+        /* Sold-Unsold*/
+        var a = document.getElementsByClassName("player");
+        setInterval(function() {
+            for (var b = 0; b < pr.length; b++) {
+                var c = a[b].getAttribute("id");
+                if (readCookie(c)) {
+                    a[b].classList.add("s");
+                    a[b].classList.remove("find");
+                    a[b].classList.remove("usx");
+                    a[b].setAttribute("data-team", readCookie(c).split("@").shift());
+                    a[b].setAttribute("data-price", readCookie(c).split("@").pop());
+                } else if (!readCookie(c)) {
+                    a[b].classList.remove("s");
+                    if (!a[b].classList.contains("usx")) {
+                        a[b].classList.add("find");
+                    }
+                    a[b].removeAttribute("data-team");
+                    a[b].removeAttribute("data-price");
+                }
+            }
+            var tx = document.getElementsByClassName("s");
+            for (var t = 0; t < tx.length; t++) {
+                if (tx[t].getAttribute("data-team") == "UMAR_DADABHAI_LIONS") {
+                    var ty = tx[t].getAttribute("id");
+                    var tp = readCookie(ty).split("@").pop();
+                    if (document.getElementsByClassName(ty).length == 0) {
+                        document.getElementById("UMAR_DADABHAI_LIONS").insertAdjacentHTML("beforeend", "<div class='" + ty + " col-12 col-md-6 col-lg-3 px-0 UMAR_DADABHAI_LIONS teamS' data-player='" + ty + "' data-price='" + tp + "' onclick='myFunction(\"" + ty + "\")'><input id='" + ty + "$COPY' type='text' class='CopyTeam d-none' value='" + ty + "@" + tp + "'><img class='img-fluid' src='https://raw.githubusercontent.com/adnanisab/UMYC-Cup-2022/main/" + ty + ".jpg'><div class='playerprice'><span class='bg-warning text-dark px-3 rounded-pill fw-bold'>" + tp + "</span></div></div>");
+                    }
+                }
+                if (tx[t].getAttribute("data-team") == "RISING_STARS_JUNED_11") {
+                    var ty = tx[t].getAttribute("id");
+                    var tp = readCookie(ty).split("@").pop();
+                    if (document.getElementsByClassName(ty).length == 0) {
+                        document.getElementById("RISING_STARS_JUNED_11").insertAdjacentHTML("beforeend", "<div class='" + ty + " col-12 col-md-6 col-lg-3 px-0 RISING_STARS_JUNED_11 teamS' data-player='" + ty + "' data-price='" + tp + "' onclick='myFunction(\"" + ty + "\")'><input id='" + ty + "$COPY' type='text' class='CopyTeam d-none' value='" + ty + "@" + tp + "'><img class='img-fluid' src='https://raw.githubusercontent.com/adnanisab/UMYC-Cup-2022/main/" + ty + ".jpg'><div class='playerprice'><span class='bg-warning text-dark px-3 rounded-pill fw-bold'>" + tp + "</span></div></div>");
+                    }
+                }
+                if (tx[t].getAttribute("data-team") == "BLUE_STARS_XI") {
+                    var ty = tx[t].getAttribute("id");
+                    var tp = readCookie(ty).split("@").pop();
+                    if (document.getElementsByClassName(ty).length == 0) {
+                        document.getElementById("BLUE_STARS_XI").insertAdjacentHTML("beforeend", "<div class='" + ty + " col-12 col-md-6 col-lg-3 px-0 BLUE_STARS_XI teamS' data-player='" + ty + "' data-price='" + tp + "' onclick='myFunction(\"" + ty + "\")'><input id='" + ty + "$COPY' type='text' class='CopyTeam d-none' value='" + ty + "@" + tp + "'><img class='img-fluid' src='https://raw.githubusercontent.com/adnanisab/UMYC-Cup-2022/main/" + ty + ".jpg'><div class='playerprice'><span class='bg-warning text-dark px-3 rounded-pill fw-bold'>" + tp + "</span></div></div>");
+                    }
+                }
+                if (tx[t].getAttribute("data-team") == "FRESH_N_PURE_UK") {
+                    var ty = tx[t].getAttribute("id");
+                    var tp = readCookie(ty).split("@").pop();
+                    if (document.getElementsByClassName(ty).length == 0) {
+                        document.getElementById("FRESH_N_PURE_UK").insertAdjacentHTML("beforeend", "<div class='" + ty + " col-12 col-md-6 col-lg-3 px-0 FRESH_N_PURE_UK teamS' data-player='" + ty + "' data-price='" + tp + "' onclick='myFunction(\"" + ty + "\")'><input id='" + ty + "$COPY' type='text' class='CopyTeam d-none' value='" + ty + "@" + tp + "'><img class='img-fluid' src='https://raw.githubusercontent.com/adnanisab/UMYC-Cup-2022/main/" + ty + ".jpg'><div class='playerprice'><span class='bg-warning text-dark px-3 rounded-pill fw-bold'>" + tp + "</span></div></div>");
+                    }
+                }
+            }
+            var ts = document.getElementsByClassName("teamS");
+            for (m = 0; m < ts.length; m++) {
+                if (!readCookie(ts[m].getAttribute("data-player"))) {
+                    ts[m].remove();
+                }
+            }
+
+            /* Balance Left*/
+            var a_UMAR_DADABHAI_LIONS = document.getElementsByClassName("UMAR_DADABHAI_LIONS");
+            if (a_UMAR_DADABHAI_LIONS.length > 0) {
+                var tl_UMAR_DADABHAI_LIONS = 0;
+                for (var ai_UMAR_DADABHAI_LIONS = 0; ai_UMAR_DADABHAI_LIONS < a_UMAR_DADABHAI_LIONS.length; ai_UMAR_DADABHAI_LIONS++) {
+                    tl_UMAR_DADABHAI_LIONS = tl_UMAR_DADABHAI_LIONS + parseInt(a_UMAR_DADABHAI_LIONS[ai_UMAR_DADABHAI_LIONS].getAttribute("data-price"));
+                }
+                document.getElementsByClassName("t1-left")[0].innerHTML = parseInt(document.getElementsByClassName("t1-leftX")[0].innerHTML) - tl_UMAR_DADABHAI_LIONS;
+            } else {
+                document.getElementsByClassName("t1-left")[0].innerHTML = parseInt(document.getElementsByClassName("t1-leftX")[0].innerHTML);
+            }
+            var a_RISING_STARS_JUNED_11 = document.getElementsByClassName("RISING_STARS_JUNED_11");
+            if (a_RISING_STARS_JUNED_11.length > 0) {
+                var tl_RISING_STARS_JUNED_11 = 0;
+                for (var ai_RISING_STARS_JUNED_11 = 0; ai_RISING_STARS_JUNED_11 < a_RISING_STARS_JUNED_11.length; ai_RISING_STARS_JUNED_11++) {
+                    tl_RISING_STARS_JUNED_11 = tl_RISING_STARS_JUNED_11 + parseInt(a_RISING_STARS_JUNED_11[ai_RISING_STARS_JUNED_11].getAttribute("data-price"));
+                }
+                document.getElementsByClassName("t2-left")[0].innerHTML = parseInt(document.getElementsByClassName("t2-leftX")[0].innerHTML) - tl_RISING_STARS_JUNED_11;
+            } else {
+                document.getElementsByClassName("t2-left")[0].innerHTML = parseInt(document.getElementsByClassName("t2-leftX")[0].innerHTML);
+            }
+            var a_BLUE_STARS_XI = document.getElementsByClassName("BLUE_STARS_XI");
+            if (a_BLUE_STARS_XI.length > 0) {
+                var tl_BLUE_STARS_XI = 0;
+                for (var ai_BLUE_STARS_XI = 0; ai_BLUE_STARS_XI < a_BLUE_STARS_XI.length; ai_BLUE_STARS_XI++) {
+                    tl_BLUE_STARS_XI = tl_BLUE_STARS_XI + parseInt(a_BLUE_STARS_XI[ai_BLUE_STARS_XI].getAttribute("data-price"));
+                }
+                document.getElementsByClassName("t3-left")[0].innerHTML = parseInt(document.getElementsByClassName("t3-leftX")[0].innerHTML) - tl_BLUE_STARS_XI;
+            } else {
+                document.getElementsByClassName("t3-left")[0].innerHTML = parseInt(document.getElementsByClassName("t3-leftX")[0].innerHTML);
+            }
+            var a_FRESH_N_PURE_UK = document.getElementsByClassName("FRESH_N_PURE_UK");
+            if (a_FRESH_N_PURE_UK.length > 0) {
+                var tl_FRESH_N_PURE_UK = 0;
+                for (var ai_FRESH_N_PURE_UK = 0; ai_FRESH_N_PURE_UK < a_FRESH_N_PURE_UK.length; ai_FRESH_N_PURE_UK++) {
+                    tl_FRESH_N_PURE_UK = tl_FRESH_N_PURE_UK + parseInt(a_FRESH_N_PURE_UK[ai_FRESH_N_PURE_UK].getAttribute("data-price"));
+                }
+                document.getElementsByClassName("t4-left")[0].innerHTML = parseInt(document.getElementsByClassName("t4-leftX")[0].innerHTML) - tl_FRESH_N_PURE_UK;
+            } else {
+                document.getElementsByClassName("t4-left")[0].innerHTML = parseInt(document.getElementsByClassName("t4-leftX")[0].innerHTML);
+            }
+
+            /* Counting */
+            document.getElementsByClassName("totalP")[0].innerHTML = document.getElementsByClassName("player").length;
+            if (document.getElementsByClassName("s").length > 0) {
+                document.getElementsByClassName("soldP")[0].innerHTML = document.getElementsByClassName("s").length;
+            } else {
+                document.getElementsByClassName("soldP")[0].innerHTML = 0;
+            }
+            if (document.getElementsByClassName("usx").length > 0) {
+                document.getElementsByClassName("unsoldP")[0].innerHTML = document.getElementsByClassName("usx").length;
+            } else {
+                document.getElementsByClassName("unsoldP")[0].innerHTML = 0;
+            }
+        }, 10);
+        var w = document.getElementsByClassName("ww");
+        for (z = 0; z < w.length; z++) {
+            w[z].innerHTML = w[z].innerHTML.replace(/_/gi, " ");
+        }
+
+
+        /* ********************************* Store Players ********************************* */
+
+        createCookie('Mahmud-Dadabhai', 'UMAR_DADABHAI_LIONS@3000');
+        createCookie('Arshad-Abuji', 'RISING_STARS_JUNED_11@3000');
+        createCookie('Abdul-Rehman-Dariai', 'FRESH_N_PURE_UK@8000');
+        createCookie('Siddik-Memon', 'BLUE_STARS_XI@7000');
+
+
+
+
+
+        /* ********************************* Store Players ********************************* */
+    </script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+    <script>
+        window.onbeforeunload = function(e) {
+            e = e || window.event;
+
+            // For IE and Firefox prior to version 4
+            if (e) {
+                e.returnValue = 'Sure?';
+            }
+
+            // For Safari
+            return 'Sure?';
+        };
+    </script>
+
+    <!-- Replace solding class with below if not want to place price
+        <b class='solding d-flex justify-content-center' style='cursor: pointer;'><svg style='transform: scale(1.5);' xmlns='http://www.w3.org/2000/svg' width='32' height='32' fill='#fff' class='bi bi-list' viewBox='0 0 16 16'><path fill-rule='evenodd' d='M2.5 12a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5zm0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5zm0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5z'/></svg></b>
+    
+    <div class='cus-price solding'><span class='cus-price-span bg-warning text-dark px-4 rounded-pill fs-3 lh-lg d-inline-block'>Base Price : " + price + "</span></div>
+
+    createCookie("Player-Name","RISING_STARS_JUNED_11@700");
+    Ajaml - 1000
+    Ahmed - 1000
+    Juned - 500
+    Asfak - 1500
+-->
+</body>
+
+</html>
