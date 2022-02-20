@@ -438,7 +438,7 @@
                         var cv = readCookie("UNSOLD");
                         if (cv.indexOf(cn) != -1) {
                             cv = cv.replace(cn, "");
-                            createCookie("UNSOLD", cv);
+                            createCookie("UNSOLD", cv, '1');
                         }
                     }
                     document.getElementsByClassName("figureX")[0].classList.add("sX");
@@ -455,22 +455,22 @@
                     /*Select Team*/
                     document.getElementsByClassName('t1')[0].addEventListener('click', function() {
                         window.location.href = "#" + document.getElementsByClassName('t1')[0].getAttribute("data-team");
-                        createCookie(sx, document.getElementsByClassName('t1')[0].innerHTML.replace(/ /gi, "_") + "@" + document.getElementsByClassName("priceV")[0].value);
+                        createCookie(sx, document.getElementsByClassName('t1')[0].innerHTML.replace(/ /gi, "_") + "@" + document.getElementsByClassName("priceV")[0].value, '1');
                         document.getElementsByClassName('f_Popup3_close')[0].click();
                     });
                     document.getElementsByClassName('t2')[0].addEventListener('click', function() {
                         window.location.href = "#" + document.getElementsByClassName('t2')[0].getAttribute("data-team");
-                        createCookie(sx, document.getElementsByClassName('t2')[0].innerHTML.replace(/ /gi, "_") + "@" + document.getElementsByClassName("priceV")[0].value);
+                        createCookie(sx, document.getElementsByClassName('t2')[0].innerHTML.replace(/ /gi, "_") + "@" + document.getElementsByClassName("priceV")[0].value, '1');
                         document.getElementsByClassName('f_Popup3_close')[0].click();
                     });
                     document.getElementsByClassName('t3')[0].addEventListener('click', function() {
                         window.location.href = "#" + document.getElementsByClassName('t3')[0].getAttribute("data-team");
-                        createCookie(sx, document.getElementsByClassName('t3')[0].innerHTML.replace(/ /gi, "_") + "@" + document.getElementsByClassName("priceV")[0].value);
+                        createCookie(sx, document.getElementsByClassName('t3')[0].innerHTML.replace(/ /gi, "_") + "@" + document.getElementsByClassName("priceV")[0].value, '1');
                         document.getElementsByClassName('f_Popup3_close')[0].click();
                     });
                     document.getElementsByClassName('t4')[0].addEventListener('click', function() {
                         window.location.href = "#" + document.getElementsByClassName('t4')[0].getAttribute("data-team");
-                        createCookie(sx, document.getElementsByClassName('t4')[0].innerHTML.replace(/ /gi, "_") + "@" + document.getElementsByClassName("priceV")[0].value);
+                        createCookie(sx, document.getElementsByClassName('t4')[0].innerHTML.replace(/ /gi, "_") + "@" + document.getElementsByClassName("priceV")[0].value, '1');
                         document.getElementsByClassName('f_Popup3_close')[0].click();
                     });
                 });
@@ -483,7 +483,7 @@
                     if (readCookie('UNSOLD')) {
                         uc = readCookie('UNSOLD');
                     }
-                    createCookie("UNSOLD", uc + "@" + ux);
+                    createCookie("UNSOLD", uc + "@" + ux, '1');
                     eraseCookie(ux);
                     document.getElementsByClassName('f_Popup3_close')[0].click();
                 });
@@ -913,10 +913,10 @@
 
         /* ********************************* Store Players ********************************* */
 
-        createCookie('Mahmud-Dadabhai', 'UMAR_DADABHAI_LIONS@3000');
-        createCookie('Arshad-Abuji', 'RISING_STARS_JUNED_11@3000');
-        createCookie('Abdul-Rehman-Dariai', 'FRESH_N_PURE_UK@8000');
-        createCookie('Siddik-Memon', 'BLUE_STARS_XI@7000');
+        createCookie('Mahmud-Dadabhai', 'UMAR_DADABHAI_LIONS@3000', '1');
+        createCookie('Arshad-Abuji', 'RISING_STARS_JUNED_11@3000', '1');
+        createCookie('Abdul-Rehman-Dariai', 'FRESH_N_PURE_UK@8000', '1');
+        createCookie('Siddik-Memon', 'BLUE_STARS_XI@7000', '1');
 
 
 
