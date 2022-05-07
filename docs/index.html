@@ -3,14 +3,14 @@
 
 <head>
     <!-- Required meta tags -->
-    <link rel="shortcut icon" href="https://raw.githubusercontent.com/adnanisab/UMYC-Cup-2022/main/favicon.ico">
+    <link rel="shortcut icon" href="https://raw.githubusercontent.com/adnanisab/UNITY-CUP-2022/main/favicon.ico">
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta property="og:image" content="https://raw.githubusercontent.com/adnanisab/UMYC-Cup-2022/main/sharelogo.jpg" />
+    <meta property="og:image" content="https://raw.githubusercontent.com/adnanisab/UNITY-CUP-2022/main/sharelogo.jpg" />
     <meta name="twitter:card" content="summary_large_image" />
     <meta name="twitter:title" content="UMYC CUP - 2022" />
     <meta name="twitter:description" content="UMYC CUP - 2022 | Auction" />
-    <meta name="twitter:image" content="https://raw.githubusercontent.com/adnanisab/UMYC-Cup-2022/main/sharelogo.jpg" />
+    <meta name="twitter:image" content="https://raw.githubusercontent.com/adnanisab/UNITY-CUP-2022/main/sharelogo.jpg" />
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans&display=swap" rel="stylesheet">
@@ -118,7 +118,7 @@
         }
         
         #f_Popup3 {
-            background-image: url("https://raw.githubusercontent.com/adnanisab/UMYC-Cup-2022/main/bg.jpg");
+            background-image: url("https://raw.githubusercontent.com/adnanisab/UNITY-CUP-2022/main/bg.jpg");
             background-repeat: no-repeat;
             background-size: 100%;
             background-position: top;
@@ -366,6 +366,14 @@
             transition: 300ms ease-in-out;
             opacity: 1;
         }
+        
+        #MostExp img {
+            width: 30%
+        }
+        
+        .s_img.unsold_over {
+            cursor: no-drop;
+        }
     </style>
     <script>
         function createCookie(name, value, days) {
@@ -411,7 +419,7 @@
 
         function OpenPopup3(pageUrl, name, price) {
             if (!document.getElementById('f_Popup3_button')) {
-                var msg = '<figure class="figure figureX border border-3 border-light rounded"><img id="f-mfp-img" class="mb-0" src="' + pageUrl + '" class="figure-img img-fluid"><img class="s_img d-none" src="https://raw.githubusercontent.com/adnanisab/UMYC-Cup-2022/main/sold3.png"></figure>';
+                var msg = '<figure class="figure figureX border border-3 border-light rounded"><img id="f-mfp-img" class="mb-0" src="' + pageUrl + '" class="figure-img img-fluid"><img class="s_img unsold_over d-none" src="https://raw.githubusercontent.com/adnanisab/UNITY-CUP-2022/main/sold3.png"></figure>';
                 document.getElementsByTagName("body")[0].insertAdjacentHTML("beforeend", "<button id='f_Popup3_button' type='button' data-bs-toggle='modal' data-bs-target='#f_Popup3' style='display:none;'></button><div class='f_Popup3_box modal fade modal-static' id='f_Popup3' data-bs-backdrop='static' data-bs-keyboard='false' tabindex='-1' aria-labelledby='f_Popup3Label' aria-hidden='true'><div class='modal-dialog modal-dialog-centered modal-dialog-scrollable mx-auto'><div class='modal-content'><button type='button' class='f_Popup3_close btn-close position-absolute' data-bs-dismiss='modal' aria-label='Close'><svg style='transform: scale(1.5);' xmlns='http://www.w3.org/2000/svg' width='32' height='32' fill='#fff' class='bi bi-x-lg' viewBox='0 0 16 16'><path fill-rule='evenodd' d='M13.854 2.146a.5.5 0 0 1 0 .708l-11 11a.5.5 0 0 1-.708-.708l11-11a.5.5 0 0 1 .708 0Z'/><path fill-rule='evenodd' d='M2.146 2.146a.5.5 0 0 0 0 .708l11 11a.5.5 0 0 0 .708-.708l-11-11a.5.5 0 0 0-.708 0Z'/></svg></button><div class='modal-body text-center position-relative' style='white-space: pre-wrap;'>" + msg + "<div class='actionx position-fixed'><b class='solding d-none justify-content-center' style='cursor: pointer;'><svg style='transform: scale(1.5);' xmlns='http://www.w3.org/2000/svg' width='32' height='32' fill='#fff' class='bi bi-list' viewBox='0 0 16 16'><path fill-rule='evenodd' d='M2.5 12a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5zm0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5zm0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5z'/></svg></b><span class='soldx invisible text-white bg-danger py-2 px-5 d-inline-block rounded-pill me-3 fs-4' data-name='" + name + "'>&nbsp;&nbsp;SOLD&nbsp;&nbsp;</span> <span class='unsoldx invisible text-dark bg-light py-2 px-5 d-inline-block rounded-pill fs-4' data-name='" + name + "'>UNSOLD</span><div class='price upGo'><b class='unsoldx2 rounded-pill btn px-4 py-2 btn-danger fs-4' data-name='" + name + "'>UNSOLD</b><strong class='cus-strong d-inline-block bg-primary mx-3 p-2 rounded-pill'><b class='fs-2 ps-2'><more class='changeBid'>Base Price</more><svg xmlns='http://www.w3.org/2000/svg' data-bid='250' width='32' height='32' fill='#ffc107' class='cus-bid bi bi-arrow-right-square-fill ms-4' viewBox='0 0 16 16'><path d='M0 14a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V2a2 2 0 0 0-2-2H2a2 2 0 0 0-2 2v12zm4.5-6.5h5.793L8.146 5.354a.5.5 0 1 1 .708-.708l3 3a.5.5 0 0 1 0 .708l-3 3a.5.5 0 0 1-.708-.708L10.293 8.5H4.5a.5.5 0 0 1 0-1z'/></svg></b><input value='" + price + "' class='priceV text-center fs-2' style='font-family: Trebuchet MS;' type='number'  maxlength='6' size='6'></strong><b class='priceSubmit rounded-pill btn px-4 py-2 btn-warning fs-4' data-name='" + name + "'>&nbsp;&nbsp;SOLD&nbsp;&nbsp;</b></div><div class='teamX d-none'><b class='t1' data-team='TEAM_1'>TEAM_1</b><b class='t2' data-team='TEAM_2'>TEAM_2</b><b class='t3' data-team='TEAM_3'>TEAM_3</b><b class='t4' data-team='TEAM_4'>TEAM_4</b><b class='t5' data-team='TEAM_5'>TEAM_5</b><b class='t6' data-team='TEAM_6'>TEAM_6</b></div></div></div></div></div><style>.modal-dialog-scrollable .modal-content {max-height: none;overflow:visible;}.modal-body {padding:0;} .f_Popup3_close{right:-1rem;z-index:999;top:-1rem;background-color:#0d6efd;border-radius:50px;padding:1rem;opacity:1;box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.2);background-image:none;color:#fff;display:flex;justify-content:center;align-items:center;font-weight:700;font-size:18px}.f_Popup3_close:hover{color:#fff;background-color: red;opacity:1}.modal-dialog{display:flex;justify-content:center} .modal-content{width:auto;border-width:0} #f-mfp-img{max-height:90vh;max-width: 90vw;} @media (min-width:576px) {.modal-content{width:auto;}.modal-dialog{max-width:800px;}} .modal-content{background:0 0}}</style></div>");
                 document.getElementById('f_Popup3_button').click();
                 setTimeout(function() {
@@ -437,6 +445,12 @@
                         document.getElementsByClassName("priceV")[0].classList.remove("priceVBig");
                     }, 300)
                 });
+                var st = document.getElementsByClassName("figureX")[0].children[0].getAttribute("src").split("/main/").pop().split(".").shift();
+                if (readCookie(st)) {
+                    document.getElementsByClassName("figureX")[0].classList.add("sX");
+                    document.getElementsByClassName("price")[0].classList.add("d-none");
+                }
+
                 document.getElementsByClassName('priceSubmit')[0].addEventListener('click', function() {
                     var cn = document.getElementsByClassName("priceSubmit")[0].getAttribute("data-name");
                     if (readCookie("UNSOLD")) {
@@ -504,6 +518,19 @@
                     eraseCookie(ux);
                     document.getElementsByClassName('f_Popup3_close')[0].click();
                 });
+                document.getElementsByClassName('unsold_over')[0].addEventListener('click', function() {
+                    // var usx = document.getElementsByClassName('unsoldx2')[0].getAttribute('data-name');
+                    // document.getElementById(usx).classList.add("usx");
+                    // document.getElementById(usx).classList.remove("find");
+                    var ux = document.getElementsByClassName('soldx')[0].getAttribute("data-name");
+                    // var uc = "";
+                    // if (readCookie('UNSOLD')) {
+                    //     uc = readCookie('UNSOLD');
+                    // }
+                    // createCookie("UNSOLD", uc + "@" + ux, '1');
+                    eraseCookie(ux);
+                    document.getElementsByClassName('f_Popup3_close')[0].click();
+                });
                 document.getElementsByClassName('f_Popup3_close')[0].addEventListener('click', function() {
                     document.getElementById('f_Popup3_button').remove();
                     document.getElementsByClassName('f_Popup3_box')[0].remove();
@@ -532,7 +559,7 @@
 <body class="aBody aDisable" style="color:white;font-family: 'Voltaire', sans-serif;">
     <div class="row justify-content-center my-5 py-5 bg-white mx-0">
         <div class="col-10 my-5 pb-5">
-            <center class="pb-5"><img class="img-fluid" src="https://raw.githubusercontent.com/adnanisab/UMYC-Cup-2022/main/auction.jpg"></center>
+            <center class="pb-5"><img class="img-fluid" src="https://raw.githubusercontent.com/adnanisab/UNITY-CUP-2022/main/auction.jpg"></center>
         </div>
     </div>
     <div class="container-fluid mt-5 px-3 py-5 border-top border-success border-3" style="background-color: #272727;">
@@ -542,7 +569,7 @@
         <!--Batsman-->
         <div id="BatsmanList" class="row mx-lg-0 mb-5 py-5">
             <div class="col-12 rounded-pill fw-bold p-3 mb-3 fs-2" style="background-color: #324aa0;">
-                <img src="https://raw.githubusercontent.com/adnanisab/UMYC-Cup-2022/main/bat.png" class="img-fluid me-4 bg-danger rounded-pill p-2">BATSMAN
+                <img src="https://raw.githubusercontent.com/adnanisab/UNITY-CUP-2022/main/bat.png" class="img-fluid me-4 bg-danger rounded-pill p-2">BATSMAN
             </div>
             <div id="Adnan-Isab" class="player find" data-base-price="500" data-num="1"></div>
             <div id="Adnan-S-Barafwala" class="player find" data-base-price="500" data-num="2"></div>
@@ -581,7 +608,7 @@
         <!--All Rounder-->
         <div id="ARList" class="row mx-lg-0 my-5 py-5">
             <div class="col-12 rounded-pill fw-bold p-3 mb-3 fs-2" style="background-color: #324aa0;">
-                <img src="https://raw.githubusercontent.com/adnanisab/UMYC-Cup-2022/main/all.png" class="img-fluid me-4 bg-danger rounded-pill p-2">ALL ROUNDER
+                <img src="https://raw.githubusercontent.com/adnanisab/UNITY-CUP-2022/main/all.png" class="img-fluid me-4 bg-danger rounded-pill p-2">ALL ROUNDER
             </div>
             <div id="Abdul-Ayaaz-Shaikh" class="player find" data-base-price="500"></div>
             <div id="Abdul-Rahman-Nanabhai" class="player find" data-base-price="500"></div>
@@ -612,7 +639,7 @@
         <!--Wicket Keeper-->
         <div id="WKList" class="row mx-lg-0 my-5 py-5">
             <div class="col-12 rounded-pill fw-bold p-3 mb-3 fs-2" style="background-color: #324aa0;">
-                <img src="https://raw.githubusercontent.com/adnanisab/UMYC-Cup-2022/main/wicket.png" class="img-fluid me-4 bg-danger rounded-pill p-2">WICKET KEEPER
+                <img src="https://raw.githubusercontent.com/adnanisab/UNITY-CUP-2022/main/wicket.png" class="img-fluid me-4 bg-danger rounded-pill p-2">WICKET KEEPER
             </div>
             <div id="Asfak-Nan" class="player find" data-base-price="500"></div>
             <div id="Haifz-Siddiq-Gandhi" class="player find" data-base-price="500"></div>
@@ -622,7 +649,7 @@
         <!--Bowler-->
         <div id="BowlerList" class="row mx-lg-0 my-5 py-5">
             <div class="col-12 rounded-pill fw-bold p-3 mb-3 fs-2" style="background-color: #324aa0;">
-                <img src="https://raw.githubusercontent.com/adnanisab/UMYC-Cup-2022/main/ball2.png" class="img-fluid me-4 bg-danger rounded-pill p-2">BOWLER
+                <img src="https://raw.githubusercontent.com/adnanisab/UNITY-CUP-2022/main/ball2.png" class="img-fluid me-4 bg-danger rounded-pill p-2">BOWLER
             </div>
             <div id="Ayaz-Nan" class="player find" data-base-price="500"></div>
             <div id="Mahmud-Dadabhai" class="player find" data-base-price="500"></div>
@@ -640,32 +667,32 @@
 
         <!-- TEAM_1 -->
         <div id="TEAM_1" class="row mx-lg-0 my-5 py-5 teams">
-            <div class="col-12 rounded-pill bg-danger fw-bold p-3 mb-3 fs-2 ww d-lg-flex align-items-center justify-content-between"><span class="ww-span"><img class="img_fluid ww-img me-3" src="https://raw.githubusercontent.com/adnanisab/UMYC-Cup-2022/main/UMAR-DADABHAI-LIONS-TRANSPARENT.png">TEAM_1</span><span class="float-lg-end d-block d-lg-inline px-3 bg-success rounded-pill">Balance Left: <b class="t1-left">50000</b><b class="t1-leftX d-none">50000</b></span></div>
+            <div class="col-12 rounded-pill bg-danger fw-bold p-3 mb-3 fs-2 ww d-lg-flex align-items-center justify-content-between"><span class="ww-span"><img class="img_fluid ww-img me-3" src="https://raw.githubusercontent.com/adnanisab/UNITY-CUP-2022/main/UMAR-DADABHAI-LIONS-TRANSPARENT.png">TEAM_1</span><span class="float-lg-end d-block d-lg-inline px-3 bg-success rounded-pill">Balance Left: <b class="t1-left">50000</b><b class="t1-leftX d-none">50000</b></span></div>
         </div><br><br><br><br><br><br>
 
         <!-- TEAM_2 -->
         <div id="TEAM_2" class="row mx-lg-0 my-5 py-5 teams">
-            <div class="col-12 rounded-pill bg-danger fw-bold p-3 mb-3 fs-2 ww d-lg-flex align-items-center justify-content-between"><span class="ww-span"><img class="img_fluid ww-img me-3" src="https://raw.githubusercontent.com/adnanisab/UMYC-Cup-2022/main/RISING-STARS-JUNED-11.png">TEAM_2</span><span class="float-lg-end d-block d-lg-inline px-3 bg-success rounded-pill">Balance Left: <b class="t2-left">50000</b><b class="t2-leftX d-none">50000</b></span></div>
+            <div class="col-12 rounded-pill bg-danger fw-bold p-3 mb-3 fs-2 ww d-lg-flex align-items-center justify-content-between"><span class="ww-span"><img class="img_fluid ww-img me-3" src="https://raw.githubusercontent.com/adnanisab/UNITY-CUP-2022/main/RISING-STARS-JUNED-11.png">TEAM_2</span><span class="float-lg-end d-block d-lg-inline px-3 bg-success rounded-pill">Balance Left: <b class="t2-left">50000</b><b class="t2-leftX d-none">50000</b></span></div>
         </div><br><br><br><br><br><br>
 
         <!-- TEAM_3 -->
         <div id="TEAM_3" class="row mx-lg-0 my-5 py-5 teams">
-            <div class="col-12 rounded-pill bg-danger fw-bold p-3 mb-3 fs-2 ww d-lg-flex align-items-center justify-content-between"><span class="ww-span"><img class="img_fluid ww-img me-3" src="https://raw.githubusercontent.com/adnanisab/UMYC-Cup-2022/main/TEST.png">TEAM_3</span><span class="float-lg-end d-block d-lg-inline px-3 bg-success rounded-pill">Balance Left: <b class="t3-left">50000</b><b class="t3-leftX d-none">50000</b></span></div>
+            <div class="col-12 rounded-pill bg-danger fw-bold p-3 mb-3 fs-2 ww d-lg-flex align-items-center justify-content-between"><span class="ww-span"><img class="img_fluid ww-img me-3" src="https://raw.githubusercontent.com/adnanisab/UNITY-CUP-2022/main/TEST.png">TEAM_3</span><span class="float-lg-end d-block d-lg-inline px-3 bg-success rounded-pill">Balance Left: <b class="t3-left">50000</b><b class="t3-leftX d-none">50000</b></span></div>
         </div><br><br><br><br><br><br>
 
         <!-- TEAM_4 -->
         <div id="TEAM_4" class="row mx-lg-0 my-5 py-5 teams">
-            <div class="col-12 rounded-pill bg-danger fw-bold p-3 mb-3 fs-2 ww d-lg-flex align-items-center justify-content-between"><span class="ww-span"><img class="img_fluid ww-img me-3" src="https://raw.githubusercontent.com/adnanisab/UMYC-Cup-2022/main/FRESH-N-PURE-UK.png">TEAM_4</span><span class="float-lg-end d-block d-lg-inline px-3 bg-success rounded-pill">Balance Left: <b class="t4-left">50000</b><b class="t4-leftX d-none">50000</b></span></div>
+            <div class="col-12 rounded-pill bg-danger fw-bold p-3 mb-3 fs-2 ww d-lg-flex align-items-center justify-content-between"><span class="ww-span"><img class="img_fluid ww-img me-3" src="https://raw.githubusercontent.com/adnanisab/UNITY-CUP-2022/main/FRESH-N-PURE-UK.png">TEAM_4</span><span class="float-lg-end d-block d-lg-inline px-3 bg-success rounded-pill">Balance Left: <b class="t4-left">50000</b><b class="t4-leftX d-none">50000</b></span></div>
         </div><br><br><br><br><br><br>
 
         <!-- TEAM_5 -->
         <div id="TEAM_5" class="row mx-lg-0 my-5 py-5 teams">
-            <div class="col-12 rounded-pill bg-danger fw-bold p-3 mb-3 fs-2 ww d-lg-flex align-items-center justify-content-between"><span class="ww-span"><img class="img_fluid ww-img me-3" src="https://raw.githubusercontent.com/adnanisab/UMYC-Cup-2022/main/FRESH-N-PURE-UK.png">TEAM_5</span><span class="float-lg-end d-block d-lg-inline px-3 bg-success rounded-pill">Balance Left: <b class="t5-left">50000</b><b class="t5-leftX d-none">50000</b></span></div>
+            <div class="col-12 rounded-pill bg-danger fw-bold p-3 mb-3 fs-2 ww d-lg-flex align-items-center justify-content-between"><span class="ww-span"><img class="img_fluid ww-img me-3" src="https://raw.githubusercontent.com/adnanisab/UNITY-CUP-2022/main/FRESH-N-PURE-UK.png">TEAM_5</span><span class="float-lg-end d-block d-lg-inline px-3 bg-success rounded-pill">Balance Left: <b class="t5-left">50000</b><b class="t5-leftX d-none">50000</b></span></div>
         </div><br><br><br><br><br><br>
 
         <!-- TEAM_6 -->
         <div id="TEAM_6" class="row mx-lg-0 my-5 py-5 teams">
-            <div class="col-12 rounded-pill bg-danger fw-bold p-3 mb-3 fs-2 ww d-lg-flex align-items-center justify-content-between"><span class="ww-span"><img class="img_fluid ww-img me-3" src="https://raw.githubusercontent.com/adnanisab/UMYC-Cup-2022/main/FRESH-N-PURE-UK.png">TEAM_6</span><span class="float-lg-end d-block d-lg-inline px-3 bg-success rounded-pill">Balance Left: <b class="t6-left">50000</b><b class="t6-leftX d-none">50000</b></span></div>
+            <div class="col-12 rounded-pill bg-danger fw-bold p-3 mb-3 fs-2 ww d-lg-flex align-items-center justify-content-between"><span class="ww-span"><img class="img_fluid ww-img me-3" src="https://raw.githubusercontent.com/adnanisab/UNITY-CUP-2022/main/FRESH-N-PURE-UK.png">TEAM_6</span><span class="float-lg-end d-block d-lg-inline px-3 bg-success rounded-pill">Balance Left: <b class="t6-left">50000</b><b class="t6-leftX d-none">50000</b></span></div>
         </div><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
     </div>
 
@@ -694,6 +721,12 @@
         </div>
         <br<br><br><br><br>
             <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br></p>
+
+    <div class="bg-dark py-5 fs-2 text-light text-center fw-bold fs-3"><br><br><br><br>
+        <h1 class="text-warning display-3 mb-5">MOST EXPENSIVE PLAYERS</h1>
+        <br><br>
+        <div id="MostExp" class="d-flex flex-column-reverse container"></div>
+        <br><br><br><br></div>
     <p class="bg-body py-5 fs-2 text-dark text-center fw-bold fs-3"><br><br><br><br>
         <br<br><br><br><br><br><br><br><br><br><br><br><br><span class="display-3" style="cursor: pointer;" onclick="getCookies();">END OF AUCTION</span><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
             <textarea id="cus-save"></textarea><br><br><br></p>
@@ -706,12 +739,12 @@
             <path fill-rule="evenodd" d="M2.146 2.146a.5.5 0 0 0 0 .708l11 11a.5.5 0 0 0 .708-.708l-11-11a.5.5 0 0 0-.708 0Z"/>
           </svg>
         <span class="links">
-            <a href="#BatsmanList"><img src="https://raw.githubusercontent.com/adnanisab/UMYC-Cup-2022/main/bat.png" class="img-fluid bg-dark rounded-pill p-2 bg-red-hover"></a>            
-            <a href="#ARList"><img src="https://raw.githubusercontent.com/adnanisab/UMYC-Cup-2022/main/all.png" class="img-fluid bg-dark rounded-pill p-2 bg-red-hover"></a>                       
-            <a class="" href="#WKList"><img src="https://raw.githubusercontent.com/adnanisab/UMYC-Cup-2022/main/wicket.png" class="img-fluid bg-dark rounded-pill p-2 bg-red-hover"></a>
-            <a href="#BowlerList"><img src="https://raw.githubusercontent.com/adnanisab/UMYC-Cup-2022/main/ball.png" class="img-fluid bg-dark rounded-pill p-2 bg-red-hover"></a> 
+            <a href="#BatsmanList"><img src="https://raw.githubusercontent.com/adnanisab/UNITY-CUP-2022/main/bat.png" class="img-fluid bg-dark rounded-pill p-2 bg-red-hover"></a>            
+            <a href="#ARList"><img src="https://raw.githubusercontent.com/adnanisab/UNITY-CUP-2022/main/all.png" class="img-fluid bg-dark rounded-pill p-2 bg-red-hover"></a>                       
+            <a class="" href="#WKList"><img src="https://raw.githubusercontent.com/adnanisab/UNITY-CUP-2022/main/wicket.png" class="img-fluid bg-dark rounded-pill p-2 bg-red-hover"></a>
+            <a href="#BowlerList"><img src="https://raw.githubusercontent.com/adnanisab/UNITY-CUP-2022/main/ball.png" class="img-fluid bg-dark rounded-pill p-2 bg-red-hover"></a> 
 
-            <!-- <a href="#SearchPlayers" class="ms-3 ps-3 border-start border-secondary"><img src="https://raw.githubusercontent.com/adnanisab/UMYC-Cup-2022/main/search.png" class="img-fluid bg-dark rounded-pill p-2 bg-primary-hover"></a>  -->
+            <!-- <a href="#SearchPlayers" class="ms-3 ps-3 border-start border-secondary"><img src="https://raw.githubusercontent.com/adnanisab/UNITY-CUP-2022/main/search.png" class="img-fluid bg-dark rounded-pill p-2 bg-primary-hover"></a>  -->
             <span class="ms-3 ps-3 border-start border-secondary">
                 <input id="ck_search_input" class="py-1 text-center rounded-pill border-0" style="caret-color: #000;background-color: #000;outline: none !important; max-width: 75px; color: #3B3B3B !important;" type="number" oninput="this.value = this.value.replace(/[^0-9.]/g, '').replace(/(\..*?)\..*/g, '$1');"/>
             </span>
@@ -823,11 +856,11 @@
                 for (ck = 0; ck < ck_p.length; ck++) {
                     if (ck_p[ck].getAttribute("data-num") == ck_value) {
                         ck_p[ck].children[0].click();
-                        var st = document.getElementsByClassName("figureX")[0].children[0].getAttribute("src").split("/main/").pop().split(".").shift();
-                        if (readCookie(st)) {
-                            document.getElementsByClassName("figureX")[0].classList.add("sX");
-                            document.getElementsByClassName("price")[0].classList.add("d-none");
-                        }
+                        // var st = document.getElementsByClassName("figureX")[0].children[0].getAttribute("src").split("/main/").pop().split(".").shift();
+                        // if (readCookie(st)) {
+                        //     document.getElementsByClassName("figureX")[0].classList.add("sX");
+                        //     document.getElementsByClassName("price")[0].classList.add("d-none");
+                        // }
 
                     }
                 }
@@ -857,7 +890,7 @@
             var q = pr[p].getAttribute("id");
             var bp = pr[p].getAttribute("data-base-price");
             pr[p].classList.add("col-12", "col-md-6", "col-lg-4", "px-0")
-            pr[p].insertAdjacentHTML("beforeend", "<img class='img-fluid pl' src='https://raw.githubusercontent.com/adnanisab/UMYC-Cup-2022/main/" + q + ".jpg' onclick=\"OpenPopup3('https://raw.githubusercontent.com/adnanisab/UMYC-Cup-2022/main/" + q + ".jpg','" + q + "','" + bp + "')\"><img class='s_img d-none' src='https://raw.githubusercontent.com/adnanisab/UMYC-Cup-2022/main/sold3.png'><img class='us_img d-none' src='https://raw.githubusercontent.com/adnanisab/UMYC-Cup-2022/main/unsold.png'>");
+            pr[p].insertAdjacentHTML("beforeend", "<img class='img-fluid pl' src='https://raw.githubusercontent.com/adnanisab/UNITY-CUP-2022/main/" + q + ".jpg' onclick=\"OpenPopup3('https://raw.githubusercontent.com/adnanisab/UNITY-CUP-2022/main/" + q + ".jpg','" + q + "','" + bp + "')\"><img class='s_img d-none' src='https://raw.githubusercontent.com/adnanisab/UNITY-CUP-2022/main/sold3.png'><img class='us_img d-none' src='https://raw.githubusercontent.com/adnanisab/UNITY-CUP-2022/main/unsold.png'>");
         }
 
         /* Sold-Unsold*/
@@ -886,42 +919,42 @@
                     var ty = tx[t].getAttribute("id");
                     var tp = readCookie(ty).split("@").pop();
                     if (document.getElementsByClassName(ty).length == 0) {
-                        document.getElementById("TEAM_1").insertAdjacentHTML("beforeend", "<div class='" + ty + " col-12 col-md-6 col-lg-3 px-0 TEAM_1 teamS' data-player='" + ty + "' data-price='" + tp + "' onclick='myFunction(\"" + ty + "\")'><input id='" + ty + "$COPY' type='text' class='CopyTeam d-none' value='" + ty + "@" + tp + "'><img class='img-fluid' src='https://raw.githubusercontent.com/adnanisab/UMYC-Cup-2022/main/" + ty + ".jpg'><div class='playerprice'><span class='bg-warning text-dark px-3 rounded-pill fw-bold'>" + tp + "</span></div></div>");
+                        document.getElementById("TEAM_1").insertAdjacentHTML("beforeend", "<div class='" + ty + " col-12 col-md-6 col-lg-3 px-0 TEAM_1 teamS' data-player='" + ty + "' data-price='" + tp + "' onclick='myFunction(\"" + ty + "\")'><input id='" + ty + "$COPY' type='text' class='CopyTeam d-none' value='" + ty + "@" + tp + "'><img class='img-fluid' data-price='" + tp + "' src='https://raw.githubusercontent.com/adnanisab/UNITY-CUP-2022/main/" + ty + ".jpg'><div class='playerprice'><span class='bg-warning text-dark px-3 rounded-pill fw-bold'>" + tp + "</span></div></div>");
                     }
                 }
                 if (tx[t].getAttribute("data-team") == "TEAM_2") {
                     var ty = tx[t].getAttribute("id");
                     var tp = readCookie(ty).split("@").pop();
                     if (document.getElementsByClassName(ty).length == 0) {
-                        document.getElementById("TEAM_2").insertAdjacentHTML("beforeend", "<div class='" + ty + " col-12 col-md-6 col-lg-3 px-0 TEAM_2 teamS' data-player='" + ty + "' data-price='" + tp + "' onclick='myFunction(\"" + ty + "\")'><input id='" + ty + "$COPY' type='text' class='CopyTeam d-none' value='" + ty + "@" + tp + "'><img class='img-fluid' src='https://raw.githubusercontent.com/adnanisab/UMYC-Cup-2022/main/" + ty + ".jpg'><div class='playerprice'><span class='bg-warning text-dark px-3 rounded-pill fw-bold'>" + tp + "</span></div></div>");
+                        document.getElementById("TEAM_2").insertAdjacentHTML("beforeend", "<div class='" + ty + " col-12 col-md-6 col-lg-3 px-0 TEAM_2 teamS' data-player='" + ty + "' data-price='" + tp + "' onclick='myFunction(\"" + ty + "\")'><input id='" + ty + "$COPY' type='text' class='CopyTeam d-none' value='" + ty + "@" + tp + "'><img class='img-fluid' data-price='" + tp + "' src='https://raw.githubusercontent.com/adnanisab/UNITY-CUP-2022/main/" + ty + ".jpg'><div class='playerprice'><span class='bg-warning text-dark px-3 rounded-pill fw-bold'>" + tp + "</span></div></div>");
                     }
                 }
                 if (tx[t].getAttribute("data-team") == "TEAM_3") {
                     var ty = tx[t].getAttribute("id");
                     var tp = readCookie(ty).split("@").pop();
                     if (document.getElementsByClassName(ty).length == 0) {
-                        document.getElementById("TEAM_3").insertAdjacentHTML("beforeend", "<div class='" + ty + " col-12 col-md-6 col-lg-3 px-0 TEAM_3 teamS' data-player='" + ty + "' data-price='" + tp + "' onclick='myFunction(\"" + ty + "\")'><input id='" + ty + "$COPY' type='text' class='CopyTeam d-none' value='" + ty + "@" + tp + "'><img class='img-fluid' src='https://raw.githubusercontent.com/adnanisab/UMYC-Cup-2022/main/" + ty + ".jpg'><div class='playerprice'><span class='bg-warning text-dark px-3 rounded-pill fw-bold'>" + tp + "</span></div></div>");
+                        document.getElementById("TEAM_3").insertAdjacentHTML("beforeend", "<div class='" + ty + " col-12 col-md-6 col-lg-3 px-0 TEAM_3 teamS' data-player='" + ty + "' data-price='" + tp + "' onclick='myFunction(\"" + ty + "\")'><input id='" + ty + "$COPY' type='text' class='CopyTeam d-none' value='" + ty + "@" + tp + "'><img class='img-fluid' data-price='" + tp + "' src='https://raw.githubusercontent.com/adnanisab/UNITY-CUP-2022/main/" + ty + ".jpg'><div class='playerprice'><span class='bg-warning text-dark px-3 rounded-pill fw-bold'>" + tp + "</span></div></div>");
                     }
                 }
                 if (tx[t].getAttribute("data-team") == "TEAM_4") {
                     var ty = tx[t].getAttribute("id");
                     var tp = readCookie(ty).split("@").pop();
                     if (document.getElementsByClassName(ty).length == 0) {
-                        document.getElementById("TEAM_4").insertAdjacentHTML("beforeend", "<div class='" + ty + " col-12 col-md-6 col-lg-3 px-0 TEAM_4 teamS' data-player='" + ty + "' data-price='" + tp + "' onclick='myFunction(\"" + ty + "\")'><input id='" + ty + "$COPY' type='text' class='CopyTeam d-none' value='" + ty + "@" + tp + "'><img class='img-fluid' src='https://raw.githubusercontent.com/adnanisab/UMYC-Cup-2022/main/" + ty + ".jpg'><div class='playerprice'><span class='bg-warning text-dark px-3 rounded-pill fw-bold'>" + tp + "</span></div></div>");
+                        document.getElementById("TEAM_4").insertAdjacentHTML("beforeend", "<div class='" + ty + " col-12 col-md-6 col-lg-3 px-0 TEAM_4 teamS' data-player='" + ty + "' data-price='" + tp + "' onclick='myFunction(\"" + ty + "\")'><input id='" + ty + "$COPY' type='text' class='CopyTeam d-none' value='" + ty + "@" + tp + "'><img class='img-fluid' data-price='" + tp + "' src='https://raw.githubusercontent.com/adnanisab/UNITY-CUP-2022/main/" + ty + ".jpg'><div class='playerprice'><span class='bg-warning text-dark px-3 rounded-pill fw-bold'>" + tp + "</span></div></div>");
                     }
                 }
                 if (tx[t].getAttribute("data-team") == "TEAM_5") {
                     var ty = tx[t].getAttribute("id");
                     var tp = readCookie(ty).split("@").pop();
                     if (document.getElementsByClassName(ty).length == 0) {
-                        document.getElementById("TEAM_5").insertAdjacentHTML("beforeend", "<div class='" + ty + " col-12 col-md-6 col-lg-3 px-0 TEAM_5 teamS' data-player='" + ty + "' data-price='" + tp + "' onclick='myFunction(\"" + ty + "\")'><input id='" + ty + "$COPY' type='text' class='CopyTeam d-none' value='" + ty + "@" + tp + "'><img class='img-fluid' src='https://raw.githubusercontent.com/adnanisab/UMYC-Cup-2022/main/" + ty + ".jpg'><div class='playerprice'><span class='bg-warning text-dark px-3 rounded-pill fw-bold'>" + tp + "</span></div></div>");
+                        document.getElementById("TEAM_5").insertAdjacentHTML("beforeend", "<div class='" + ty + " col-12 col-md-6 col-lg-3 px-0 TEAM_5 teamS' data-player='" + ty + "' data-price='" + tp + "' onclick='myFunction(\"" + ty + "\")'><input id='" + ty + "$COPY' type='text' class='CopyTeam d-none' value='" + ty + "@" + tp + "'><img class='img-fluid' data-price='" + tp + "' src='https://raw.githubusercontent.com/adnanisab/UNITY-CUP-2022/main/" + ty + ".jpg'><div class='playerprice'><span class='bg-warning text-dark px-3 rounded-pill fw-bold'>" + tp + "</span></div></div>");
                     }
                 }
                 if (tx[t].getAttribute("data-team") == "TEAM_6") {
                     var ty = tx[t].getAttribute("id");
                     var tp = readCookie(ty).split("@").pop();
                     if (document.getElementsByClassName(ty).length == 0) {
-                        document.getElementById("TEAM_6").insertAdjacentHTML("beforeend", "<div class='" + ty + " col-12 col-md-6 col-lg-3 px-0 TEAM_6 teamS' data-player='" + ty + "' data-price='" + tp + "' onclick='myFunction(\"" + ty + "\")'><input id='" + ty + "$COPY' type='text' class='CopyTeam d-none' value='" + ty + "@" + tp + "'><img class='img-fluid' src='https://raw.githubusercontent.com/adnanisab/UMYC-Cup-2022/main/" + ty + ".jpg'><div class='playerprice'><span class='bg-warning text-dark px-3 rounded-pill fw-bold'>" + tp + "</span></div></div>");
+                        document.getElementById("TEAM_6").insertAdjacentHTML("beforeend", "<div class='" + ty + " col-12 col-md-6 col-lg-3 px-0 TEAM_6 teamS' data-player='" + ty + "' data-price='" + tp + "' onclick='myFunction(\"" + ty + "\")'><input id='" + ty + "$COPY' type='text' class='CopyTeam d-none' value='" + ty + "@" + tp + "'><img class='img-fluid' data-price='" + tp + "' src='https://raw.githubusercontent.com/adnanisab/UNITY-CUP-2022/main/" + ty + ".jpg'><div class='playerprice'><span class='bg-warning text-dark px-3 rounded-pill fw-bold'>" + tp + "</span></div></div>");
                     }
                 }
             }
@@ -1012,6 +1045,24 @@
             w[z].innerHTML = w[z].innerHTML.replace(/_/gi, " ");
         }
 
+        /* Most Expensive Players*/
+        setInterval(function() {
+            document.getElementById("MostExp").innerHTML = "";
+            var xt = document.getElementById("MostExp");
+            var ts = document.getElementsByClassName("teamS");
+            for (var v = 0; v < ts.length; v++) {
+                var clone = ts[v].children[1].cloneNode(true);
+                document.getElementById("MostExp").insertAdjacentElement("beforeend", clone);
+            }
+            for (var x1 = 0; x1 < xt.childElementCount; x1++) {
+                xt.children[x1].classList.add("mep");
+            }
+            var xu = document.getElementsByClassName("mep");
+            for (var x2 = 0; x2 < xu.length; x2++) {
+                var xx = x2 + 1;
+                xt.insertAdjacentHTML("beforeend", "<style>.mep:nth-child(" + xx + "){order:" + xu[x2].getAttribute("data-price") + "}</style>")
+            }
+        }, 1000)
 
         /* ********************************* Store Players ********************************* */
 
