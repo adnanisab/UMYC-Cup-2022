@@ -8,8 +8,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta property="og:image" content="https://raw.githubusercontent.com/adnanisab/UNITY-CUP-2022/main/sharelogo.jpg" />
     <meta name="twitter:card" content="summary_large_image" />
-    <meta name="twitter:title" content="UMYC CUP - 2022" />
-    <meta name="twitter:description" content="UMYC CUP - 2022 | Auction" />
+    <meta name="twitter:title" content="UNITY CUP - 2022" />
+    <meta name="twitter:description" content="UNITY CUP - 2022 | Auction" />
     <meta name="twitter:image" content="https://raw.githubusercontent.com/adnanisab/UNITY-CUP-2022/main/sharelogo.jpg" />
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -19,7 +19,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Voltaire&display=swap" rel="stylesheet">
-    <title>UMYC CUP - 2022 | Auction</title>
+    <title>UNITY CUP - 2022 | Auction</title>
     <style>
         .s,
         .sX,
@@ -367,8 +367,47 @@
             opacity: 1;
         }
         
-        #MostExp img {
-            width: 30%
+        .meep {
+            height: 1176px;
+            overflow: hidden;
+        }
+        
+        .mep {
+            width: 100%;
+            position: relative;
+            margin-bottom: 20px;
+            display: flex;
+            background: #272727;
+            border-radius: 50rem !important;
+            overflow: hidden;
+        }
+        
+        .mep img {
+            width: 40%;
+        }
+        
+        .mep::after {
+            position: absolute;
+            width: 100%;
+            top: 46%;
+            transform: translateY(-46%);
+            right: 0%;
+            font-size: 2.5rem;
+            color: #ffc107;
+        }
+        
+        .mep .playerprice span {
+            font-size: 3rem;
+        }
+        
+        .mep .playerprice {
+            position: absolute;
+            bottom: 0;
+            right: 2%;
+            top: 52%;
+            left: auto;
+            transform: translateY(-52%);
+            background: #272727;
         }
         
         .s_img.unsold_over {
@@ -420,7 +459,7 @@
         function OpenPopup3(pageUrl, name, price) {
             if (!document.getElementById('f_Popup3_button')) {
                 var msg = '<figure class="figure figureX border border-3 border-light rounded"><img id="f-mfp-img" class="mb-0" src="' + pageUrl + '" class="figure-img img-fluid"><img class="s_img unsold_over d-none" src="https://raw.githubusercontent.com/adnanisab/UNITY-CUP-2022/main/sold3.png"></figure>';
-                document.getElementsByTagName("body")[0].insertAdjacentHTML("beforeend", "<button id='f_Popup3_button' type='button' data-bs-toggle='modal' data-bs-target='#f_Popup3' style='display:none;'></button><div class='f_Popup3_box modal fade modal-static' id='f_Popup3' data-bs-backdrop='static' data-bs-keyboard='false' tabindex='-1' aria-labelledby='f_Popup3Label' aria-hidden='true'><div class='modal-dialog modal-dialog-centered modal-dialog-scrollable mx-auto'><div class='modal-content'><button type='button' class='f_Popup3_close btn-close position-absolute' data-bs-dismiss='modal' aria-label='Close'><svg style='transform: scale(1.5);' xmlns='http://www.w3.org/2000/svg' width='32' height='32' fill='#fff' class='bi bi-x-lg' viewBox='0 0 16 16'><path fill-rule='evenodd' d='M13.854 2.146a.5.5 0 0 1 0 .708l-11 11a.5.5 0 0 1-.708-.708l11-11a.5.5 0 0 1 .708 0Z'/><path fill-rule='evenodd' d='M2.146 2.146a.5.5 0 0 0 0 .708l11 11a.5.5 0 0 0 .708-.708l-11-11a.5.5 0 0 0-.708 0Z'/></svg></button><div class='modal-body text-center position-relative' style='white-space: pre-wrap;'>" + msg + "<div class='actionx position-fixed'><b class='solding d-none justify-content-center' style='cursor: pointer;'><svg style='transform: scale(1.5);' xmlns='http://www.w3.org/2000/svg' width='32' height='32' fill='#fff' class='bi bi-list' viewBox='0 0 16 16'><path fill-rule='evenodd' d='M2.5 12a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5zm0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5zm0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5z'/></svg></b><span class='soldx invisible text-white bg-danger py-2 px-5 d-inline-block rounded-pill me-3 fs-4' data-name='" + name + "'>&nbsp;&nbsp;SOLD&nbsp;&nbsp;</span> <span class='unsoldx invisible text-dark bg-light py-2 px-5 d-inline-block rounded-pill fs-4' data-name='" + name + "'>UNSOLD</span><div class='price upGo'><b class='unsoldx2 rounded-pill btn px-4 py-2 btn-danger fs-4' data-name='" + name + "'>UNSOLD</b><strong class='cus-strong d-inline-block bg-primary mx-3 p-2 rounded-pill'><b class='fs-2 ps-2'><more class='changeBid'>Base Price</more><svg xmlns='http://www.w3.org/2000/svg' data-bid='250' width='32' height='32' fill='#ffc107' class='cus-bid bi bi-arrow-right-square-fill ms-4' viewBox='0 0 16 16'><path d='M0 14a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V2a2 2 0 0 0-2-2H2a2 2 0 0 0-2 2v12zm4.5-6.5h5.793L8.146 5.354a.5.5 0 1 1 .708-.708l3 3a.5.5 0 0 1 0 .708l-3 3a.5.5 0 0 1-.708-.708L10.293 8.5H4.5a.5.5 0 0 1 0-1z'/></svg></b><input value='" + price + "' class='priceV text-center fs-2' style='font-family: Trebuchet MS;' type='number'  maxlength='6' size='6'></strong><b class='priceSubmit rounded-pill btn px-4 py-2 btn-warning fs-4' data-name='" + name + "'>&nbsp;&nbsp;SOLD&nbsp;&nbsp;</b></div><div class='teamX d-none'><b class='t1' data-team='TEAM_1'>TEAM_1</b><b class='t2' data-team='TEAM_2'>TEAM_2</b><b class='t3' data-team='TEAM_3'>TEAM_3</b><b class='t4' data-team='TEAM_4'>TEAM_4</b><b class='t5' data-team='TEAM_5'>TEAM_5</b><b class='t6' data-team='TEAM_6'>TEAM_6</b></div></div></div></div></div><style>.modal-dialog-scrollable .modal-content {max-height: none;overflow:visible;}.modal-body {padding:0;} .f_Popup3_close{right:-1rem;z-index:999;top:-1rem;background-color:#0d6efd;border-radius:50px;padding:1rem;opacity:1;box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.2);background-image:none;color:#fff;display:flex;justify-content:center;align-items:center;font-weight:700;font-size:18px}.f_Popup3_close:hover{color:#fff;background-color: red;opacity:1}.modal-dialog{display:flex;justify-content:center} .modal-content{width:auto;border-width:0} #f-mfp-img{max-height:90vh;max-width: 90vw;} @media (min-width:576px) {.modal-content{width:auto;}.modal-dialog{max-width:800px;}} .modal-content{background:0 0}}</style></div>");
+                document.getElementsByTagName("body")[0].insertAdjacentHTML("beforeend", "<button id='f_Popup3_button' type='button' data-bs-toggle='modal' data-bs-target='#f_Popup3' style='display:none;'></button><div class='f_Popup3_box modal fade modal-static' id='f_Popup3' data-bs-backdrop='static' data-bs-keyboard='false' tabindex='-1' aria-labelledby='f_Popup3Label' aria-hidden='true'><div class='modal-dialog modal-dialog-centered modal-dialog-scrollable mx-auto'><div class='modal-content'><button type='button' class='f_Popup3_close btn-close position-absolute' data-bs-dismiss='modal' aria-label='Close'><svg style='transform: scale(1.5);' xmlns='http://www.w3.org/2000/svg' width='32' height='32' fill='#fff' class='bi bi-x-lg' viewBox='0 0 16 16'><path fill-rule='evenodd' d='M13.854 2.146a.5.5 0 0 1 0 .708l-11 11a.5.5 0 0 1-.708-.708l11-11a.5.5 0 0 1 .708 0Z'/><path fill-rule='evenodd' d='M2.146 2.146a.5.5 0 0 0 0 .708l11 11a.5.5 0 0 0 .708-.708l-11-11a.5.5 0 0 0-.708 0Z'/></svg></button><div class='modal-body text-center position-relative' style='white-space: pre-wrap;'>" + msg + "<div class='actionx position-fixed'><b class='solding d-none justify-content-center' style='cursor: pointer;'><svg style='transform: scale(1.5);' xmlns='http://www.w3.org/2000/svg' width='32' height='32' fill='#fff' class='bi bi-list' viewBox='0 0 16 16'><path fill-rule='evenodd' d='M2.5 12a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5zm0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5zm0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5z'/></svg></b><span class='soldx invisible text-white bg-danger py-2 px-5 d-inline-block rounded-pill me-3 fs-4' data-name='" + name + "'>&nbsp;&nbsp;SOLD&nbsp;&nbsp;</span> <span class='unsoldx invisible text-dark bg-light py-2 px-5 d-inline-block rounded-pill fs-4' data-name='" + name + "'>UNSOLD</span><div class='price upGo'><b class='unsoldx2 rounded-pill btn px-4 py-2 btn-danger fs-4' data-name='" + name + "'>UNSOLD</b><strong class='cus-strong d-inline-block bg-primary mx-3 p-2 rounded-pill'><b class='fs-2 ps-2'><more class='changeBid'>Base Price</more><svg xmlns='http://www.w3.org/2000/svg' data-bid='250' width='32' height='32' fill='#ffc107' class='cus-bid bi bi-arrow-right-square-fill ms-4' viewBox='0 0 16 16'><path d='M0 14a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V2a2 2 0 0 0-2-2H2a2 2 0 0 0-2 2v12zm4.5-6.5h5.793L8.146 5.354a.5.5 0 1 1 .708-.708l3 3a.5.5 0 0 1 0 .708l-3 3a.5.5 0 0 1-.708-.708L10.293 8.5H4.5a.5.5 0 0 1 0-1z'/></svg></b><input value='" + price + "' class='priceV text-center fs-2' style='font-family: Trebuchet MS;' type='number'  maxlength='6' size='6'></strong><b class='priceSubmit rounded-pill btn px-4 py-2 btn-warning fs-4' data-name='" + name + "'>&nbsp;&nbsp;SOLD&nbsp;&nbsp;</b></div><div class='teamX d-none'><b class='t1' data-team='AI_WARRIORS'>AI_WARRIORS</b><b class='t2' data-team='NOOH_STRIKERS'>NOOH_STRIKERS</b><b class='t3' data-team='LALA_BHAI_LIONS'>LALA_BHAI_LIONS</b><b class='t4' data-team='FRESH_N_PURE_UK'>FRESH_N_PURE_UK</b><b class='t5' data-team='MCC_ELEVEN'>MCC_ELEVEN</b><b class='t6' data-team='EZZY_MASALA_XI'>EZZY_MASALA_XI</b></div></div></div></div></div><style>.modal-dialog-scrollable .modal-content {max-height: none;overflow:visible;}.modal-body {padding:0;} .f_Popup3_close{right:-1rem;z-index:999;top:-1rem;background-color:#0d6efd;border-radius:50px;padding:1rem;opacity:1;box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.2);background-image:none;color:#fff;display:flex;justify-content:center;align-items:center;font-weight:700;font-size:18px}.f_Popup3_close:hover{color:#fff;background-color: red;opacity:1}.modal-dialog{display:flex;justify-content:center} .modal-content{width:auto;border-width:0} #f-mfp-img{max-height:90vh;max-width: 90vw;} @media (min-width:576px) {.modal-content{width:auto;}.modal-dialog{max-width:800px;}} .modal-content{background:0 0}}</style></div>");
                 document.getElementById('f_Popup3_button').click();
                 setTimeout(function() {
                     document.getElementById("f_Popup3").classList.add("f_Popup3x");
@@ -665,34 +704,34 @@
 
         <h1 class="text-center mb-0 display-1 fw-bold mb-5 py-5 d-block"><span class="text-white text-uppercase d-block">Teams</span></h1>
 
-        <!-- TEAM_1 -->
-        <div id="TEAM_1" class="row mx-lg-0 my-5 py-5 teams">
-            <div class="col-12 rounded-pill bg-danger fw-bold p-3 mb-3 fs-2 ww d-lg-flex align-items-center justify-content-between"><span class="ww-span"><img class="img_fluid ww-img me-3" src="https://raw.githubusercontent.com/adnanisab/UNITY-CUP-2022/main/UMAR-DADABHAI-LIONS-TRANSPARENT.png">TEAM_1</span><span class="float-lg-end d-block d-lg-inline px-3 bg-success rounded-pill">Balance Left: <b class="t1-left">50000</b><b class="t1-leftX d-none">50000</b></span></div>
+        <!-- AI_WARRIORS -->
+        <div id="AI_WARRIORS" class="row mx-lg-0 my-5 py-5 teams">
+            <div class="col-12 rounded-pill bg-danger fw-bold p-3 mb-3 fs-2 ww d-lg-flex align-items-center justify-content-between"><span class="ww-span"><img class="img_fluid ww-img me-3" src="https://raw.githubusercontent.com/adnanisab/UNITY-CUP-2022/main/UMAR-DADABHAI-LIONS-TRANSPARENT.png">AI_WARRIORS</span><span class="float-lg-end d-block d-lg-inline px-3 bg-success rounded-pill">Balance Left: <b class="t1-left">50000</b><b class="t1-leftX d-none">50000</b></span></div>
         </div><br><br><br><br><br><br>
 
-        <!-- TEAM_2 -->
-        <div id="TEAM_2" class="row mx-lg-0 my-5 py-5 teams">
-            <div class="col-12 rounded-pill bg-danger fw-bold p-3 mb-3 fs-2 ww d-lg-flex align-items-center justify-content-between"><span class="ww-span"><img class="img_fluid ww-img me-3" src="https://raw.githubusercontent.com/adnanisab/UNITY-CUP-2022/main/RISING-STARS-JUNED-11.png">TEAM_2</span><span class="float-lg-end d-block d-lg-inline px-3 bg-success rounded-pill">Balance Left: <b class="t2-left">50000</b><b class="t2-leftX d-none">50000</b></span></div>
+        <!-- NOOH_STRIKERS -->
+        <div id="NOOH_STRIKERS" class="row mx-lg-0 my-5 py-5 teams">
+            <div class="col-12 rounded-pill bg-danger fw-bold p-3 mb-3 fs-2 ww d-lg-flex align-items-center justify-content-between"><span class="ww-span"><img class="img_fluid ww-img me-3" src="https://raw.githubusercontent.com/adnanisab/UNITY-CUP-2022/main/RISING-STARS-JUNED-11.png">NOOH_STRIKERS</span><span class="float-lg-end d-block d-lg-inline px-3 bg-success rounded-pill">Balance Left: <b class="t2-left">50000</b><b class="t2-leftX d-none">50000</b></span></div>
         </div><br><br><br><br><br><br>
 
-        <!-- TEAM_3 -->
-        <div id="TEAM_3" class="row mx-lg-0 my-5 py-5 teams">
-            <div class="col-12 rounded-pill bg-danger fw-bold p-3 mb-3 fs-2 ww d-lg-flex align-items-center justify-content-between"><span class="ww-span"><img class="img_fluid ww-img me-3" src="https://raw.githubusercontent.com/adnanisab/UNITY-CUP-2022/main/TEST.png">TEAM_3</span><span class="float-lg-end d-block d-lg-inline px-3 bg-success rounded-pill">Balance Left: <b class="t3-left">50000</b><b class="t3-leftX d-none">50000</b></span></div>
+        <!-- LALA_BHAI_LIONS -->
+        <div id="LALA_BHAI_LIONS" class="row mx-lg-0 my-5 py-5 teams">
+            <div class="col-12 rounded-pill bg-danger fw-bold p-3 mb-3 fs-2 ww d-lg-flex align-items-center justify-content-between"><span class="ww-span"><img class="img_fluid ww-img me-3" src="https://raw.githubusercontent.com/adnanisab/UNITY-CUP-2022/main/TEST.png">LALA_BHAI_LIONS</span><span class="float-lg-end d-block d-lg-inline px-3 bg-success rounded-pill">Balance Left: <b class="t3-left">50000</b><b class="t3-leftX d-none">50000</b></span></div>
         </div><br><br><br><br><br><br>
 
-        <!-- TEAM_4 -->
-        <div id="TEAM_4" class="row mx-lg-0 my-5 py-5 teams">
-            <div class="col-12 rounded-pill bg-danger fw-bold p-3 mb-3 fs-2 ww d-lg-flex align-items-center justify-content-between"><span class="ww-span"><img class="img_fluid ww-img me-3" src="https://raw.githubusercontent.com/adnanisab/UNITY-CUP-2022/main/FRESH-N-PURE-UK.png">TEAM_4</span><span class="float-lg-end d-block d-lg-inline px-3 bg-success rounded-pill">Balance Left: <b class="t4-left">50000</b><b class="t4-leftX d-none">50000</b></span></div>
+        <!-- FRESH_N_PURE_UK -->
+        <div id="FRESH_N_PURE_UK" class="row mx-lg-0 my-5 py-5 teams">
+            <div class="col-12 rounded-pill bg-danger fw-bold p-3 mb-3 fs-2 ww d-lg-flex align-items-center justify-content-between"><span class="ww-span"><img class="img_fluid ww-img me-3" src="https://raw.githubusercontent.com/adnanisab/UNITY-CUP-2022/main/FRESH-N-PURE-UK.png">FRESH_N_PURE_UK</span><span class="float-lg-end d-block d-lg-inline px-3 bg-success rounded-pill">Balance Left: <b class="t4-left">50000</b><b class="t4-leftX d-none">50000</b></span></div>
         </div><br><br><br><br><br><br>
 
-        <!-- TEAM_5 -->
-        <div id="TEAM_5" class="row mx-lg-0 my-5 py-5 teams">
-            <div class="col-12 rounded-pill bg-danger fw-bold p-3 mb-3 fs-2 ww d-lg-flex align-items-center justify-content-between"><span class="ww-span"><img class="img_fluid ww-img me-3" src="https://raw.githubusercontent.com/adnanisab/UNITY-CUP-2022/main/FRESH-N-PURE-UK.png">TEAM_5</span><span class="float-lg-end d-block d-lg-inline px-3 bg-success rounded-pill">Balance Left: <b class="t5-left">50000</b><b class="t5-leftX d-none">50000</b></span></div>
+        <!-- MCC_ELEVEN -->
+        <div id="MCC_ELEVEN" class="row mx-lg-0 my-5 py-5 teams">
+            <div class="col-12 rounded-pill bg-danger fw-bold p-3 mb-3 fs-2 ww d-lg-flex align-items-center justify-content-between"><span class="ww-span"><img class="img_fluid ww-img me-3" src="https://raw.githubusercontent.com/adnanisab/UNITY-CUP-2022/main/FRESH-N-PURE-UK.png">MCC_ELEVEN</span><span class="float-lg-end d-block d-lg-inline px-3 bg-success rounded-pill">Balance Left: <b class="t5-left">50000</b><b class="t5-leftX d-none">50000</b></span></div>
         </div><br><br><br><br><br><br>
 
-        <!-- TEAM_6 -->
-        <div id="TEAM_6" class="row mx-lg-0 my-5 py-5 teams">
-            <div class="col-12 rounded-pill bg-danger fw-bold p-3 mb-3 fs-2 ww d-lg-flex align-items-center justify-content-between"><span class="ww-span"><img class="img_fluid ww-img me-3" src="https://raw.githubusercontent.com/adnanisab/UNITY-CUP-2022/main/FRESH-N-PURE-UK.png">TEAM_6</span><span class="float-lg-end d-block d-lg-inline px-3 bg-success rounded-pill">Balance Left: <b class="t6-left">50000</b><b class="t6-leftX d-none">50000</b></span></div>
+        <!-- EZZY_MASALA_XI -->
+        <div id="EZZY_MASALA_XI" class="row mx-lg-0 my-5 py-5 teams">
+            <div class="col-12 rounded-pill bg-danger fw-bold p-3 mb-3 fs-2 ww d-lg-flex align-items-center justify-content-between"><span class="ww-span"><img class="img_fluid ww-img me-3" src="https://raw.githubusercontent.com/adnanisab/UNITY-CUP-2022/main/FRESH-N-PURE-UK.png">EZZY_MASALA_XI</span><span class="float-lg-end d-block d-lg-inline px-3 bg-success rounded-pill">Balance Left: <b class="t6-left">50000</b><b class="t6-leftX d-none">50000</b></span></div>
         </div><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
     </div>
 
@@ -722,8 +761,8 @@
         <br<br><br><br><br>
             <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br></p>
 
-    <div class="bg-dark py-5 fs-2 text-light text-center fw-bold fs-3"><br><br><br><br>
-        <h1 class="text-warning display-3 mb-5">MOST EXPENSIVE PLAYERS</h1>
+    <div class="bg-dark py-5 fs-2 text-light text-center fw-bold fs-3 meep"><br><br>
+        <h1 class="text-warning display-3 mb-3">MOST EXPENSIVE PLAYERS</h1>
         <br><br>
         <div id="MostExp" class="d-flex flex-column-reverse container"></div>
         <br><br><br><br></div>
@@ -756,12 +795,12 @@
         <a href="javascript:void(0)" class="selectZ p-2 rounded bg-danger mx-5 d-none">SELECT UNSOLD PLAYER</a>
 
         <div class="ms-5 float-lg-end d-block d-lg-inline d-inline-block">
-            <a href="#TEAM_1" class="bg-dark p-2 rounded-pill bg-red-hover px-2">TEAM 1</a>
-            <a href="#TEAM_2" class="bg-dark p-2 rounded-pill bg-red-hover px-2">TEAM 2</a>
-            <a href="#TEAM_3" class="bg-dark p-2 rounded-pill bg-red-hover px-2">TEAM 3</a>
-            <a href="#TEAM_4" class="bg-dark p-2 rounded-pill bg-red-hover px-2">TEAM 4</a>
-            <a href="#TEAM_5" class="bg-dark p-2 rounded-pill bg-red-hover px-2">TEAM 5</a>
-            <a href="#TEAM_6" class="bg-dark p-2 rounded-pill bg-red-hover px-2 me-2">TEAM 6</a>
+            <a href="#AI_WARRIORS" class="bg-dark p-2 rounded-pill bg-red-hover px-2">AI_WARRIORS</a>
+            <a href="#NOOH_STRIKERS" class="bg-dark p-2 rounded-pill bg-red-hover px-2">NOOH STRIKERS</a>
+            <a href="#LALA_BHAI_LIONS" class="bg-dark p-2 rounded-pill bg-red-hover px-2">LALA BHAI LIONS</a>
+            <a href="#FRESH_N_PURE_UK" class="bg-dark p-2 rounded-pill bg-red-hover px-2">FRESH N PURE UK</a>
+            <a href="#MCC_ELEVEN" class="bg-dark p-2 rounded-pill bg-red-hover px-2">MCC ELEVEN</a>
+            <a href="#EZZY_MASALA_XI" class="bg-dark p-2 rounded-pill bg-red-hover px-2 me-2">EZZY MASALA XI</a>
         </div>
         </span>
 
@@ -915,46 +954,46 @@
             }
             var tx = document.getElementsByClassName("s");
             for (var t = 0; t < tx.length; t++) {
-                if (tx[t].getAttribute("data-team") == "TEAM_1") {
+                if (tx[t].getAttribute("data-team") == "AI_WARRIORS") {
                     var ty = tx[t].getAttribute("id");
                     var tp = readCookie(ty).split("@").pop();
                     if (document.getElementsByClassName(ty).length == 0) {
-                        document.getElementById("TEAM_1").insertAdjacentHTML("beforeend", "<div class='" + ty + " col-12 col-md-6 col-lg-3 px-0 TEAM_1 teamS' data-player='" + ty + "' data-price='" + tp + "' onclick='myFunction(\"" + ty + "\")'><input id='" + ty + "$COPY' type='text' class='CopyTeam d-none' value='" + ty + "@" + tp + "'><img class='img-fluid' data-price='" + tp + "' src='https://raw.githubusercontent.com/adnanisab/UNITY-CUP-2022/main/" + ty + ".jpg'><div class='playerprice'><span class='bg-warning text-dark px-3 rounded-pill fw-bold'>" + tp + "</span></div></div>");
+                        document.getElementById("AI_WARRIORS").insertAdjacentHTML("beforeend", "<div class='" + ty + " col-12 col-md-6 col-lg-3 px-0 AI_WARRIORS teamS' data-team='AI_WARRIORS' data-player='" + ty + "' data-price='" + tp + "' onclick='myFunction(\"" + ty + "\")'><input id='" + ty + "$COPY' type='text' class='CopyTeam d-none' value='" + ty + "@" + tp + "'><img class='img-fluid' data-price='" + tp + "' src='https://raw.githubusercontent.com/adnanisab/UNITY-CUP-2022/main/" + ty + ".jpg'><div class='playerprice'><span class='bg-warning text-dark px-3 rounded-pill fw-bold'>" + tp + "</span></div></div>");
                     }
                 }
-                if (tx[t].getAttribute("data-team") == "TEAM_2") {
+                if (tx[t].getAttribute("data-team") == "NOOH_STRIKERS") {
                     var ty = tx[t].getAttribute("id");
                     var tp = readCookie(ty).split("@").pop();
                     if (document.getElementsByClassName(ty).length == 0) {
-                        document.getElementById("TEAM_2").insertAdjacentHTML("beforeend", "<div class='" + ty + " col-12 col-md-6 col-lg-3 px-0 TEAM_2 teamS' data-player='" + ty + "' data-price='" + tp + "' onclick='myFunction(\"" + ty + "\")'><input id='" + ty + "$COPY' type='text' class='CopyTeam d-none' value='" + ty + "@" + tp + "'><img class='img-fluid' data-price='" + tp + "' src='https://raw.githubusercontent.com/adnanisab/UNITY-CUP-2022/main/" + ty + ".jpg'><div class='playerprice'><span class='bg-warning text-dark px-3 rounded-pill fw-bold'>" + tp + "</span></div></div>");
+                        document.getElementById("NOOH_STRIKERS").insertAdjacentHTML("beforeend", "<div class='" + ty + " col-12 col-md-6 col-lg-3 px-0 NOOH_STRIKERS teamS' data-team='NOOH_STRIKERS' data-player='" + ty + "' data-price='" + tp + "' onclick='myFunction(\"" + ty + "\")'><input id='" + ty + "$COPY' type='text' class='CopyTeam d-none' value='" + ty + "@" + tp + "'><img class='img-fluid' data-price='" + tp + "' src='https://raw.githubusercontent.com/adnanisab/UNITY-CUP-2022/main/" + ty + ".jpg'><div class='playerprice'><span class='bg-warning text-dark px-3 rounded-pill fw-bold'>" + tp + "</span></div></div>");
                     }
                 }
-                if (tx[t].getAttribute("data-team") == "TEAM_3") {
+                if (tx[t].getAttribute("data-team") == "LALA_BHAI_LIONS") {
                     var ty = tx[t].getAttribute("id");
                     var tp = readCookie(ty).split("@").pop();
                     if (document.getElementsByClassName(ty).length == 0) {
-                        document.getElementById("TEAM_3").insertAdjacentHTML("beforeend", "<div class='" + ty + " col-12 col-md-6 col-lg-3 px-0 TEAM_3 teamS' data-player='" + ty + "' data-price='" + tp + "' onclick='myFunction(\"" + ty + "\")'><input id='" + ty + "$COPY' type='text' class='CopyTeam d-none' value='" + ty + "@" + tp + "'><img class='img-fluid' data-price='" + tp + "' src='https://raw.githubusercontent.com/adnanisab/UNITY-CUP-2022/main/" + ty + ".jpg'><div class='playerprice'><span class='bg-warning text-dark px-3 rounded-pill fw-bold'>" + tp + "</span></div></div>");
+                        document.getElementById("LALA_BHAI_LIONS").insertAdjacentHTML("beforeend", "<div class='" + ty + " col-12 col-md-6 col-lg-3 px-0 LALA_BHAI_LIONS teamS' data-team='LALA_BHAI_LIONS' data-player='" + ty + "' data-price='" + tp + "' onclick='myFunction(\"" + ty + "\")'><input id='" + ty + "$COPY' type='text' class='CopyTeam d-none' value='" + ty + "@" + tp + "'><img class='img-fluid' data-price='" + tp + "' src='https://raw.githubusercontent.com/adnanisab/UNITY-CUP-2022/main/" + ty + ".jpg'><div class='playerprice'><span class='bg-warning text-dark px-3 rounded-pill fw-bold'>" + tp + "</span></div></div>");
                     }
                 }
-                if (tx[t].getAttribute("data-team") == "TEAM_4") {
+                if (tx[t].getAttribute("data-team") == "FRESH_N_PURE_UK") {
                     var ty = tx[t].getAttribute("id");
                     var tp = readCookie(ty).split("@").pop();
                     if (document.getElementsByClassName(ty).length == 0) {
-                        document.getElementById("TEAM_4").insertAdjacentHTML("beforeend", "<div class='" + ty + " col-12 col-md-6 col-lg-3 px-0 TEAM_4 teamS' data-player='" + ty + "' data-price='" + tp + "' onclick='myFunction(\"" + ty + "\")'><input id='" + ty + "$COPY' type='text' class='CopyTeam d-none' value='" + ty + "@" + tp + "'><img class='img-fluid' data-price='" + tp + "' src='https://raw.githubusercontent.com/adnanisab/UNITY-CUP-2022/main/" + ty + ".jpg'><div class='playerprice'><span class='bg-warning text-dark px-3 rounded-pill fw-bold'>" + tp + "</span></div></div>");
+                        document.getElementById("FRESH_N_PURE_UK").insertAdjacentHTML("beforeend", "<div class='" + ty + " col-12 col-md-6 col-lg-3 px-0 FRESH_N_PURE_UK teamS' data-team='FRESH_N_PURE_UK' data-player='" + ty + "' data-price='" + tp + "' onclick='myFunction(\"" + ty + "\")'><input id='" + ty + "$COPY' type='text' class='CopyTeam d-none' value='" + ty + "@" + tp + "'><img class='img-fluid' data-price='" + tp + "' src='https://raw.githubusercontent.com/adnanisab/UNITY-CUP-2022/main/" + ty + ".jpg'><div class='playerprice'><span class='bg-warning text-dark px-3 rounded-pill fw-bold'>" + tp + "</span></div></div>");
                     }
                 }
-                if (tx[t].getAttribute("data-team") == "TEAM_5") {
+                if (tx[t].getAttribute("data-team") == "MCC_ELEVEN") {
                     var ty = tx[t].getAttribute("id");
                     var tp = readCookie(ty).split("@").pop();
                     if (document.getElementsByClassName(ty).length == 0) {
-                        document.getElementById("TEAM_5").insertAdjacentHTML("beforeend", "<div class='" + ty + " col-12 col-md-6 col-lg-3 px-0 TEAM_5 teamS' data-player='" + ty + "' data-price='" + tp + "' onclick='myFunction(\"" + ty + "\")'><input id='" + ty + "$COPY' type='text' class='CopyTeam d-none' value='" + ty + "@" + tp + "'><img class='img-fluid' data-price='" + tp + "' src='https://raw.githubusercontent.com/adnanisab/UNITY-CUP-2022/main/" + ty + ".jpg'><div class='playerprice'><span class='bg-warning text-dark px-3 rounded-pill fw-bold'>" + tp + "</span></div></div>");
+                        document.getElementById("MCC_ELEVEN").insertAdjacentHTML("beforeend", "<div class='" + ty + " col-12 col-md-6 col-lg-3 px-0 MCC_ELEVEN teamS' data-team='MCC_ELEVEN' data-player='" + ty + "' data-price='" + tp + "' onclick='myFunction(\"" + ty + "\")'><input id='" + ty + "$COPY' type='text' class='CopyTeam d-none' value='" + ty + "@" + tp + "'><img class='img-fluid' data-price='" + tp + "' src='https://raw.githubusercontent.com/adnanisab/UNITY-CUP-2022/main/" + ty + ".jpg'><div class='playerprice'><span class='bg-warning text-dark px-3 rounded-pill fw-bold'>" + tp + "</span></div></div>");
                     }
                 }
-                if (tx[t].getAttribute("data-team") == "TEAM_6") {
+                if (tx[t].getAttribute("data-team") == "EZZY_MASALA_XI") {
                     var ty = tx[t].getAttribute("id");
                     var tp = readCookie(ty).split("@").pop();
                     if (document.getElementsByClassName(ty).length == 0) {
-                        document.getElementById("TEAM_6").insertAdjacentHTML("beforeend", "<div class='" + ty + " col-12 col-md-6 col-lg-3 px-0 TEAM_6 teamS' data-player='" + ty + "' data-price='" + tp + "' onclick='myFunction(\"" + ty + "\")'><input id='" + ty + "$COPY' type='text' class='CopyTeam d-none' value='" + ty + "@" + tp + "'><img class='img-fluid' data-price='" + tp + "' src='https://raw.githubusercontent.com/adnanisab/UNITY-CUP-2022/main/" + ty + ".jpg'><div class='playerprice'><span class='bg-warning text-dark px-3 rounded-pill fw-bold'>" + tp + "</span></div></div>");
+                        document.getElementById("EZZY_MASALA_XI").insertAdjacentHTML("beforeend", "<div class='" + ty + " col-12 col-md-6 col-lg-3 px-0 EZZY_MASALA_XI teamS' data-team='EZZY_MASALA_XI' data-player='" + ty + "' data-price='" + tp + "' onclick='myFunction(\"" + ty + "\")'><input id='" + ty + "$COPY' type='text' class='CopyTeam d-none' value='" + ty + "@" + tp + "'><img class='img-fluid' data-price='" + tp + "' src='https://raw.githubusercontent.com/adnanisab/UNITY-CUP-2022/main/" + ty + ".jpg'><div class='playerprice'><span class='bg-warning text-dark px-3 rounded-pill fw-bold'>" + tp + "</span></div></div>");
                     }
                 }
             }
@@ -966,63 +1005,63 @@
             }
 
             /* Balance Left*/
-            var a_TEAM_1 = document.getElementsByClassName("TEAM_1");
-            if (a_TEAM_1.length > 0) {
-                var tl_TEAM_1 = 0;
-                for (var ai_TEAM_1 = 0; ai_TEAM_1 < a_TEAM_1.length; ai_TEAM_1++) {
-                    tl_TEAM_1 = tl_TEAM_1 + parseInt(a_TEAM_1[ai_TEAM_1].getAttribute("data-price"));
+            var a_AI_WARRIORS = document.getElementsByClassName("AI_WARRIORS");
+            if (a_AI_WARRIORS.length > 0) {
+                var tl_AI_WARRIORS = 0;
+                for (var ai_AI_WARRIORS = 0; ai_AI_WARRIORS < a_AI_WARRIORS.length; ai_AI_WARRIORS++) {
+                    tl_AI_WARRIORS = tl_AI_WARRIORS + parseInt(a_AI_WARRIORS[ai_AI_WARRIORS].getAttribute("data-price"));
                 }
-                document.getElementsByClassName("t1-left")[0].innerHTML = parseInt(document.getElementsByClassName("t1-leftX")[0].innerHTML) - tl_TEAM_1;
+                document.getElementsByClassName("t1-left")[0].innerHTML = parseInt(document.getElementsByClassName("t1-leftX")[0].innerHTML) - tl_AI_WARRIORS;
             } else {
                 document.getElementsByClassName("t1-left")[0].innerHTML = parseInt(document.getElementsByClassName("t1-leftX")[0].innerHTML);
             }
-            var a_TEAM_2 = document.getElementsByClassName("TEAM_2");
-            if (a_TEAM_2.length > 0) {
-                var tl_TEAM_2 = 0;
-                for (var ai_TEAM_2 = 0; ai_TEAM_2 < a_TEAM_2.length; ai_TEAM_2++) {
-                    tl_TEAM_2 = tl_TEAM_2 + parseInt(a_TEAM_2[ai_TEAM_2].getAttribute("data-price"));
+            var a_NOOH_STRIKERS = document.getElementsByClassName("NOOH_STRIKERS");
+            if (a_NOOH_STRIKERS.length > 0) {
+                var tl_NOOH_STRIKERS = 0;
+                for (var ai_NOOH_STRIKERS = 0; ai_NOOH_STRIKERS < a_NOOH_STRIKERS.length; ai_NOOH_STRIKERS++) {
+                    tl_NOOH_STRIKERS = tl_NOOH_STRIKERS + parseInt(a_NOOH_STRIKERS[ai_NOOH_STRIKERS].getAttribute("data-price"));
                 }
-                document.getElementsByClassName("t2-left")[0].innerHTML = parseInt(document.getElementsByClassName("t2-leftX")[0].innerHTML) - tl_TEAM_2;
+                document.getElementsByClassName("t2-left")[0].innerHTML = parseInt(document.getElementsByClassName("t2-leftX")[0].innerHTML) - tl_NOOH_STRIKERS;
             } else {
                 document.getElementsByClassName("t2-left")[0].innerHTML = parseInt(document.getElementsByClassName("t2-leftX")[0].innerHTML);
             }
-            var a_TEAM_3 = document.getElementsByClassName("TEAM_3");
-            if (a_TEAM_3.length > 0) {
-                var tl_TEAM_3 = 0;
-                for (var ai_TEAM_3 = 0; ai_TEAM_3 < a_TEAM_3.length; ai_TEAM_3++) {
-                    tl_TEAM_3 = tl_TEAM_3 + parseInt(a_TEAM_3[ai_TEAM_3].getAttribute("data-price"));
+            var a_LALA_BHAI_LIONS = document.getElementsByClassName("LALA_BHAI_LIONS");
+            if (a_LALA_BHAI_LIONS.length > 0) {
+                var tl_LALA_BHAI_LIONS = 0;
+                for (var ai_LALA_BHAI_LIONS = 0; ai_LALA_BHAI_LIONS < a_LALA_BHAI_LIONS.length; ai_LALA_BHAI_LIONS++) {
+                    tl_LALA_BHAI_LIONS = tl_LALA_BHAI_LIONS + parseInt(a_LALA_BHAI_LIONS[ai_LALA_BHAI_LIONS].getAttribute("data-price"));
                 }
-                document.getElementsByClassName("t3-left")[0].innerHTML = parseInt(document.getElementsByClassName("t3-leftX")[0].innerHTML) - tl_TEAM_3;
+                document.getElementsByClassName("t3-left")[0].innerHTML = parseInt(document.getElementsByClassName("t3-leftX")[0].innerHTML) - tl_LALA_BHAI_LIONS;
             } else {
                 document.getElementsByClassName("t3-left")[0].innerHTML = parseInt(document.getElementsByClassName("t3-leftX")[0].innerHTML);
             }
-            var a_TEAM_4 = document.getElementsByClassName("TEAM_4");
-            if (a_TEAM_4.length > 0) {
-                var tl_TEAM_4 = 0;
-                for (var ai_TEAM_4 = 0; ai_TEAM_4 < a_TEAM_4.length; ai_TEAM_4++) {
-                    tl_TEAM_4 = tl_TEAM_4 + parseInt(a_TEAM_4[ai_TEAM_4].getAttribute("data-price"));
+            var a_FRESH_N_PURE_UK = document.getElementsByClassName("FRESH_N_PURE_UK");
+            if (a_FRESH_N_PURE_UK.length > 0) {
+                var tl_FRESH_N_PURE_UK = 0;
+                for (var ai_FRESH_N_PURE_UK = 0; ai_FRESH_N_PURE_UK < a_FRESH_N_PURE_UK.length; ai_FRESH_N_PURE_UK++) {
+                    tl_FRESH_N_PURE_UK = tl_FRESH_N_PURE_UK + parseInt(a_FRESH_N_PURE_UK[ai_FRESH_N_PURE_UK].getAttribute("data-price"));
                 }
-                document.getElementsByClassName("t4-left")[0].innerHTML = parseInt(document.getElementsByClassName("t4-leftX")[0].innerHTML) - tl_TEAM_4;
+                document.getElementsByClassName("t4-left")[0].innerHTML = parseInt(document.getElementsByClassName("t4-leftX")[0].innerHTML) - tl_FRESH_N_PURE_UK;
             } else {
                 document.getElementsByClassName("t4-left")[0].innerHTML = parseInt(document.getElementsByClassName("t4-leftX")[0].innerHTML);
             }
-            var a_TEAM_5 = document.getElementsByClassName("TEAM_5");
-            if (a_TEAM_5.length > 0) {
-                var tl_TEAM_5 = 0;
-                for (var ai_TEAM_5 = 0; ai_TEAM_5 < a_TEAM_5.length; ai_TEAM_5++) {
-                    tl_TEAM_5 = tl_TEAM_5 + parseInt(a_TEAM_5[ai_TEAM_5].getAttribute("data-price"));
+            var a_MCC_ELEVEN = document.getElementsByClassName("MCC_ELEVEN");
+            if (a_MCC_ELEVEN.length > 0) {
+                var tl_MCC_ELEVEN = 0;
+                for (var ai_MCC_ELEVEN = 0; ai_MCC_ELEVEN < a_MCC_ELEVEN.length; ai_MCC_ELEVEN++) {
+                    tl_MCC_ELEVEN = tl_MCC_ELEVEN + parseInt(a_MCC_ELEVEN[ai_MCC_ELEVEN].getAttribute("data-price"));
                 }
-                document.getElementsByClassName("t5-left")[0].innerHTML = parseInt(document.getElementsByClassName("t5-leftX")[0].innerHTML) - tl_TEAM_5;
+                document.getElementsByClassName("t5-left")[0].innerHTML = parseInt(document.getElementsByClassName("t5-leftX")[0].innerHTML) - tl_MCC_ELEVEN;
             } else {
                 document.getElementsByClassName("t5-left")[0].innerHTML = parseInt(document.getElementsByClassName("t5-leftX")[0].innerHTML);
             }
-            var a_TEAM_6 = document.getElementsByClassName("TEAM_6");
-            if (a_TEAM_6.length > 0) {
-                var tl_TEAM_6 = 0;
-                for (var ai_TEAM_6 = 0; ai_TEAM_6 < a_TEAM_6.length; ai_TEAM_6++) {
-                    tl_TEAM_6 = tl_TEAM_6 + parseInt(a_TEAM_6[ai_TEAM_6].getAttribute("data-price"));
+            var a_EZZY_MASALA_XI = document.getElementsByClassName("EZZY_MASALA_XI");
+            if (a_EZZY_MASALA_XI.length > 0) {
+                var tl_EZZY_MASALA_XI = 0;
+                for (var ai_EZZY_MASALA_XI = 0; ai_EZZY_MASALA_XI < a_EZZY_MASALA_XI.length; ai_EZZY_MASALA_XI++) {
+                    tl_EZZY_MASALA_XI = tl_EZZY_MASALA_XI + parseInt(a_EZZY_MASALA_XI[ai_EZZY_MASALA_XI].getAttribute("data-price"));
                 }
-                document.getElementsByClassName("t6-left")[0].innerHTML = parseInt(document.getElementsByClassName("t6-leftX")[0].innerHTML) - tl_TEAM_6;
+                document.getElementsByClassName("t6-left")[0].innerHTML = parseInt(document.getElementsByClassName("t6-leftX")[0].innerHTML) - tl_EZZY_MASALA_XI;
             } else {
                 document.getElementsByClassName("t6-left")[0].innerHTML = parseInt(document.getElementsByClassName("t6-leftX")[0].innerHTML);
             }
@@ -1051,8 +1090,9 @@
             var xt = document.getElementById("MostExp");
             var ts = document.getElementsByClassName("teamS");
             for (var v = 0; v < ts.length; v++) {
-                var clone = ts[v].children[1].cloneNode(true);
+                var clone = ts[v].cloneNode(true);
                 document.getElementById("MostExp").insertAdjacentElement("beforeend", clone);
+                document.getElementById("MostExp").lastChild.classList.remove("teamS");
             }
             for (var x1 = 0; x1 < xt.childElementCount; x1++) {
                 xt.children[x1].classList.add("mep");
@@ -1060,18 +1100,18 @@
             var xu = document.getElementsByClassName("mep");
             for (var x2 = 0; x2 < xu.length; x2++) {
                 var xx = x2 + 1;
-                xt.insertAdjacentHTML("beforeend", "<style>.mep:nth-child(" + xx + "){order:" + xu[x2].getAttribute("data-price") + "}</style>")
+                xt.insertAdjacentHTML("beforeend", "<style>.mep:nth-child(" + xx + "){order:" + xu[x2].getAttribute("data-price") + "} .mep:nth-child(" + xx + "):after{content:'" + xu[x2].getAttribute("data-team").replace(/_/gi, " ") + "'}</style>")
             }
         }, 1000)
 
         /* ********************************* Store Players ********************************* */
 
-        // createCookie('Mahmud-Dadabhai', 'TEAM_1@3000', '1');
-        // createCookie('Arshad-Abuji', 'TEAM_2@3000', '1');
-        // createCookie('Abdul-Rehman-Dariai', 'TEAM_4@8000', '1');
-        // createCookie('Siddik-Memon', 'TEAM_3@7000', '1');
-        // createCookie('Siddik-Memon', 'TEAM_5@7000', '1');
-        // createCookie('Siddik-Memon', 'TEAM_6@7000', '1');
+        // createCookie('Mahmud-Dadabhai', 'AI_WARRIORS@3000', '1');
+        // createCookie('Arshad-Abuji', 'NOOH_STRIKERS@3000', '1');
+        // createCookie('Abdul-Rehman-Dariai', 'FRESH_N_PURE_UK@8000', '1');
+        // createCookie('Siddik-Memon', 'LALA_BHAI_LIONS@7000', '1');
+        // createCookie('Siddik-Memon', 'MCC_ELEVEN@7000', '1');
+        // createCookie('Siddik-Memon', 'EZZY_MASALA_XI@7000', '1');
 
 
 
