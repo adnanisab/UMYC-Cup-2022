@@ -354,6 +354,10 @@
             font-family: Tahoma;
         }
         
+        #ck_search_input {
+            border: 1px solid #555 !important;
+        }
+        
         .f_Popup3_box {
             transform: translateY(100%);
             transition: 300ms ease-in-out;
@@ -384,7 +388,7 @@
         }
         
         .mep img {
-            width: 40%;
+            width: 30%;
         }
         
         .mep::after {
@@ -405,9 +409,9 @@
             position: absolute;
             bottom: 0;
             right: 2%;
-            top: 52%;
+            top: 44%;
             left: auto;
-            transform: translateY(-52%);
+            transform: translateY(-44%);
             background: #272727;
         }
         
@@ -717,11 +721,11 @@
         <br<br><br><br><br>
             <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br></p>
 
-    <div class="bg-primary py-5 fs-2 text-light text-center fw-bold fs-3 meep"><br><br>
-        <h1 class="text-white display-3 mb-3">MOST EXPENSIVE PLAYERS</h1>
-        <br><br>
+    <div id="XBuy" class="bg-primary py-5 fs-2 text-light text-center fw-bold fs-3 meep"><br><br>
+        <h1 class="text-white display-3 mb-0">MOST EXPENSIVE PLAYERS</h1>
+        <br>
         <div id="MostExp" class="d-flex flex-column-reverse container"></div>
-        <br><br><br><br></div>
+        <br><br><br></div>
     <p class="bg-body py-5 fs-2 text-dark text-center fw-bold fs-3"><br><br><br><br>
         <br<br><br><br><br><br><br><br><br><br><br><br><br><span class="display-3" style="cursor: pointer;" onclick="getCookies();">END OF AUCTION</span><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
             <textarea id="cus-save"></textarea><br><br><br></p>
@@ -747,7 +751,7 @@
         <a href="javascript:void(0)" class="selectX p-2 rounded bg-warning mx-5 d-none" style="color:black !important">SELECT FRESH PLAYER</a>
 
 
-
+        <a class="bg-dark rounded-pill px-3 py-2 bg-red-hover" href="#XBuy">X</a>
         <a href="javascript:void(0)" class="selectZ p-2 rounded bg-danger mx-5 d-none">SELECT UNSOLD PLAYER</a>
 
         <div class="ms-5 float-lg-end d-block d-lg-inline d-inline-block">
