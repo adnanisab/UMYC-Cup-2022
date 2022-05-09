@@ -182,8 +182,8 @@
         
         .playerprice {
             position: absolute;
-            bottom: 0;
-            left: 7%;
+            bottom: 8%;
+            left: 10%;
         }
         
         @media (max-width:576px) {
@@ -1042,42 +1042,42 @@
                     var ty = tx[t].getAttribute("id");
                     var tp = readCookie(ty).split("@").pop();
                     if (document.getElementsByClassName(ty).length == 0) {
-                        document.getElementById("AI_WARRIORS").insertAdjacentHTML("beforeend", "<div class='" + ty + " col-12 col-md-6 col-lg-3 px-0 AI_WARRIORS teamS' data-team='AI_WARRIORS' data-player='" + ty + "' data-price='" + tp + "' onclick='myFunction(\"" + ty + "\")'><input id='" + ty + "$COPY' type='text' class='CopyTeam d-none' value='" + ty + "@" + tp + "'><img class='img-fluid' data-price='" + tp + "' src='https://raw.githubusercontent.com/adnanisab/UNITY-CUP-2022/main/" + ty + ".jpg'><div class='playerprice'><span class='bg-warning text-dark px-3 rounded-pill fw-bold'>" + tp + "</span></div></div>");
+                        document.getElementById("AI_WARRIORS").insertAdjacentHTML("beforeend", "<div class='" + ty + " col-12 col-md-6 col-lg-4 px-0 AI_WARRIORS teamS' data-team='AI_WARRIORS' data-player='" + ty + "' data-price='" + tp + "' onclick='myFunction(\"" + ty + "\")'><input id='" + ty + "$COPY' type='text' class='CopyTeam d-none' value='" + ty + " " + tp + "'><img class='img-fluid' data-price='" + tp + "' src='https://raw.githubusercontent.com/adnanisab/UNITY-CUP-2022/main/" + ty + ".jpg'><div class='playerprice'><span class='bg-warning text-dark px-3 rounded-pill fw-bold'>" + tp + "</span></div></div>");
                     }
                 }
                 if (tx[t].getAttribute("data-team") == "NOOH_STRIKERS") {
                     var ty = tx[t].getAttribute("id");
                     var tp = readCookie(ty).split("@").pop();
                     if (document.getElementsByClassName(ty).length == 0) {
-                        document.getElementById("NOOH_STRIKERS").insertAdjacentHTML("beforeend", "<div class='" + ty + " col-12 col-md-6 col-lg-3 px-0 NOOH_STRIKERS teamS' data-team='NOOH_STRIKERS' data-player='" + ty + "' data-price='" + tp + "' onclick='myFunction(\"" + ty + "\")'><input id='" + ty + "$COPY' type='text' class='CopyTeam d-none' value='" + ty + "@" + tp + "'><img class='img-fluid' data-price='" + tp + "' src='https://raw.githubusercontent.com/adnanisab/UNITY-CUP-2022/main/" + ty + ".jpg'><div class='playerprice'><span class='bg-warning text-dark px-3 rounded-pill fw-bold'>" + tp + "</span></div></div>");
+                        document.getElementById("NOOH_STRIKERS").insertAdjacentHTML("beforeend", "<div class='" + ty + " col-12 col-md-6 col-lg-4 px-0 NOOH_STRIKERS teamS' data-team='NOOH_STRIKERS' data-player='" + ty + "' data-price='" + tp + "' onclick='myFunction(\"" + ty + "\")'><input id='" + ty + "$COPY' type='text' class='CopyTeam d-none' value='" + ty + " " + tp + "'><img class='img-fluid' data-price='" + tp + "' src='https://raw.githubusercontent.com/adnanisab/UNITY-CUP-2022/main/" + ty + ".jpg'><div class='playerprice'><span class='bg-warning text-dark px-3 rounded-pill fw-bold'>" + tp + "</span></div></div>");
                     }
                 }
                 if (tx[t].getAttribute("data-team") == "LALA_BHAI_LIONS") {
                     var ty = tx[t].getAttribute("id");
                     var tp = readCookie(ty).split("@").pop();
                     if (document.getElementsByClassName(ty).length == 0) {
-                        document.getElementById("LALA_BHAI_LIONS").insertAdjacentHTML("beforeend", "<div class='" + ty + " col-12 col-md-6 col-lg-3 px-0 LALA_BHAI_LIONS teamS' data-team='LALA_BHAI_LIONS' data-player='" + ty + "' data-price='" + tp + "' onclick='myFunction(\"" + ty + "\")'><input id='" + ty + "$COPY' type='text' class='CopyTeam d-none' value='" + ty + "@" + tp + "'><img class='img-fluid' data-price='" + tp + "' src='https://raw.githubusercontent.com/adnanisab/UNITY-CUP-2022/main/" + ty + ".jpg'><div class='playerprice'><span class='bg-warning text-dark px-3 rounded-pill fw-bold'>" + tp + "</span></div></div>");
+                        document.getElementById("LALA_BHAI_LIONS").insertAdjacentHTML("beforeend", "<div class='" + ty + " col-12 col-md-6 col-lg-4 px-0 LALA_BHAI_LIONS teamS' data-team='LALA_BHAI_LIONS' data-player='" + ty + "' data-price='" + tp + "' onclick='myFunction(\"" + ty + "\")'><input id='" + ty + "$COPY' type='text' class='CopyTeam d-none' value='" + ty + " " + tp + "'><img class='img-fluid' data-price='" + tp + "' src='https://raw.githubusercontent.com/adnanisab/UNITY-CUP-2022/main/" + ty + ".jpg'><div class='playerprice'><span class='bg-warning text-dark px-3 rounded-pill fw-bold'>" + tp + "</span></div></div>");
                     }
                 }
                 if (tx[t].getAttribute("data-team") == "DARIAI_CHALLENGERS") {
                     var ty = tx[t].getAttribute("id");
                     var tp = readCookie(ty).split("@").pop();
                     if (document.getElementsByClassName(ty).length == 0) {
-                        document.getElementById("DARIAI_CHALLENGERS").insertAdjacentHTML("beforeend", "<div class='" + ty + " col-12 col-md-6 col-lg-3 px-0 DARIAI_CHALLENGERS teamS' data-team='DARIAI_CHALLENGERS' data-player='" + ty + "' data-price='" + tp + "' onclick='myFunction(\"" + ty + "\")'><input id='" + ty + "$COPY' type='text' class='CopyTeam d-none' value='" + ty + "@" + tp + "'><img class='img-fluid' data-price='" + tp + "' src='https://raw.githubusercontent.com/adnanisab/UNITY-CUP-2022/main/" + ty + ".jpg'><div class='playerprice'><span class='bg-warning text-dark px-3 rounded-pill fw-bold'>" + tp + "</span></div></div>");
+                        document.getElementById("DARIAI_CHALLENGERS").insertAdjacentHTML("beforeend", "<div class='" + ty + " col-12 col-md-6 col-lg-4 px-0 DARIAI_CHALLENGERS teamS' data-team='DARIAI_CHALLENGERS' data-player='" + ty + "' data-price='" + tp + "' onclick='myFunction(\"" + ty + "\")'><input id='" + ty + "$COPY' type='text' class='CopyTeam d-none' value='" + ty + " " + tp + "'><img class='img-fluid' data-price='" + tp + "' src='https://raw.githubusercontent.com/adnanisab/UNITY-CUP-2022/main/" + ty + ".jpg'><div class='playerprice'><span class='bg-warning text-dark px-3 rounded-pill fw-bold'>" + tp + "</span></div></div>");
                     }
                 }
                 if (tx[t].getAttribute("data-team") == "MCC_ELEVEN") {
                     var ty = tx[t].getAttribute("id");
                     var tp = readCookie(ty).split("@").pop();
                     if (document.getElementsByClassName(ty).length == 0) {
-                        document.getElementById("MCC_ELEVEN").insertAdjacentHTML("beforeend", "<div class='" + ty + " col-12 col-md-6 col-lg-3 px-0 MCC_ELEVEN teamS' data-team='MCC_ELEVEN' data-player='" + ty + "' data-price='" + tp + "' onclick='myFunction(\"" + ty + "\")'><input id='" + ty + "$COPY' type='text' class='CopyTeam d-none' value='" + ty + "@" + tp + "'><img class='img-fluid' data-price='" + tp + "' src='https://raw.githubusercontent.com/adnanisab/UNITY-CUP-2022/main/" + ty + ".jpg'><div class='playerprice'><span class='bg-warning text-dark px-3 rounded-pill fw-bold'>" + tp + "</span></div></div>");
+                        document.getElementById("MCC_ELEVEN").insertAdjacentHTML("beforeend", "<div class='" + ty + " col-12 col-md-6 col-lg-3 px-0 MCC_ELEVEN teamS' data-team='MCC_ELEVEN' data-player='" + ty + "' data-price='" + tp + "' onclick='myFunction(\"" + ty + "\")'><input id='" + ty + "$COPY' type='text' class='CopyTeam d-none' value='" + ty + " " + tp + "'><img class='img-fluid' data-price='" + tp + "' src='https://raw.githubusercontent.com/adnanisab/UNITY-CUP-2022/main/" + ty + ".jpg'><div class='playerprice'><span class='bg-warning text-dark px-3 rounded-pill fw-bold'>" + tp + "</span></div></div>");
                     }
                 }
                 if (tx[t].getAttribute("data-team") == "EZZY_MASALA_XI") {
                     var ty = tx[t].getAttribute("id");
                     var tp = readCookie(ty).split("@").pop();
                     if (document.getElementsByClassName(ty).length == 0) {
-                        document.getElementById("EZZY_MASALA_XI").insertAdjacentHTML("beforeend", "<div class='" + ty + " col-12 col-md-6 col-lg-3 px-0 EZZY_MASALA_XI teamS' data-team='EZZY_MASALA_XI' data-player='" + ty + "' data-price='" + tp + "' onclick='myFunction(\"" + ty + "\")'><input id='" + ty + "$COPY' type='text' class='CopyTeam d-none' value='" + ty + "@" + tp + "'><img class='img-fluid' data-price='" + tp + "' src='https://raw.githubusercontent.com/adnanisab/UNITY-CUP-2022/main/" + ty + ".jpg'><div class='playerprice'><span class='bg-warning text-dark px-3 rounded-pill fw-bold'>" + tp + "</span></div></div>");
+                        document.getElementById("EZZY_MASALA_XI").insertAdjacentHTML("beforeend", "<div class='" + ty + " col-12 col-md-6 col-lg-3 px-0 EZZY_MASALA_XI teamS' data-team='EZZY_MASALA_XI' data-player='" + ty + "' data-price='" + tp + "' onclick='myFunction(\"" + ty + "\")'><input id='" + ty + "$COPY' type='text' class='CopyTeam d-none' value='" + ty + " " + tp + "'><img class='img-fluid' data-price='" + tp + "' src='https://raw.githubusercontent.com/adnanisab/UNITY-CUP-2022/main/" + ty + ".jpg'><div class='playerprice'><span class='bg-warning text-dark px-3 rounded-pill fw-bold'>" + tp + "</span></div></div>");
                     }
                 }
             }
