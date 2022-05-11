@@ -1077,14 +1077,14 @@
                     var ty = tx[t].getAttribute("id");
                     var tp = readCookie(ty).split("@").pop();
                     if (document.getElementsByClassName(ty).length == 0) {
-                        document.getElementById("MCC_ELEVEN").insertAdjacentHTML("beforeend", "<div class='" + ty + " col-12 col-md-6 col-lg-3 px-0 MCC_ELEVEN teamS' data-team='MCC_ELEVEN' data-player='" + ty + "' data-price='" + tp + "' onclick='myFunction(\"" + ty + "\")'><input id='" + ty + "$COPY' type='text' class='CopyTeam d-none' value='" + ty + " " + tp + "'><img class='img-fluid' data-price='" + tp + "' src='https://raw.githubusercontent.com/adnanisab/UNITY-CUP-2022/main/" + ty + ".jpg'><div class='playerprice'><span class='bg-warning text-dark px-3 rounded-pill fw-bold'>" + tp + "</span></div></div>");
+                        document.getElementById("MCC_ELEVEN").insertAdjacentHTML("beforeend", "<div class='" + ty + " col-12 col-md-6 col-lg-4 px-0 MCC_ELEVEN teamS' data-team='MCC_ELEVEN' data-player='" + ty + "' data-price='" + tp + "' onclick='myFunction(\"" + ty + "\")'><input id='" + ty + "$COPY' type='text' class='CopyTeam d-none' value='" + ty + " " + tp + "'><img class='img-fluid' data-price='" + tp + "' src='https://raw.githubusercontent.com/adnanisab/UNITY-CUP-2022/main/" + ty + ".jpg'><div class='playerprice'><span class='bg-warning text-dark px-3 rounded-pill fw-bold'>" + tp + "</span></div></div>");
                     }
                 }
                 if (tx[t].getAttribute("data-team") == "EZZY_MASALA_XI") {
                     var ty = tx[t].getAttribute("id");
                     var tp = readCookie(ty).split("@").pop();
                     if (document.getElementsByClassName(ty).length == 0) {
-                        document.getElementById("EZZY_MASALA_XI").insertAdjacentHTML("beforeend", "<div class='" + ty + " col-12 col-md-6 col-lg-3 px-0 EZZY_MASALA_XI teamS' data-team='EZZY_MASALA_XI' data-player='" + ty + "' data-price='" + tp + "' onclick='myFunction(\"" + ty + "\")'><input id='" + ty + "$COPY' type='text' class='CopyTeam d-none' value='" + ty + " " + tp + "'><img class='img-fluid' data-price='" + tp + "' src='https://raw.githubusercontent.com/adnanisab/UNITY-CUP-2022/main/" + ty + ".jpg'><div class='playerprice'><span class='bg-warning text-dark px-3 rounded-pill fw-bold'>" + tp + "</span></div></div>");
+                        document.getElementById("EZZY_MASALA_XI").insertAdjacentHTML("beforeend", "<div class='" + ty + " col-12 col-md-6 col-lg-4 px-0 EZZY_MASALA_XI teamS' data-team='EZZY_MASALA_XI' data-player='" + ty + "' data-price='" + tp + "' onclick='myFunction(\"" + ty + "\")'><input id='" + ty + "$COPY' type='text' class='CopyTeam d-none' value='" + ty + " " + tp + "'><img class='img-fluid' data-price='" + tp + "' src='https://raw.githubusercontent.com/adnanisab/UNITY-CUP-2022/main/" + ty + ".jpg'><div class='playerprice'><span class='bg-warning text-dark px-3 rounded-pill fw-bold'>" + tp + "</span></div></div>");
                     }
                 }
             }
@@ -1195,7 +1195,9 @@
             for (var v = 0; v < ts.length; v++) {
                 var clone = ts[v].cloneNode(true);
                 document.getElementById("MostExp").insertAdjacentElement("beforeend", clone);
+                var tn = document.getElementById("MostExp").lastChild.getAttribute("data-team");
                 document.getElementById("MostExp").lastChild.classList.remove("teamS");
+                document.getElementById("MostExp").lastChild.classList.remove(tn);
             }
             for (var x1 = 0; x1 < xt.childElementCount; x1++) {
                 xt.children[x1].classList.add("mep");
@@ -1209,16 +1211,87 @@
 
         /* ********************************* Store Players ********************************* */
 
-        // createCookie('Mahmud-Dadabhai', 'AI_WARRIORS@3000', '1');
-        // createCookie('Arshad-Abuji', 'NOOH_STRIKERS@3000', '1');
-        // createCookie('Abdul-Rehman-Dariai', 'DARIAI_CHALLENGERS@8000', '1');
-        // createCookie('Siddik-Memon', 'LALA_BHAI_LIONS@7000', '1');
+        createCookie('Ayaz-Nan', 'LALA_BHAI_LIONS@2000');
+        createCookie('Abdul-Kadir-Manga', 'NOOH_STRIKERS@1750');
+        createCookie('Ammar-Shaikh', 'EZZY_MASALA_XI@500');
+        createCookie('Sohil-Shaikh', 'NOOH_STRIKERS@5000');
+        createCookie('Sajid-Tanwar', 'DARIAI_CHALLENGERS@2500');
+        createCookie('Ramzan-Gebi', 'LALA_BHAI_LIONS@2000');
+        createCookie('Abdul-Ayaaz-Shaikh', 'DARIAI_CHALLENGERS@7000');
+        createCookie('Nisar-Lal', 'AI_WARRIORS@4000');
+        createCookie('Suleman-Gebi', 'LALA_BHAI_LIONS@19000');
+        createCookie('Yahya-Maniar', 'EZZY_MASALA_XI@3000');
+        createCookie('Salim-Maniar', 'AI_WARRIORS@3500');
+        createCookie('Sadik-Isab', 'MCC_ELEVEN@6000');
+        createCookie('Maiz-Mubarkali-Shaikh', 'EZZY_MASALA_XI@3500');
+        createCookie('Kasim-Vazir', 'MCC_ELEVEN@7000');
+        createCookie('Arshad-Abuji', 'EZZY_MASALA_XI@2500');
+        createCookie('Ajmal-Sema', 'LALA_BHAI_LIONS@2000');
+        createCookie('Ahmed-Dariai', 'DARIAI_CHALLENGERS@2000');
+        createCookie('Azaz-Bangdi', 'AI_WARRIORS@6000');
+        createCookie('Samir-Saiyed', 'DARIAI_CHALLENGERS@3000');
+        createCookie('Ayyad-Sema', 'NOOH_STRIKERS@1000');
+        createCookie('Abubakkar-Kanyat', 'DARIAI_CHALLENGERS@17000');
+        createCookie('Hafiz-Fahad-Vali', 'AI_WARRIORS@2000');
+        createCookie('Ayyan-M-Shaikh', 'LALA_BHAI_LIONS@10000');
+        createCookie('Amvaz-Isab', 'NOOH_STRIKERS@1500');
+        createCookie('Kasam-Koradia', 'AI_WARRIORS@2500');
+        createCookie('Abdullah', 'NOOH_STRIKERS@3000');
+        createCookie('Salim-Barafwala', 'NOOH_STRIKERS@4000');
+        createCookie('Umer-Shaikh', 'DARIAI_CHALLENGERS@6000');
+        createCookie('Tamim-Sema', 'NOOH_STRIKERS@3500');
+        createCookie('Tabrez-Gebi', 'LALA_BHAI_LIONS@500');
+        createCookie('Shihab-M-Manga', 'MCC_ELEVEN@2000');
+        createCookie('Mohsin-Khan-Pathan', 'NOOH_STRIKERS@3500');
+        createCookie('Arshil-Damanvala', 'LALA_BHAI_LIONS@500');
+        createCookie('Kaif-Koradia', 'EZZY_MASALA_XI@750');
+        createCookie('Anfaal-Sema', 'NOOH_STRIKERS@3000');
+        createCookie('Mubassir-Nanabhai', 'EZZY_MASALA_XI@3500');
+        createCookie('Asfak-Nan', 'AI_WARRIORS@2000');
+        createCookie('Muzammil-Maniar', 'NOOH_STRIKERS@10000');
+        createCookie('Sakib-Saiyed', 'MCC_ELEVEN@19000');
+        createCookie('Munib-Shaikh', 'AI_WARRIORS@2500');
+        createCookie('Nawaz-Ali-Saiyed', 'EZZY_MASALA_XI@3000');
+        createCookie('Hamza-Barafwala', 'NOOH_STRIKERS@4000');
+        createCookie('Almas-Maniar', 'AI_WARRIORS@14000');
+        createCookie('Faisal-Sema', 'NOOH_STRIKERS@9000');
+        createCookie('Yunus-Maniar', 'AI_WARRIORS@750');
+        createCookie('Mahruf-Sema', 'LALA_BHAI_LIONS@4000');
+        createCookie('Afnan-Maniar', 'EZZY_MASALA_XI@9000');
+        createCookie('Imran-Popat', 'EZZY_MASALA_XI@1500');
+        createCookie('Mustakim-Popat', 'EZZY_MASALA_XI@6000');
+        createCookie('Kadir-Goawala', 'MCC_ELEVEN@500');
+        createCookie('Adib-Lal', 'DARIAI_CHALLENGERS@5000');
+        createCookie('Hisham-Vali', 'MCC_ELEVEN@4500');
+        createCookie('Ahmed-Isab', 'MCC_ELEVEN@2500');
+        createCookie('Amin-Manga', 'MCC_ELEVEN@2500');
+        createCookie('Jilaan-Popat', 'MCC_ELEVEN@2500');
+        createCookie('Bilal-Maniyar', 'AI_WARRIORS@1500');
+        createCookie('Hamid-Shaikh', 'DARIAI_CHALLENGERS@1250');
+        createCookie('Mo-Azharuddin-Isab', 'DARIAI_CHALLENGERS@500');
+        createCookie('Ramzan-Barafwala', 'AI_WARRIORS@8000');
+        createCookie('Aabid-Tanwar', 'LALA_BHAI_LIONS@1250');
+        createCookie('Saffan-Bhindiwala', 'DARIAI_CHALLENGERS@500');
+        createCookie('Aziz-Shaikh', 'LALA_BHAI_LIONS@1000');
+        createCookie('Shahbaz-Nan', 'EZZY_MASALA_XI@1500');
+        createCookie('Anish-Gebi', 'EZZY_MASALA_XI@4500');
+        createCookie('Maaz-Isab', 'DARIAI_CHALLENGERS@500');
+        createCookie('Sahil-K-Maniar', 'MCC_ELEVEN@500');
+        createCookie('Mohammed-Afak-Maniar', 'DARIAI_CHALLENGERS@1750');
+        createCookie('Azim-Jamadar', 'MCC_ELEVEN@1000');
+        createCookie('Juned-Abuji', 'EZZY_MASALA_XI@2000');
+        createCookie('Sakib-Isab', 'LALA_BHAI_LIONS@3000');
+        createCookie('Mohammad-Gebi', 'LALA_BHAI_LIONS@3000');
+        createCookie('Juned-Nan', 'MCC_ELEVEN@500');
+        createCookie('Muzassim-Gebi', 'LALA_BHAI_LIONS@1000');
+        createCookie('Siddik-Memon', 'AI_WARRIORS@1500');
+        createCookie('Akhtar-Isab', 'NOOH_STRIKERS@500');
+        createCookie('Ismail-Isab', 'MCC_ELEVEN@1500');
+        createCookie('Mohammadali-Navajish-Bangdi', 'DARIAI_CHALLENGERS@1500');
+        createCookie('Anish-Manga', 'AI_WARRIORS@500');
 
 
-
-
-
-        /* ********************************* Store Players ********************************* */
+        /* ********************************* /Store Players ********************************* */
     </script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
     <script>
